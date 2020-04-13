@@ -42,7 +42,7 @@ img {
   max-width: 100%; }
 
 table {
-  border: 1px solid #189F89;
+  border: 1px solid #EEEEE3;
   border-collapse: collapse;
   font-size: 85%;
   margin-bottom: 1rem;
@@ -50,7 +50,7 @@ table {
 
 td,
 th {
-  border: 1px solid #189F89;
+  border: 1px solid #EEEEE3;
   padding: 0.25rem 0.5rem; }
 
 th {
@@ -65,14 +65,14 @@ input[type='text'],
 input[type='email'],
 input[type='search'],
 input[type='submit'] {
-  border: 1px solid #189F89;
+  border: 1px solid #EEEEE3;
   border-radius: 300px;
   padding: 1em 1.5em; }
 
 button,
 input[type='submit'] {
   background: transparent;
-  border-color: #189F89;
+  border-color: #EEEEE3;
   color: #000000;
   cursor: pointer;
   transition: color 0.6s ease-in-out, border-color 0.6s ease-in-out, background 0.6s ease-in-out; }
@@ -146,11 +146,11 @@ abbr {
   font-weight: bold;
   text-transform: uppercase; }
   abbr[title] {
-    border-bottom: 1px dotted #189F89;
+    border-bottom: 1px dotted #EEEEE3;
     cursor: help; }
 
 blockquote {
-  border-left: 0.25rem solid #189F89;
+  border-left: 0.25rem solid #EEEEE3;
   color: #7a7a7a;
   margin: 0.8rem 0;
   padding: 0.5rem 1rem; }
@@ -441,7 +441,7 @@ pre {
 code {
   background-color: #f9f9f9;
   border-radius: 3px;
-  color: #189F89;
+  color: #EEEEE3;
   font-size: 85%;
   padding: 0.25em 0.5em; }
 
@@ -754,7 +754,7 @@ h2.page-title {
 
 article + *,
 .post-body ~ section {
-  border-top: 1px solid #189F89;
+  border-top: 1px solid #EEEEE3;
   margin-top: 2rem;
   padding-top: 2rem; }
   article + * > h2:first-child,
@@ -764,7 +764,7 @@ article + *,
     margin-top: 0; }
 
 .post-meta {
-  color: #189F89;
+  color: #EEEEE3;
   margin-bottom: 1rem;
   margin-top: -0.5rem; }
 
@@ -788,7 +788,7 @@ button.disqus-load {
   text-align: center; }
   .pagination > a {
     background: #EEEEE3;
-    border: solid #189F89;
+    border: solid #EEEEE3;
     border-radius: 300px;
     border-width: 1px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16);
@@ -797,7 +797,7 @@ button.disqus-load {
     padding: 1em 1.5em;
     width: 60%; }
   .pagination > a:hover {
-    background-color: #189F89; }
+    background-color: #EEEEE3; }
 
 * + .pagination {
   margin-top: 2rem; }
@@ -820,7 +820,7 @@ button.disqus-load {
   .content .pagination:first-child {
     margin-top: 0; }
     .content .pagination:first-child + * {
-      border-top: 1px solid #189F89;
+      border-top: 1px solid #EEEEE3;
       margin-top: 2rem;
       padding-top: 2rem; }
 
@@ -833,7 +833,7 @@ button.disqus-load {
   padding: 1rem; }
 
 .search-row {
-  border: 1px solid #189F89;
+  border: 1px solid #EEEEE3;
   border-radius: 300px;
   display: flex;
   padding: 2px; }
@@ -918,7 +918,7 @@ img {
   max-width: 100%; }
 
 table {
-  border: 1px solid #189F89;
+  border: 1px solid #EEEEE3;
   border-collapse: collapse;
   font-size: 85%;
   margin-bottom: 1rem;
@@ -926,7 +926,7 @@ table {
 
 td,
 th {
-  border: 1px solid #189F89;
+  border: 1px solid #EEEEE3;
   padding: 0.25rem 0.5rem; }
 
 th {
@@ -941,14 +941,14 @@ input[type='text'],
 input[type='email'],
 input[type='search'],
 input[type='submit'] {
-  border: 1px solid #189F89;
+  border: 1px solid #EEEEE3;
   border-radius: 300px;
   padding: 1em 1.5em; }
 
 button,
 input[type='submit'] {
   background: transparent;
-  border-color: #189F89;
+  border-color: #EEEEE3;
   color: #000000;
   cursor: pointer;
   transition: color 0.6s ease-in-out, border-color 0.6s ease-in-out, background 0.6s ease-in-out; }
@@ -1022,11 +1022,11 @@ abbr {
   font-weight: bold;
   text-transform: uppercase; }
   abbr[title] {
-    border-bottom: 1px dotted #189F89;
+    border-bottom: 1px dotted #EEEEE3;
     cursor: help; }
 
 blockquote {
-  border-left: 0.25rem solid #189F89;
+  border-left: 0.25rem solid #EEEEE3;
   color: #7a7a7a;
   margin: 0.8rem 0;
   padding: 0.5rem 1rem; }
@@ -1317,7 +1317,7 @@ pre {
 code {
   background-color: #f9f9f9;
   border-radius: 3px;
-  color: #189F89;
+  color: #EEEEE3;
   font-size: 85%;
   padding: 0.25em 0.5em; }
 
@@ -1630,7 +1630,7 @@ h2.page-title {
 
 article + *,
 .post-body ~ section {
-  border-top: 1px solid #189F89;
+  border-top: 1px solid #EEEEE3;
   margin-top: 2rem;
   padding-top: 2rem; }
   article + * > h2:first-child,
@@ -1640,7 +1640,7 @@ article + *,
     margin-top: 0; }
 
 .post-meta {
-  color: #189F89;
+  color: #EEEEE3;
   margin-bottom: 1rem;
   margin-top: -0.5rem; }
 
@@ -1664,7 +1664,7 @@ button.disqus-load {
   text-align: center; }
   .pagination > a {
     background: #EEEEE3;
-    border: solid #189F89;
+    border: solid #EEEEE3;
     border-radius: 300px;
     border-width: 1px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16);
@@ -1673,7 +1673,7 @@ button.disqus-load {
     padding: 1em 1.5em;
     width: 60%; }
   .pagination > a:hover {
-    background-color: #189F89; }
+    background-color: #EEEEE3; }
 
 * + .pagination {
   margin-top: 2rem; }
@@ -1696,7 +1696,7 @@ button.disqus-load {
   .content .pagination:first-child {
     margin-top: 0; }
     .content .pagination:first-child + * {
-      border-top: 1px solid #189F89;
+      border-top: 1px solid #EEEEE3;
       margin-top: 2rem;
       padding-top: 2rem; }
 
@@ -1709,7 +1709,7 @@ button.disqus-load {
   padding: 1rem; }
 
 .search-row {
-  border: 1px solid #189F89;
+  border: 1px solid #EEEEE3;
   border-radius: 300px;
   display: flex;
   padding: 2px; }
