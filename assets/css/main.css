@@ -675,7 +675,7 @@ body {
 #sidebar nav > .icon {
   display: inline-block;
   font-size: 1.5rem;
-  margin: 2 0em; }
+  margin: 0 0.25em; }
 
 @media print {
   #sidebar {
@@ -764,7 +764,7 @@ article + *,
     margin-top: 0; }
 
 .post-meta {
-  color: #189F89;
+  color: #EEEEE3;
   margin-bottom: 1rem;
   margin-top: -0.5rem; }
 
@@ -1551,7 +1551,7 @@ body {
 #sidebar nav > .icon {
   display: inline-block;
   font-size: 1.5rem;
-  margin: 2 0em; }
+  margin: 0 0.25em; }
 
 @media print {
   #sidebar {
@@ -1640,7 +1640,7 @@ article + *,
     margin-top: 0; }
 
 .post-meta {
-  color: #189F89;
+  color: #EEEEE3;
   margin-bottom: 1rem;
   margin-top: -0.5rem; }
 
