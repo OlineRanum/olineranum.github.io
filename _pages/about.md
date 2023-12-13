@@ -8,12 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Hello, I'm Oline, and this website provides a concise introduction to my work, which is dedicated to building a warmer future for AI.
 
-My research is focused on establishing a foundation for sign language recognition rooted geometric deep learning. This approach utilizes symmetries in human motion, 3D motion capture technologies, and linguistic principles. Currently, I'm pursuing a Master of Science degree in Artificial Intelligence at the University of Amsterdam, where I am in the process of writing my masters' thesis. 
 
-Prior to pursuing a degree in AI, I founded and led DeepSign AS, an innovative start-up in sign language technologies. This venture, comprised of an international team of six, received support and funding from the Research Council of Norway in 2021.
+## Welcome!
 
-My academic background is rooted in physics and astronomy, having completed a bachelor's degree at the University of Oslo. My initial master's studies at the University of Amsterdam included in-depth research into gravitational waves and astroparticle physics at the GRAPPA institute. Additionally, I have conducted research at both the European Organization for Nuclear Research (CERN) in Switzerland and the Lawrence Berkeley National Laboratory (LBNL) in the USA. I also briefly pursued a degree in international relations, focusing on human rights, international law, economics, and organization.
+I'm Oline, and this website provides a concise introduction to my work, which is dedicated to building a warmer future for AI.
 
-In 2021, I decided to shift my research focus from physics to AI. This transition was driven by my growing realization of the potential and importance of AI in creating technologies that are truly good for people and which includes those who might need them most. Growing up in a bilingual household, where Norwegian and Norwegian Sign Language were used, I became acutely aware of the challenges faced by disabled communities in connecting with society at large, and the lack of oppotunities to recive adequate support. This personal experience was further deepened due to my brother's early diagnosis with a rare neurological disorder, which impacted his ability to understand and use spoken language. My current research, while focusing on what could be considered a prime example of warm AI, is part of a larger purpose centered on improving societal structures for accessibility.
