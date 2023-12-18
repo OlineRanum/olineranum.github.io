@@ -12,7 +12,7 @@ main:
 #  - title: "Portfolio"
 #    url: /portfolio/
         
-  - title: "Blog Posts"
+  - title: "Sign Language Processing"
     url: /year-archive/
     
   - title: "CV"
