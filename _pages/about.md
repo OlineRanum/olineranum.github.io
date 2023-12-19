@@ -12,5 +12,4 @@ redirect_from:
 
 ## Welcome!
 
-I'm Oline, and this website provides a concise introduction to my work, which is dedicated to building a warmer future for AI.
-
+Email: oline.ranum@student.uva.nl
