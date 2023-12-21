@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-My research is focused on sign language processing, and in particular on establishing a foundation for sign language recognition in geometric deep learning. This approach utilizes 3D motion capture technologies, spatial geometry and linguistic principles. Currently, I'm pursuing a Master of Science degree in Artificial Intelligence at the University of Amsterdam, where I am in the process of writing my thesis. 
+My research is focused on sign language processing, and in particular on establishing a foundation for sign language recognition in geometric deep learning. This approach utilizes 3D motion capture technologies, spatial geometry and linguistic principles, with the goal of creating deployable assistive tools. Currently, I'm pursuing a Master of Science degree in Artificial Intelligence at the University of Amsterdam, where I am in the process of writing my thesis. 
 
 Prior to pursuing a degree in AI, I founded and led DeepSign AS, a start-up targeting sign language technologies. This venture, comprised of an international team of six, received support and funding from the Research Council of Norway in 2021. 
 
