@@ -51,7 +51,7 @@ Media
 <a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/" target="_blank">Argument.no (NO)</a><br><br>
 
 <strong>News:</strong><br>
-<a href="https://ace-incubator.nl/cohort-fall-2021/" target="_blank">Ace Incubator COHORT FALL ’21</a><a href="https://ace-incubator.nl/celebrating-graduation-companies/" target="_blank">Ace Incubator</a><br>
+<a href="https://ace-incubator.nl/cohort-fall-2021/" target="_blank">Ace Incubator COHORT FALL ’21</a>,<a href="https://ace-incubator.nl/celebrating-graduation-companies/" target="_blank">Ace Incubator</a><br>
 
 
 </td>
