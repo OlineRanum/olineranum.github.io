@@ -14,7 +14,7 @@ redirect_from:
 <tr>
 <td style="border: none;">
 
-<figure style="text-align: center;">
+<figure style="display: flex; justify-content: center; flex-direction: column;">
 <a href="/files/CV_Ranum_Public.pdf">
   <img src="/files/cv.png" alt="LEX" style="width: 75.00%; height: auto;">
 </a>
