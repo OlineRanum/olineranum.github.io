@@ -39,7 +39,7 @@ Selected Projects
 
 <figure style="text-align: center;">
 <a href="https://github.com/elidub/equiv-neural-rendering">
-  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 75.00%; height: auto;"> 
+  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 200.00%; height: auto;"> 
 </a>
 </figure>
 
