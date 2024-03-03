@@ -9,7 +9,7 @@ author_profile: true
 
 ## Visual Languages
 
-Sign languages are visual, fully fledged natural languages that are produced using a structured synthesis of the hands, body, and the face to convey meaning. Unlike spoken languages that unfold over time through sound, sign languages are three-dimensional languages expressed in the physical space around the signer. They are perceived and understood with the vision.
+Sign languages are visual, fully fledged natural languages that are produced using a structured synthesis of the hands, the body, and the face to convey meaning. Unlike spoken languages that unfold over time through sound, sign languages are three-dimensional languages expressed in the physical space around the signer. They are perceived and understood with the vision.
 
 Sign languages serve as the primary means of communication within Deaf communities. However, sign languages are also in use by other communities including individuals with disabling hearing loss, persons with neurocognitive disorders that affect language abilities, and hearing individuals learning to sign.
 
