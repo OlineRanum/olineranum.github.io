@@ -21,5 +21,5 @@ The recognition of and accommodation for sign languages vary significantly acros
 
 
 ## Sign Language Processing
-Sign language processing (SLP) is a dynamic research area concerned with the automatic recognition, translation and production of sign languages (SL). This interdisciplinary field focuses on the development of interpretation technologies for d/Deaf and hearing communities, fostering better communication and promoting inclusivity. SLP encompasses a broad range of domains such as linguistics, natural language processing, computer vision, machine learning, animation technology, and human-computer interaction (HCI).
+Sign language processing (SLP) is a dynamic research area concerned with the automatic recognition, translation and production of sign languages. This interdisciplinary field focuses on the development of interpretation technologies for d/Deaf and hearing communities, fostering better communication and promoting inclusivity. SLP encompasses a broad range of domains such as linguistics, natural language processing, computer vision, machine learning, animation technology, and human-computer interaction (HCI).
 
