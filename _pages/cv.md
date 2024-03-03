@@ -10,16 +10,16 @@ redirect_from:
 {% include base_path %}
 
 
-<table style="border-collapse: collapse; border: none;width: 60%;" border="0">
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
 <td style="border: none;">
 
 <a href="/files/CV_Ranum_Public.pdf">
-  <img src="/files/cv.png" alt="LEX" style="width: 60.00%; height: auto;">
+  <img src="/files/cv.png" alt="LEX" style="width: 30.00%; height: auto;">
 </a>
 
 </td>
-<td style="border: none; text-align: left; font-size: 20px; vertical-align: left;width: 40.00%; ">
+<td style="border: none; text-align: left; font-size: 20px; vertical-align: left;width: 70.00%; ">
 
 <a href="/files/CV_Ranum_Public.pdf" target="_blank">Link to full CV</a>
 
@@ -31,19 +31,19 @@ redirect_from:
 
 Selected Projects
 ======
-<table style="border-collapse: collapse; border: none;width: 60%;" border="0">
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
 <figure>
 <a href="https://github.com/elidub/equiv-neural-rendering">
-  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 40.00%; height: auto;"> 
+  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 30.00%; height: auto;"> 
 </a>
 </figure>
 
 
 </td>
-<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 60.00%;">
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
 
 <strong>SE(3)-Equivariant Neural Rendering:</strong><br>
 <a href="https://github.com/elidub/equiv-neural-rendering" target="_blank">Github Repository</a><br>
@@ -61,7 +61,7 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 
 <figure>
 <a href="https://github.com/LBBusser/point_e_team10/">
-  <img src="/images/projects/chairs.png" alt="LEX" style="width: 40.00%; height: auto;"> 
+  <img src="/images/projects/chairs.png" alt="LEX" style="width: 30.00%; height: auto;"> 
 </a>
 
   <figcaption>Prompt: 'A simple chair beside a table in a white background'.</figcaption>
@@ -69,7 +69,7 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 
 
 </td>
-<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 60.00%;">
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
 
 <strong>Indoor scene generation using Point-E and Training Free Layout Control:</strong><br>
 <a href="https://github.com/LBBusser/point_e_team10/" target="_blank">Github Repository</a><br>
@@ -84,20 +84,20 @@ We present framework for extending point cloud diffusion models to accomodate in
 
 Media
 ======
-<table style="border-collapse: collapse; border: none;width: 60%;" border="0">
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
 <figure>
 <a href="https://www.uio.no/om/aktuelt/arrangementer/en-ny-start-festival/student-og-grunder-hvordan-kan-din-ide-bli-til-noe-mer.html">
-  <img src="/images/photos/uio.JPG" alt="LEX" style="width: 60.00%; height: auto;"> 
+  <img src="/images/photos/uio.JPG" alt="LEX" style="width: 30.00%; height: auto;"> 
 </a>
   <figcaption>DeepSign at <span style="font-family: 'Brush Script MT', cursive;">En ny start - University of Oslo.</span></figcaption>
 </figure>
 
 
 </td>
-<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 40.00%;">
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
 
 <strong>DeepSign AS:</strong><br>
 <a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no (NO)</a><br>
