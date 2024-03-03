@@ -37,7 +37,7 @@ Selected Projects
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figure style="display: flex; justify-content: center;">
+<figure style="text-align: center;">
 <a href="https://github.com/elidub/equiv-neural-rendering">
   <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 300.00%; height: auto;"> 
 </a>
@@ -61,7 +61,7 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figure style="display: flex; justify-content: center;">
+<figure style="text-align: center;">
 <a href="https://github.com/LBBusser/point_e_team10/">
   <img src="/images/projects/chairs.png" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
@@ -90,7 +90,7 @@ Media
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figure style="display: flex; justify-content: center; flex-direction: column;">
+<figure style="text-align: center;">
 <a href="https://www.uio.no/om/aktuelt/arrangementer/en-ny-start-festival/student-og-grunder-hvordan-kan-din-ide-bli-til-noe-mer.html">
   <img src="/images/photos/uio.JPG" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
