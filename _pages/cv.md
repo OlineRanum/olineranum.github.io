@@ -17,7 +17,7 @@ redirect_from:
 <img src="/files/cv.png" alt="LEX" style="width: 50.00%; height: auto;"> 
 
 </td>
-<td style="border: none; text-align: left; font-size: 20px; vertical-align: middle;">
+<td style="border: none; text-align: left; font-size: 20px; vertical-align: middle; width:50%;">
 
 <a href="/files/CV_Ranum_Public.pdf" target="_blank">Link to <br> Full CV</a>
 
