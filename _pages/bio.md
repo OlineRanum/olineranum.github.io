@@ -7,6 +7,26 @@ author_profile: true
 
 {% include base_path %}
 
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
+<tr>
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+
+At the age of 4, my brother Halvor was diagnosed with a rare neurological disorder. He lost his ability to use spoken language, and our family adapted by learning to sign. As such, I grew up in a bilingual household, where we daily spoke both Norwegian and Norwegian Sign Language. 
+
+</td>
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 40.00%;">
+
+<figure style="display: flex; justify-content: center; flex-direction: column;">
+  <img src="/images/photos/family2.jpeg" alt="LEX" style="width: 75.00%; height: auto;"> 
+</a>
+  <figcaption style="text-align: center;">DeepSign at <span style="font-family: 'Brush Script MT', cursive;">En ny start - University of Oslo.</span></figcaption>
+</figure>
+
+</td>
+</tr>
+</table>
+
+
 At the age of 4, my brother Halvor was diagnosed with a rare neurological disorder. He lost his ability to use spoken language, and our family adapted by learning to sign. As such, I grew up in a bilingual household, where we daily spoke both Norwegian and Norwegian Sign Language. 
 
 In his fight for inclusion, my brother has taught me about accessibility, empowerment, and community, but his circumstances have also demonstrated the immense cost of not being able to access information and services around you. The advent of AI offers to provide my brother and those facing similar challenges with tools that can profoundly transform their opportunities, leading to a more inclusive and fully realized experience of life.
