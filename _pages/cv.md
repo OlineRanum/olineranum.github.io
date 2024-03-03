@@ -36,11 +36,11 @@ In Media
 <img src="/images/photos/uio.JPG" alt="LEX" style="width: 60.00%; height: auto;"> 
 
 </td>
-<td style="border: none; text-align: left; font-size: 20px; vertical-align: left;width: 40.00%;">
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 40.00%;">
 
 **Articles:**
-<a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no (Norwegian)</a>
-<a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/" target="_blank">Argument.no (Norwegian)</a>
+<a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no (NO)</a>
+<a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/" target="_blank">Argument.no (NO)</a>
 
 </td>
 </tr>
