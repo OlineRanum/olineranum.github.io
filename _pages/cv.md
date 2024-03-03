@@ -53,6 +53,31 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 </td>
 </tr>
 </table>
+
+
+<table style="border-collapse: collapse; border: none;width: 60%;" border="0">
+<tr>
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+
+<figure>
+<a href="https://github.com/LBBusser/point_e_team10/">
+  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 60.00%; height: auto;"> 
+</a>
+</figure>
+
+
+</td>
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 40.00%;">
+
+<strong>Indoor scene generation using Point-E and Training Free Layout Control:</strong><br>
+<a href="https://github.com/LBBusser/point_e_team10/" target="_blank">Github Repository</a><br>
+We present framework for extending point cloud diffusion models to accomodate indoor scene generations directly from text prompts. 
+
+
+</td>
+</tr>
+</table>
+
 ***
 
 Media
