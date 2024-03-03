@@ -1,20 +1,18 @@
 ---
 layout: archive
-title: "Bio"
+title: "Research & Bio"
 permalink: /bio/
 author_profile: true
 ---
 
 {% include base_path %}
 
-My research is focused on sign language processing, and in particular on establishing a foundation for sign language recognition in geometric deep learning. This approach utilizes 3D motion capture technologies, spatial geometry and linguistic principles, with the goal of creating deployable assistive tools. Currently, I'm pursuing a Master of Science degree in Artificial Intelligence at the University of Amsterdam, where I am in the process of writing my thesis. 
+At the age of 4, my brother Halvor was diagnosed with a rare neurological disorder. He lost his ability to use spoken language, and our family adapted by learning to sign. I therefore grew up in a bilingual household, where we daily spoke both Norwegian and Norwegian Sign Language. In his fight for inclusion, my brother has taught me about accessibility, empowerment, and community, but his circumstances have also demonstrated the immense cost of not being able to access information and services around you. The advent of AI offers to provide my brother and those facing similar challenges with tools that can profoundly transform their opportunities, leading to a more inclusive and fully realized experience of life.
 
-Prior to pursuing a degree in AI, I founded and led DeepSign AS, a start-up targeting sign language technologies. This venture, comprised of an international team of six, received support and funding from the Research Council of Norway in 2021. 
+Warm AI is the pursuit of technologies that assist people living under adverse social conditions. A prime example is sign language processing (SLP), which automates interpretations between d/Deaf and hearing communities. My work, while focusing on what could be considered a prime example of warm AI, is part of a larger purpose centered on improving societal structures for accessibility. 
 
-My academic background is rooted in physics and astronomy, having completed a bachelor's degree at the University of Oslo. My initial master's studies at the University of Amsterdam focused on gravitational waves and astroparticle physics at the GRAPPA institute. I also briefly pursued a degree in international relations, focusing on human rights, international law, economics, and organization.
+Currently, I'm pursuing a Master's degree in Artificial Intelligence at the University of Amsterdam, where I am in the process of writing my thesis. This project targets methods for increasing 3D-awareness in neural sign representations, by conditioning networks on lingustic structures and grounding representations in a geometry corresponding to the inherent visual modality of sign languages.
 
-In 2021, I decided to shift my research focus from physics to AI. This transition was driven by a growing realization of the potential and importance of AI in creating social technologies, that targets inclusion and support of marginalized communities. Growing up in a bilingual household, where Norwegian and Norwegian Sign Language were used, I got to know the beautiful world of visual languages. Furthermore, due to my brother's early diagnosis with a rare neurological disorder, I got aquinted with the challenges associated with the lack of good communication tools and adequate support structers in society at large.
-
-My current research, while focusing on what could be considered a prime example of warm AI, is part of a larger purpose centered on improving societal structures for accessibility.
+Before pursuing a degree in AI, I founded DeepSign AS, a start-up comprised of an international team of six researchers targeting sign language technologies. This venture received support and funding from the Research Council of Norway during 2021. My academic background is rooted in physics and astronomy, having completed a bachelor's degree at the University of Oslo. My initial master's studies at the University of Amsterdam focused on gravitational waves and astroparticle physics at the GRAPPA Institute. I also briefly pursued a degree in international relations, focusing on human rights, international law, economics, and organization.
 
 
