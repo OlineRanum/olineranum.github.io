@@ -29,6 +29,32 @@ redirect_from:
 
 ***
 
+Selected Projects
+======
+<table style="border-collapse: collapse; border: none;width: 60%;" border="0">
+<tr>
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+
+<figure>
+<a href="https://github.com/elidub/equiv-neural-rendering">
+  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 60.00%; height: auto;"> 
+</a>
+  <figcaption></span></figcaption>
+</figure>
+
+
+</td>
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 40.00%;">
+
+<strong>SE(3)-Equivariant Neural Rendering:</strong><br>
+<a href="https://github.com/elidub/equiv-neural-rendering" target="_blank">Github Repository</a><br>
+
+
+</td>
+</tr>
+</table>
+***
+
 Media
 ======
 <table style="border-collapse: collapse; border: none;width: 60%;" border="0">
