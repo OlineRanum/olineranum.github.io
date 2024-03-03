@@ -61,12 +61,12 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figure style="text-align: center;">
+<figure style="display: flex; justify-content: center;">
 <a href="https://github.com/LBBusser/point_e_team10/">
   <img src="/images/projects/chairs.png" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
 
-  <figcaption style="text-align: center;">Prompt: 'A simple chair beside a table in a white background'.</figcaption>
+  <figcaption style="text-align: center;">Prompt: 'A simple chair beside <br>a table in a white background'.</figcaption>
 </figure>
 
 
@@ -90,7 +90,7 @@ Media
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figure style="text-align: center;">
+<figure style="display: flex; justify-content: center;">
 <a href="https://www.uio.no/om/aktuelt/arrangementer/en-ny-start-festival/student-og-grunder-hvordan-kan-din-ide-bli-til-noe-mer.html">
   <img src="/images/photos/uio.JPG" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
