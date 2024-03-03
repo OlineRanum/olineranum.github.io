@@ -12,4 +12,12 @@ redirect_from:
 
 ## Welcome!
 
+MountainFebruary.jpeg
+
+<!-- Mountain Photo of the Month -->
+<div style="text-align: center;">
+  <h2>Mountain Photo of the Month</h2>
+  <img src="/images/photos/MountainFebruary.jpeg" alt="Mountain" style="width: 100%; max-width: 800px; height: auto; margin: auto;">
+</div>
+
 Email: oline.ranum@student.uva.nl
