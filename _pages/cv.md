@@ -38,9 +38,9 @@ In Media
 </td>
 <td style="border: none; text-align: left; font-size: 20px; vertical-align: left;width: 40.00%;">
 
-
-<a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no Article (Norwegian)</a>
-<a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/" target="_blank">Argument.no Article (Norwegian)</a>
+**Articles:**
+<a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no (Norwegian)</a>
+<a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/" target="_blank">Argument.no (Norwegian)</a>
 
 </td>
 </tr>
