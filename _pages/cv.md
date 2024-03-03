@@ -10,12 +10,11 @@ redirect_from:
 {% include base_path %}
 
 
-
 <table style="border-collapse: collapse; border: none;" border="0">
 <tr>
 <td style="border: none;">
 
-<img src="/files/cv.png" alt="LEX">
+<img src="/files/cv.png" alt="LEX" style="width: 25.00%; height: auto;"> 
 
 </td>
 <td style="border: none; text-align: center; font-size: 20px;">
