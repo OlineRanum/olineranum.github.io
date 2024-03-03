@@ -61,7 +61,6 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figurestyle="text-align: center;>
 <a href="https://github.com/LBBusser/point_e_team10/">
   <img src="/images/projects/chairs.png" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
