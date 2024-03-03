@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Sign Language Processing"
+title: "Sign Language & SLP"
 permalink: /SignLanguageProcessing/
 author_profile: true
 ---
@@ -9,7 +9,7 @@ author_profile: true
 
 ## Visual Languages
 
-Sign languages are visual, fully fledged natural languages that are produced using a structured synthesiz of the hands, body and the face to convey meaning. Unlike spoken languages that unfold linearly over time through sound, sign languages are three-dimensional languages expressed in the physical space around the signer. They are as such precieved and unstrstood using the only the vision. 
+Sign languages are visual, fully fledged natural languages that are produced using a structured synthesis of the hands, body, and the face to convey meaning. Unlike spoken languages that unfold over time through sound, sign languages are three-dimensional languages expressed in the physical space around the signer. They are perceived and understood with the vision.
 
 Sign languages serve as the primary means of communication within Deaf communities. However, sign languages are also in use by other communities including individuals with disabling hearing loss, persons with neurocognitive disorders that affect language abilities, and hearing individuals learning to sign.
 
@@ -19,5 +19,5 @@ __Without Sign Language, Deaf People Are Not Equal__ (L. Kozik 2019, Human Right
 
 
 ## Sign Language Processing
-Sign language processing (SLP) is a dynamic research area concerned with the automatic recognition, translation and production of sign languages (SL). This interdisciplinary field focuses on the development of interpretation technologies for d/Deaf and hearing communities, fostering better communication and promoting inclusively. SLP encompasses a broad range of domains such as linguistics, natural language processing, computer vision, machine learning, animation technology, and human-computer interaction (HCI).
+Sign language processing (SLP) is a dynamic research area concerned with the automatic recognition, translation and production of sign languages (SL). This interdisciplinary field focuses on the development of interpretation technologies for d/Deaf and hearing communities, fostering better communication and promoting inclusivity. SLP encompasses a broad range of domains such as linguistics, natural language processing, computer vision, machine learning, animation technology, and human-computer interaction (HCI).
 
