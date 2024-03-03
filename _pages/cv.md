@@ -27,7 +27,7 @@ redirect_from:
 
 ***
 
-In Media
+Media
 ======
 <table style="border-collapse: collapse; border: none;width: 60%;" border="0">
 <tr>
@@ -38,7 +38,7 @@ In Media
 </td>
 <td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 40.00%;">
 
-**Articles:**
+<strong>Articles:</strong>
 <a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no (NO)</a>
 <a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/" target="_blank">Argument.no (NO)</a>
 
