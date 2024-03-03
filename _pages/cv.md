@@ -14,7 +14,7 @@ redirect_from:
 <tr>
 <td style="border: none;">
 
-<img src="/files/cv.png" alt="LEX" style="width: 50.00%; height: auto;"> 
+<img src="/files/cv.png" alt="LEX" style="width: 70.00%; height: auto;"> 
 
 </td>
 <td style="border: none; text-align: left; font-size: 20px; vertical-align: middle; width:50%;">
