@@ -13,9 +13,11 @@ Sign languages are visual, fully fledged natural languages that are produced usi
 
 Sign languages serve as the primary means of communication within Deaf communities. However, sign languages are also in use by other communities including individuals with disabling hearing loss, persons with neurocognitive disorders that affect language abilities, and hearing individuals learning to sign.
 
-The recognition and accommodation of sign languages vary significantly across the world. Contrary to the common misconception that there is a universal sign language, different countries or regions have their own unique sign language and dialects.  Although the Convention on the Rights of Persons with Disabilities (CRPD) mandates that governments acknowledge sign language as an official language, provide professional interpreter services, and ensure that Deaf individuals have access to education in sign language, accessibility remains a widespread issue. 
+The recognition of and accommodation for sign languages vary significantly across the world. Contrary to the common misconception that there is a universal sign language, different countries or regions have their own unique sign language and dialects.  Although the Convention on the Rights of Persons with Disabilities (CRPD) mandates that governments acknowledge sign language as an official language, provide professional interpreter services, and ensure that Deaf individuals have access to education in sign language, accessibility remains a widespread issue. 
 
-__Without Sign Language, Deaf People Are Not Equal__ (L. Kozik 2019, Human Rights Watch).
+> "Without Sign Language, Deaf People Are Not Equal."[^1]
+
+[^1]: L. Kozik 2019, Human Rights Watch
 
 
 ## Sign Language Processing
