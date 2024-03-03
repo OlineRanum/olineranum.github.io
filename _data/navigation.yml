@@ -13,7 +13,7 @@ main:
 #    url: /portfolio/
         
   - title: "Sign Language Processing"
-    url: /year-archive/
+    url: /SignLanguageProcessing/
     
   - title: "CV"
     url: /cv/
