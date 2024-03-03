@@ -6,8 +6,8 @@ main:
   - title: "Bio"
     url: /bio/    
 
-#  - title: "Teaching"
-#    url: /teaching/    
+  - title: "News"
+    url: /year-archive/   
     
 #  - title: "Portfolio"
 #    url: /portfolio/
