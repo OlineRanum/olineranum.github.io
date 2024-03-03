@@ -18,3 +18,12 @@ redirect_from:
   {% endif %}
   {% include archive-single.html %}
 {% endfor %}
+
+
+<!-- New Section for Small News -->
+<h2 class="archive__subtitle">Small News</h2>
+<ul>
+  {% for item in site.data.small_news %}
+    <li>{{ item.title }} - {{ item.date }}</li>
+  {% endfor %}
+</ul>
