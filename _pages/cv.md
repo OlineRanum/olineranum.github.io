@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 
-<table style="border-collapse: collapse; border: none;" border="0">
+<table style="border-collapse: collapse; border: none;width: 50%;" border="0">
 <tr>
 <td style="border: none;">
 
@@ -19,7 +19,7 @@ redirect_from:
 </td>
 <td style="border: none; text-align: center; font-size: 20px;">
 
-<a href="CV_Ranum_Public.pdf" target="_blank">Link to Full CV</a>
+<a href="CV_Ranum_Public.pdf" target="_blank">Link to <br> Full CV</a>
 
 </td>
 </tr>
