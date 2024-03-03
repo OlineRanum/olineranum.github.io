@@ -55,7 +55,7 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 </table>
 
 
-<table style="border-collapse: collapse; border: none;width: 60%;" border="0">
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
