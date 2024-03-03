@@ -5,8 +5,10 @@ permalink: /bio/
 author_profile: true
 ---
 <div style="font-size: inherit;">
+
   <figure style="float: right; margin-left: 20px;">
-    <img src="/images/photos/family2.jpeg" alt="LEX" style="width: 30%; height: auto;">
+    <img src="/images/photos/family2.jpeg" alt="Family" style="width: 300px; height: auto;">
+
   </figure>
 
 
