@@ -9,13 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
-[CV](/files/CV_Ranum_Public.pdf)
+
 
 <table style="border-collapse: collapse; border: none;" border="0">
 <tr>
 <td style="border: none;">
 
-<img src="/images/blog/publications/LEX.png" alt="LEX">
+<img src="/files/cv.png" alt="LEX">
 
 </td>
 <td style="border: none; text-align: center; font-size: 20px;">
