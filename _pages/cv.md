@@ -14,7 +14,9 @@ redirect_from:
 <tr>
 <td style="border: none;">
 
-<img src="/files/cv.png" alt="LEX" style="width: 60.00%; height: auto;"> 
+<a href="/files/CV_Ranum_Public.pdf">
+  <img src="/files/cv.png" alt="LEX" style="width: 60.00%; height: auto;">
+</a>
 
 </td>
 <td style="border: none; text-align: left; font-size: 20px; vertical-align: left;width: 40.00%; ">
@@ -33,7 +35,13 @@ Media
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<img src="/images/photos/uio.JPG" alt="LEX" style="width: 60.00%; height: auto;"> 
+<figure>
+<a href="https://www.uio.no/om/aktuelt/arrangementer/en-ny-start-festival/student-og-grunder-hvordan-kan-din-ide-bli-til-noe-mer.html">
+  <img src="/images/photos/uio.JPG" alt="LEX" style="width: 60.00%; height: auto;"> 
+</a>
+  <figcaption>DeepSign at <span style="font-family: 'Brush Script MT', cursive;">En ny start - University of Oslo.</span></figcaption>
+</figure>
+
 
 </td>
 <td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 40.00%;">
