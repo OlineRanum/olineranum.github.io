@@ -61,13 +61,13 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 
 <figure>
 <a href="https://github.com/LBBusser/point_e_team10/">
-  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 60.00%; height: auto;"> 
+  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 40.00%; height: auto;"> 
 </a>
 </figure>
 
 
 </td>
-<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 40.00%;">
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 60.00%;">
 
 <strong>Indoor scene generation using Point-E and Training Free Layout Control:</strong><br>
 <a href="https://github.com/LBBusser/point_e_team10/" target="_blank">Github Repository</a><br>
