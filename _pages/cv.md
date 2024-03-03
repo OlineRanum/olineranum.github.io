@@ -19,7 +19,7 @@ redirect_from:
 </td>
 <td style="border: none; text-align: left; font-size: 20px; vertical-align: middle; width:50%;">
 
-<a href="/files/CV_Ranum_Public.pdf" target="_blank">Link to <br> Full CV</a>
+<a href="/files/CV_Ranum_Public.pdf" target="_blank">Link to full CV</a>
 
 </td>
 </tr>
@@ -39,7 +39,8 @@ In Media
 <td style="border: none; text-align: left; vertical-align: middle;">
 
 
-<a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no Article</a>
+<a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no Article (Norwegian)</a>
+<a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/" target="_blank">Argument.no Article (Norwegian)</a>
 
 </td>
 </tr>
