@@ -48,6 +48,7 @@ Selected Projects
 
 <strong>SE(3)-Equivariant Neural Rendering:</strong><br>
 <a href="https://github.com/elidub/equiv-neural-rendering" target="_blank">Github Repository</a><br>
+Equivariant neural rendering is a complex task that builds upon geometric deep learning, computer vision and representation theory. One critical component of this task is scene representation, which involves modeling and describing scenes for processing. Recent advancements in neural scene representations address issues of scalability in traditional 3D representation <a href="https://github.com/elidub/equiv-neural-rendering/blob/main/blogpost.md" target="_blank">...</a><br>
 
 
 </td>
