@@ -46,12 +46,10 @@ Media
 </td>
 <td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 40.00%;">
 
-<strong>Articles:</strong><br>
+<strong>DeepSign AS:</strong><br>
 <a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no (NO)</a><br>
 <a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/" target="_blank">Argument.no (NO)</a><br><br>
-
-<strong>News:</strong><br>
-<a href="https://ace-incubator.nl/cohort-fall-2021/" target="_blank">Ace Incubator COHORT FALL ’21</a>,<a href="https://ace-incubator.nl/celebrating-graduation-companies/" target="_blank">Ace Incubator</a><br>
+<a href="https://ace-incubator.nl/cohort-fall-2021/" target="_blank">Ace Incubator 1</a>,<a href="https://ace-incubator.nl/celebrating-graduation-companies/" target="_blank">Ace Incubator 2 COHORT FALL ’21</a><br>
 
 
 </td>
