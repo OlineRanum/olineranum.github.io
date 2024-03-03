@@ -14,9 +14,11 @@ redirect_from:
 <tr>
 <td style="border: none;">
 
+<figure style="text-align: center;">
 <a href="/files/CV_Ranum_Public.pdf">
-  <img src="/files/cv.png" alt="LEX" style="width: 30.00%; height: auto;">
+  <img src="/files/cv.png" alt="LEX" style="width: 75.00%; height: auto;">
 </a>
+</figure>
 
 </td>
 <td style="border: none; text-align: left; font-size: 20px; vertical-align: left;width: 70.00%; ">
@@ -35,7 +37,7 @@ Selected Projects
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figure>
+<figure style="text-align: center;">
 <a href="https://github.com/elidub/equiv-neural-rendering">
   <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 100.00%; height: auto;"> 
 </a>
@@ -88,9 +90,9 @@ Media
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figure>
+<figure style="text-align: center;">
 <a href="https://www.uio.no/om/aktuelt/arrangementer/en-ny-start-festival/student-og-grunder-hvordan-kan-din-ide-bli-til-noe-mer.html">
-  <img src="/images/photos/uio.JPG" alt="LEX" style="width: 100.00%; height: auto;"> 
+  <img src="/images/photos/uio.JPG" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
   <figcaption>DeepSign at <span style="font-family: 'Brush Script MT', cursive;">En ny start - University of Oslo.</span></figcaption>
 </figure>
