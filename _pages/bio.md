@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
+<table style="border-collapse: collapse; border: none;width: 100%;font-size: inherit;" border="0">
 <tr>
 <td style="border: none; width: auto; padding-right: 10px;">
 
@@ -18,7 +18,6 @@ At the age of 4, my brother Halvor was diagnosed with a rare neurological disord
 
 <figure style="display: flex; justify-content: center; flex-direction: column;">
   <img src="/images/photos/family2.jpeg" alt="LEX" style="width: 75.00%; height: auto;"> 
-</a>
 </figure>
 
 </td>
