@@ -95,7 +95,7 @@ Media
 <a href="https://www.uio.no/om/aktuelt/arrangementer/en-ny-start-festival/student-og-grunder-hvordan-kan-din-ide-bli-til-noe-mer.html">
   <img src="/images/photos/uio.JPG" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
-  <figcaption style="text-align: center;">DeepSign at <span style="font-family: 'Brush Script MT', cursive;">En ny start - University of Oslo.</span></figcaption>
+  <figcaption>DeepSign at <span style="font-family: 'Brush Script MT', cursive;">En ny start - University of Oslo.</span></figcaption>
 </figure>
 
 
