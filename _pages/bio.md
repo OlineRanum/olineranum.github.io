@@ -20,7 +20,7 @@ In his fight for inclusion, my brother has taught me about accessibility, empowe
 
 
 </td>
-<td style="border: none; text-align: left; vertical-align: left;width: 40.00%;">
+<td style="border: none; text-align: right; width: 40%; vertical-align: top;">
 
 <figure style="display: flex; justify-content: center; flex-direction: column;">
   <img src="/images/photos/family2.jpeg" alt="LEX" style="width: 75.00%; height: auto;"> 
