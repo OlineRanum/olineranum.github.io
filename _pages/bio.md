@@ -9,12 +9,12 @@ author_profile: true
 
 <table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
-<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+<td style="border: none; width: auto; padding-right: 10px;">
 
 At the age of 4, my brother Halvor was diagnosed with a rare neurological disorder. He lost his ability to use spoken language, and our family adapted by learning to sign. As such, I grew up in a bilingual household, where we daily spoke both Norwegian and Norwegian Sign Language. 
 
 </td>
-<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 40.00%;">
+<td style="border: none; text-align: left; vertical-align: left;width: 40.00%;">
 
 <figure style="display: flex; justify-content: center; flex-direction: column;">
   <img src="/images/photos/family2.jpeg" alt="LEX" style="width: 75.00%; height: auto;"> 
