@@ -37,7 +37,7 @@ Selected Projects
 
 <figure>
 <a href="https://github.com/elidub/equiv-neural-rendering">
-  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 60.00%; height: auto;"> 
+  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 100.00%; height: auto;"> 
 </a>
 </figure>
 
@@ -61,8 +61,10 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 
 <figure>
 <a href="https://github.com/LBBusser/point_e_team10/">
-  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 40.00%; height: auto;"> 
+  <img src="/images/projects/chairs.png" alt="LEX" style="width: 40.00%; height: auto;"> 
 </a>
+
+  <figcaption>'A simple chair beside a table in a white background'.</span></figcaption>
 </figure>
 
 
