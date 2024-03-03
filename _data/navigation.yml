@@ -12,7 +12,7 @@ main:
   - title: "Sign Language Processing"
     url: /SignLanguageProcessing/
   
-    - title: "News"
+  - title: "News"
     url: /blog/   
     
   - title: "CV"
