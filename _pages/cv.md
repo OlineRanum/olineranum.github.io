@@ -33,7 +33,7 @@ In Media
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<img src="/images/photos/uio.JPG" alt="LEX" style="width: 50.00%; height: auto;"> 
+<img src="/images/photos/uio.JPG" alt="LEX" style="width: 60.00%; height: auto;"> 
 
 </td>
 <td style="border: none; text-align: left; vertical-align: middle;">
