@@ -14,12 +14,30 @@ redirect_from:
 <tr>
 <td style="border: none;">
 
-<img src="/files/cv.png" alt="LEX" style="width: 25.00%; height: auto;"> 
+<img src="/files/cv.png" alt="LEX" style="width: 50.00%; height: auto;"> 
 
 </td>
 <td style="border: none; text-align: center; font-size: 20px;">
 
-<a href="CV_Ranum_Public.pdf" target="_blank">Link to <br> Full CV</a>
+<a href="/files/CV_Ranum_Public.pdf" target="_blank">Link to <br> Full CV</a>
+
+</td>
+</tr>
+</table>
+
+
+In Media
+======
+<table style="border-collapse: collapse; border: none;width: 50%;" border="0">
+<tr>
+<td style="border: none;">
+
+<img src="/images/photos/uio.JPG" alt="LEX" style="width: 25.00%; height: auto;"> 
+
+</td>
+<td style="border: none; text-align: center; font-size: 20px;">
+
+<a href="Titan UiO" target="_blank">Link to <br> Full CV</a>
 
 </td>
 </tr>
