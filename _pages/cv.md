@@ -37,7 +37,7 @@ In Media
 </td>
 <td style="border: none; text-align: center; font-size: 20px;">
 
-<a href="Titan UiO" target="_blank">Link to <br> Full CV</a>
+<a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no Article</a>
 
 </td>
 </tr>
