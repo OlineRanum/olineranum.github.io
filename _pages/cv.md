@@ -36,7 +36,7 @@ In Media
 <img src="/images/photos/uio.JPG" alt="LEX" style="width: 70.00%; height: auto;"> 
 
 </td>
-<td style="border: none; text-align: left; vertical-align: middle; width:30.00%;">
+<td style="border: none; text-align: left; vertical-align: middle; width:100.00%;">
 
 
 <a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no Article</a>
