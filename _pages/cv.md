@@ -39,7 +39,7 @@ Selected Projects
 
 <figure style="display: flex; justify-content: center;">
 <a href="https://github.com/OlineRanum/3D-LEX_Controller">
-  <img src="/images/projects/Lexlab.jpg" alt="LEX" style="width: 300.00%; height: auto;"> 
+  <img src="/images/projects/Lexlab.jpg" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
   <figcaption style="text-align: center;">3D-LEX Laboratory.</figcaption>
 </figure>
