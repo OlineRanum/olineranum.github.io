@@ -35,7 +35,7 @@ Selected Projects
 ======
 <table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
-<td style="border: none; width: auto; padding-right: 10px;">
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
 <figure style="display: flex; justify-content: left;">
 <a href="https://github.com/OlineRanum/3D-LEX_Controller">
@@ -129,7 +129,7 @@ Media
 <td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
 
 <strong>3D-LEX:</strong><br>
-<a href="https://www.napnieuws.nl/2024/02/20/ai-voor-gebarentaal-uva-werkt-aan-een-nieuw-vertaalprogramma/" target="_blank">Napnieuws.nl (NL, SignLab interview showcasing the 3D-LEX laboratory)</a><br><br>
+<a href="https://www.napnieuws.nl/2024/02/20/ai-voor-gebarentaal-uva-werkt-aan-een-nieuw-vertaalprogramma/" target="_blank">Napnieuws.nl (NL)</a>, SignLab interview showcasing the 3D-LEX laboratory<br><br>
 
 <strong>DeepSign AS:</strong><br>
 <a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no (NO)</a><br>
