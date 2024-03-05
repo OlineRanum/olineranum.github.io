@@ -37,7 +37,7 @@ Selected Projects
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figure style="display: flex; justify-content: center;">
+<figure style="display: flex; justify-content: left;">
 <a href="https://github.com/OlineRanum/3D-LEX_Controller">
   <img src="/images/projects/Lexlab.jpg" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
@@ -87,7 +87,7 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figure style="display: flex; justify-content: center; flex-direction: column;">
+<figure style="display: flex; justify-content: left; flex-direction: column;">
 
 <a href="https://github.com/LBBusser/point_e_team10/">
   <img src="/images/projects/chairs.png" alt="LEX" style="width: 75.00%; height: auto;"> 
