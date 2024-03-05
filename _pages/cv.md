@@ -38,6 +38,32 @@ Selected Projects
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
 <figure style="display: flex; justify-content: center;">
+<a href="https://github.com/OlineRanum/3D-LEX_Controller">
+  <img src="/images/projects/Lexlab.jpg" alt="LEX" style="width: 300.00%; height: auto;"> 
+</a>
+  <figcaption style="text-align: center;">3D-LEX Laboratory.</figcaption>
+</figure>
+
+
+</td>
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
+
+<strong>3D-LEX:</strong><br>
+<a href="https://github.com/OlineRanum/3D-LEX_Controller" target="_blank">Github Repository for 3D-LEX Control System</a><br>
+<a href="https://github.com/OlineRanum/SemiAutomatic_Phonetic_Annotation" target="_blank">Github Repository for Semi-Automatic Phonetic Annotations</a><br>
+<br>
+Publication coming soon.
+</td>
+</tr>
+</table>
+
+
+
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
+<tr>
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+
+<figure style="display: flex; justify-content: center;">
 <a href="https://github.com/elidub/equiv-neural-rendering">
   <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 300.00%; height: auto;"> 
 </a>
