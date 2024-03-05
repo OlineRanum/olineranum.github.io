@@ -35,7 +35,7 @@ Selected Projects
 ======
 <table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
-<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+<td style="border: none; width: auto; padding-right: 10px;">
 
 <figure style="display: flex; justify-content: left;">
 <a href="https://github.com/OlineRanum/3D-LEX_Controller">
