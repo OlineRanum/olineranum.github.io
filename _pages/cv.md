@@ -49,8 +49,9 @@ Selected Projects
 <td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
 
 <strong>3D-LEX:</strong><br>
-<a href="https://github.com/OlineRanum/3D-LEX_Controller" target="_blank">Github Repository for 3D-LEX Control System</a><br>
-<a href="https://github.com/OlineRanum/SemiAutomatic_Phonetic_Annotation" target="_blank">Github Repository for Semi-Automatic Phonetic Annotations</a><br>
+Github Repositories for the new 3D-LEX dataset: <br>
+<a href="https://github.com/OlineRanum/3D-LEX_Controller" target="_blank">3D-LEX Control System</a><br>
+<a href="https://github.com/OlineRanum/SemiAutomatic_Phonetic_Annotation" target="_blank">Semi-Automatic Phonetic Annotations</a><br>
 <br>
 Publication coming soon.
 </td>
