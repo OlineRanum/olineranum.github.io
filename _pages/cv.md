@@ -128,6 +128,10 @@ Media
 </td>
 <td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
 
+<strong>3D-LEX:</strong><br>
+SignLab interview showcasing the 3D-LEX laboratory:<br>
+<a href="https://www.napnieuws.nl/2024/02/20/ai-voor-gebarentaal-uva-werkt-aan-een-nieuw-vertaalprogramma/" target="_blank">Napnieuws.nl (NL)</a><br>
+
 <strong>DeepSign AS:</strong><br>
 <a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no (NO)</a><br>
 <a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/" target="_blank">Argument.no (NO)</a><br>
