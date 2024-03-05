@@ -41,7 +41,7 @@ Selected Projects
 <a href="https://github.com/OlineRanum/3D-LEX_Controller">
   <img src="/images/projects/Lexlab.jpg" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
-  <figcaption style="text-align: center;">A recording session in the 3D-LEX Laboratory.</figcaption>
+  <figcaption style="text-align: left;">A recording session in the 3D-LEX Laboratory.</figcaption>
 </figure>
 
 
@@ -93,7 +93,7 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
   <img src="/images/projects/chairs.png" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
 
-  <figcaption style="text-align: center;">Prompt: 'A simple chair beside a table in a white background'.</figcaption>
+  <figcaption style="text-align: left;">Prompt: 'A simple chair beside a table in a white background'.</figcaption>
 </figure>
 
 
@@ -121,7 +121,7 @@ Media
 <a href="https://www.uio.no/om/aktuelt/arrangementer/en-ny-start-festival/student-og-grunder-hvordan-kan-din-ide-bli-til-noe-mer.html">
   <img src="/images/photos/uio.JPG" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
-  <figcaption style="text-align: center;">DeepSign at <span style="font-family: 'Brush Script MT', cursive;">En ny start - University of Oslo.</span></figcaption>
+  <figcaption style="text-align: left;">DeepSign at <span style="font-family: 'Brush Script MT', cursive;">En ny start - University of Oslo.</span></figcaption>
 </figure>
 
 
