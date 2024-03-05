@@ -93,7 +93,7 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
   <img src="/images/projects/chairs.png" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
 
-  <figcaption style="text-align: left;">Prompt: 'A simple chair beside a table in a white background'.</figcaption>
+  <figcaption style="text-align: left;">Prompt: 'A simple chair beside a table in<br>a white background'.</figcaption>
 </figure>
 
 
