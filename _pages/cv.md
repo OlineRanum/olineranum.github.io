@@ -68,7 +68,7 @@ Publication coming soon.
 <a href="https://github.com/elidub/equiv-neural-rendering">
   <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 300.00%; height: auto;"> 
 </a>
-
+  <br>
   <figcaption style="text-align: left;">Roto-translated neural scene rendering.</figcaption>
 
 </figure>
