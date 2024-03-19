@@ -68,6 +68,9 @@ Publication coming soon.
 <a href="https://github.com/elidub/equiv-neural-rendering">
   <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 300.00%; height: auto;"> 
 </a>
+
+  <figcaption style="text-align: left;">Roto-translated neural scene rendering.</figcaption>
+
 </figure>
 
 
@@ -93,6 +96,8 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 <a href="https://github.com/LBBusser/point_e_team10/">
   <img src="/images/projects/cv2_group.jpeg" alt="LEX" style="width: 75.00%; height: auto;"> 
 </a>
+
+  <figcaption style="text-align: left;">Poster presentation at University of Amsterdam.</figcaption>
 </figure>
 
 
