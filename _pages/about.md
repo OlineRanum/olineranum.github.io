@@ -13,7 +13,6 @@ redirect_from:
 
 <!-- Mountain Photo of the Month -->
 <div style="text-align: center;">
-  <h2>Current Mountain Photo:</h2>
   <img src="/images/photos/MountainFebruary.jpeg" alt="Mountain" style="width: 100%; max-width: 800px; height: auto; margin: auto;">
 </div>
 
