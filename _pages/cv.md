@@ -21,6 +21,28 @@ Selected Projects
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
 <figure style="display: flex; justify-content: left; flex-direction: column;">
+<a href="https://olineranum.github.io/whatsthepoint/" target="_blank">
+  <img src="/images/projects/one_rototrans.gif" alt="What's the Point" style="width: 75.00%; height: auto;">
+</a>
+  <figcaption style="text-align: left;">Pointing sign instances from BOBSL.</figcaption>
+</figure>
+
+</td>
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
+
+<strong><a href="https://olineranum.github.io/whatsthepoint/" target="_blank">What's the Point? — Spatial Grammar &amp; Index Resolution for Sign Language Processing</a></strong><br>
+Modular framework for spatial indexing in BSL: a pose-based index detector combined with an online entity memory that substantially improves pointing-sign recovery in CSLR without retraining the backbone.<br>
+<em>Under review</em> &nbsp;|&nbsp;
+<a href="https://olineranum.github.io/whatsthepoint/" target="_blank">Project Page</a>
+</td>
+</tr>
+</table>
+
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
+<tr>
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+
+<figure style="display: flex; justify-content: left; flex-direction: column;">
 <a href="https://olineranum.github.io/GMVISR/" target="_blank">
   <img src="/images/projects/signCollect.png" alt="NGT200" style="width: 75.00%; height: auto;">
 </a>
