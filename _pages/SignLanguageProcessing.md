@@ -43,7 +43,7 @@ Most current benchmarks and models treat signing as a linear sequence of glosses
 - **Large-scale models**: scaling sign language models (Uni-Sign, SignRep, SIGN2GPT) on internet and broadcast data, analogous to LLMs in spoken NLP.
 - **Geometric and 3D representations**: using body mesh reconstruction (SMPL) and 3D hand pose (WiLoR/HaMeR) to encode spatial grammar more faithfully than 2D skeletons.
 - **Non-lexical modelling**: explicit treatment of pointing, depicting signs, and non-manual features — moving beyond lexicon-centric supervision.
-- **Community and ethics**: growing awareness of the need for deaf-led evaluation, consent in data collection, and ecologically valid training data beyond interpreted broadcasts.
+- **Community and ethics**: growing awareness of the need for deaf-led evaluation and leadership, consent in data collection, and ecologically valid training data beyond interpreted broadcasts.
 
 ---
 
