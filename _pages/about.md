@@ -125,7 +125,7 @@ I'm currently a postgraduate researcher at the Centre for Vision, Speech and Sig
     <span class="proj-title">What's the Point? Spatial Grammar &amp; Index Resolution for Sign Language Processing</span>
     <span class="proj-venue">· Under Review</span>
     <div class="proj-links">
-      <a href="https://olineranum.github.io/whatsthepoint/">Project Page</a>
+      <a href="https://olineranum.github.io/WhatsThePoint/">Project Page</a>
       <span style="color:#9ca3af;">Paper (coming soon)</span>
     </div>
   </li>
