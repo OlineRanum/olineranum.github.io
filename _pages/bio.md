@@ -4,21 +4,17 @@ title: "Research & Bio"
 permalink: /bio/
 author_profile: true
 ---
-<div style="font-size: inherit;">
 
-  <figure style="float: right; margin-left: 20px;">
-    <img src="/images/photos/family2.jpeg" alt="Family" style="width: 350px; height: auto;">
+I grew up in a bilingual household, speaking both Norwegian and Norwegian Sign Language (NTS) daily — sign language has been part of my life from early childhood. I later started learning a bit of Dutch Sign Language (NGT) and am currently learning British Sign Language (BSL, Level 1). 
 
-  </figure>
+I am a PhD researcher at the [Centre for Vision, Speech and Signal Processing (CVSSP)](https://www.surrey.ac.uk/centre-vision-speech-signal-processing), University of Surrey, supervised by Dr. Richard Bowden and Dr. Simon Hadfield. I hold a Global Talent Visa issued by UK Research and Innovation.
 
 
-<p>At the age of 4, my brother Halvor was diagnosed with a rare neurological disorder. He lost his ability to use spoken language, and our family adapted by learning to sign. As such, I grew up in a bilingual household, where we daily spoke both Norwegian and Norwegian Sign Language. </p>
+My focus centers on assistive technologies for people with minority needs and strong neurocognitive impairments. More broadly, I am interested in the development of warm AI — technologies designed not only for performance, but for human connection and benefit — and in how advances in machine learning can be translated into tools that support communities whose needs are often overlooked by mainstream technological development.
 
-<p>Through his fight for inclusion, my brother has taught me about accessibility, empowerment, and the importance of community. However, his situation has also illustrated the high cost and challenges faced when one is unable to access information and services in their surroundings. Advancements in AI offers to provide my brother and those facing similar challenges with tools that can profoundly transform the accessibility of opportunities, leading to a more inclusive and fully realized experience of life.</p>
+In my current work, I research sign language processing at the intersection of computer vision, sequence modelling, and sign language linguistics. While intersecting with potential benefits for d/Deaf communities, this work also holds broader potential for the wider sign language ecosystem, including individuals with neurocognitive or language-related differences who rely on visual communication to varying degrees. I am particularly interested in non-lexical sign classes, productive constructions, and the grammatical use of space — aspects of signed communication that extend beyond what can be captured in a traditional lexicon. Current work explores Sign Language Processing, Recognition, and Translation, with the goal of building models capable of capturing the full expressive range of signed communication.
 
-<p>Warm AI is the pursuit of technologies that assist people living under adverse social conditions. A prime example is sign language processing (SLP), which automates interpretations between d/Deaf and hearing communities. My work, while focusing on what could be considered a prime example of warm AI, is part of a larger purpose centered on improving societal structures for accessibility. </p>
 
-<p>Currently, I'm pursuing a Master's degree in Artificial Intelligence at the University of Amsterdam, where I am in the process of writing my thesis. This project explores methods for increasing 3D-awareness in neural sign representations, by conditioning networks on lingustic structures and grounding representations in a geometry corresponding to the inherent visual modality of sign languages.</p>
+Prior to my PhD, I completed an MSc in Artificial Intelligence at the University of Amsterdam (Cum Laude, ELLIS Honours). My thesis — *3D Awareness, Geometry & Linguistics in Neural Sign Language Representations* — received a grade of 9.5 and was awarded the FNWI Faculty of Science Master's Thesis Prize 2025 and the Amsterdam AI Thesis Award 2024. During the MSc I was affiliated with the [SignLab Amsterdam](https://www.signlab-amsterdam.nl/) and the [AMLab](https://amlab.science.uva.nl/), and spent a research visit at Universitat Pompeu Fabra, Barcelona.
 
-<p>Before pursuing a degree in AI, I founded DeepSign AS, a start-up comprised of an international team of six researchers targeting sign language technologies. This venture received support and funding from the Research Council of Norway in 2021. My academic background is rooted in physics and astronomy, having completed a bachelor's degree at the University of Oslo. I furthered my education with master's studies at the University of Amsterdam, where I undertook a year of studies on gravitational waves and astroparticle physics at the GRAPPA Institute. Additionally, I studied international relations for a brief period, focusing on human rights, international law, economics, and organization.</p>
-</div>
+My academic background is rooted in physics and astronomy. I completed a BSc at the University of Oslo and carried out research internships at CERN (AEgIS Group, Geneva) and Lawrence Berkeley National Laboratory (Nuclear Data Group, Berkeley). I also studied briefly at UC Berkeley and Stellenbosch University. Between my BSc and MSc, I co-founded [DeepSign AS](https://prosjektbanken.forskningsradet.no/project/FORISS/327456), a sign language technology start-up funded by the Research Council of Norway, and BliFlink, a non-profit online tutoring platform.

@@ -1,18 +1,47 @@
-- title: "Started new job as a researcher at SignLab Amsterdam, University of Amsterdam'"
+- title: "Awarded the FNWI Faculty of Science Master's Thesis Prize 2025 — '3D Awareness, Geometry & Linguistics in Neural Sign Language Representations'"
+  date: "2025-10-01"
+  url:
+
+- title: "Started PhD at CVSSP, University of Surrey, on Global Talent Visa (Exceptional Promise)"
+  date: "2025-09-01"
+  url:
+
+- title: "Received the Amsterdam AI Thesis Award for best AI thesis in Amsterdam"
+  date: "2024-12-01"
+  url: "https://www.amsterdamai.com/events/Amsterdam%20AI%20Thesis%20Awards"
+
+- title: "Started as researcher at SignLab Amsterdam, University of Amsterdam"
   date: "2024-09-01"
-- title: "Graduated with a Master’s in AI, earning Cum Laude and ELLIS Honours. Thesis, ‘3D Awareness, Geometry & Linguistics in Neural Sign Language Representations,’ awarded GP of 9.5."
+  url:
+
+- title: "Graduated MSc AI with Cum Laude and ELLIS Honours — Thesis GP 9.5"
   date: "2024-08-31"
-- title: "NGT200: Geometric Multi-View Isolated Sign Recognition Accepted for ICML 2024 Workshop: Geometry-grounded Representation Learning and Generative Modeling"
+  url: "https://scripties.uba.uva.nl/search?id=record_55278"
+
+- title: "NGT200: Geometric Multi-View Isolated Sign Recognition accepted at ICML 2024 Workshop on Geometry-grounded Representation Learning"
   date: "2024-06-19"
-- title: "3D-LEX Paper Published at Proceedings of the LREC-COLING 2024 11th Workshop on the Representation and Processing of Sign Languages"
+  url: "https://openreview.net/forum?id=idkNzTC67X"
+
+- title: "3D-LEX v1.0 published at LREC-COLING 2024 Sign Language Workshop"
   date: "2024-05-25"
-- title: "Selected for ELLIS Honours Program"
+  url: "https://aclanthology.org/2024.signlang-1.33/"
+
+- title: "Selected for ELLIS Honours Programme"
   date: "2023-12-01"
-- title: "Paper accepted for ReScience, MLRC2023"
+  url: "https://ivi.fnwi.uva.nl/ellis/2024/05/19/advancing-ai-frontiers-the-ellis-amsterdam-msc-honours-programme-2-2/"
+
+- title: "Reproducibility study of 'Joint Multisided Exposure Fairness for Recommendation' accepted at ReScience / MLRC 2023"
   date: "2023-07-31"
+  url: "https://openreview.net/forum?id=A0Sjs3IJWb-"
+
 - title: "Started MSc in AI at University of Amsterdam"
   date: "2022-09-01"
-- title: "Paper accepted for Nuclear Instruments and Methods in Physics Research Section A"
+  url:
+
+- title: "Fiber detector paper published in Nuclear Instruments and Methods in Physics Research Section A"
   date: "2022-03-01"
-- title: "DeepSign AS awarded 1M NOK from the The Research Council of Norway"
+  url: "https://doi.org/10.1016/j.nima.2021.166275"
+
+- title: "DeepSign AS awarded 1M NOK from the Research Council of Norway"
   date: "2021-06-01"
+  url: "https://prosjektbanken.forskningsradet.no/project/FORISS/327456"
