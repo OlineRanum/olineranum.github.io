@@ -10,24 +10,7 @@ redirect_from:
 {% include base_path %}
 
 
-<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
-<tr>
-<td style="border: none;">
-
-<figure style="display: flex; justify-content: center; flex-direction: column;">
-<a href="/files/CV_Ranum_Public.pdf">
-  <img src="/files/cv.png" alt="LEX" style="width: 75.00%; height: auto;">
-</a>
-</figure>
-
-</td>
-<td style="border: none; text-align: left; font-size: 20px; vertical-align: left;width: 70.00%; ">
-
-<a href="/files/CV_Ranum_Public.pdf" target="_blank">Link to full CV</a>
-
-</td>
-</tr>
-</table>
+<a href="/files/CV_Ranum_Public.pdf" target="_blank" style="font-size: 1.1em;">📄 Download CV (PDF)</a>
 
 ***
 
