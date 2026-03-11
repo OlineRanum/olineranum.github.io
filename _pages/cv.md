@@ -22,9 +22,9 @@ Selected Projects
 
 <figure style="display: flex; justify-content: left; flex-direction: column;">
 <a href="https://olineranum.github.io/whatsthepoint/" target="_blank">
-  <img src="/images/projects/one_rototrans.gif" alt="What's the Point" style="width: 75.00%; height: auto;">
+  <img src="/images/projects/whatsthepoint_frontpage.png" alt="What's the Point" style="width: 75.00%; height: auto;">
 </a>
-  <figcaption style="text-align: left;">Pointing sign instances from BOBSL.</figcaption>
+  <figcaption style="text-align: left;">Index resolution framework for BSL spatial grammar.</figcaption>
 </figure>
 
 </td>
