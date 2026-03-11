@@ -20,23 +20,44 @@ Selected Projects
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
-<figure style="display: flex; justify-content: left;">
-<a href="https://github.com/OlineRanum/3D-LEX_Controller">
-  <img src="/images/projects/Lexlab.jpg" alt="LEX" style="width: 75.00%; height: auto;"> 
+<figure style="display: flex; justify-content: left; flex-direction: column;">
+<a href="https://olineranum.github.io/GMVISR/" target="_blank">
+  <img src="/images/projects/signCollect.png" alt="NGT200" style="width: 75.00%; height: auto;">
 </a>
-  <figcaption style="text-align: left;">A recording session in the 3D-LEX Laboratory.</figcaption>
+  <figcaption style="text-align: left;">NGT200 multi-view recording setup.</figcaption>
 </figure>
-
 
 </td>
 <td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
 
-<strong>3D-LEX:</strong><br>
-Github Repositories for the new 3D-LEX dataset (under development): <br>
-<a href="https://github.com/OlineRanum/3D-LEX_Controller" target="_blank">3D-LEX Control System</a><br>
-<a href="https://github.com/OlineRanum/SemiAutomatic_Phonetic_Annotation" target="_blank">Semi-Automatic Phonetic Annotations</a><br>
-<br>
-Publication coming soon.
+<strong><a href="https://olineranum.github.io/GMVISR/" target="_blank">NGT200 — Geometric Multi-View Isolated Sign Recognition</a></strong><br>
+Multi-view benchmark for pose-based isolated sign recognition of Sign Language of the Netherlands (NGT). SE(2)-equivariant Temporal-PONITA improves recognition by 8–22% over SL-GCN baseline.<br>
+<a href="https://openreview.net/forum?id=idkNzTC67X" target="_blank">Paper (ICML 2024 Workshop)</a> &nbsp;|&nbsp;
+<a href="https://olineranum.github.io/GMVISR/" target="_blank">Project Page</a> &nbsp;|&nbsp;
+<a href="https://osf.io/5zuyd/" target="_blank">Dataset</a>
+</td>
+</tr>
+</table>
+
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
+<tr>
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+
+<figure style="display: flex; justify-content: left; flex-direction: column;">
+<a href="https://olineranum.github.io/SAPA/" target="_blank">
+  <img src="/images/projects/Lexlab.jpg" alt="3D-LEX" style="width: 75.00%; height: auto;">
+</a>
+  <figcaption style="text-align: left;">A recording session in the 3D-LEX Laboratory.</figcaption>
+</figure>
+
+</td>
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
+
+<strong><a href="https://olineranum.github.io/SAPA/" target="_blank">3D-LEX v1.0 — 3D Lexicons for ASL and NGT</a></strong><br>
+High-resolution motion capture dataset of 2,000 signs across ASL and Sign Language of the Netherlands, with semi-automatic phonetic annotation that matches or exceeds expert accuracy.<br>
+<a href="https://aclanthology.org/2024.signlang-1.33/" target="_blank">Paper (LREC-COLING 2024)</a> &nbsp;|&nbsp;
+<a href="https://olineranum.github.io/SAPA/" target="_blank">Project Page</a> &nbsp;|&nbsp;
+<a href="https://osf.io/g7u9c/?view_only=8090319e12aa4fd991d81e369a1cbd88" target="_blank">Dataset</a>
 </td>
 </tr>
 </table>
