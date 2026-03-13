@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <h2 class="archive__subtitle">Publications</h2>
+<div id="publications-list">
 {% capture written_year %}'None'{% endcapture %}
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -79,3 +80,58 @@ document.addEventListener('DOMContentLoaded', function() {
   {% endif %}
   {% include archive-single.html %}
 {% endfor %}
+</div>
+<div id="pub-pagination" style="display:none; margin-top: 0.75em; align-items: center; gap: 0.75em;">
+  <a id="pub-prev" href="#" style="text-decoration:none; color:inherit; opacity:0.4; pointer-events:none;">&#8592; Newer</a>
+  <span id="pub-page-info" style="font-size: 0.85em; color: #666;"></span>
+  <a id="pub-next" href="#">Older &#8594;</a>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var ITEMS_PER_PAGE = 3;
+  var currentPage = 0;
+  var articles = Array.prototype.slice.call(document.querySelectorAll('#publications-list .archive__item'));
+  var h3s = Array.prototype.slice.call(document.querySelectorAll('#publications-list h3'));
+  var totalPages = Math.ceil(articles.length / ITEMS_PER_PAGE);
+
+  function render() {
+    var start = currentPage * ITEMS_PER_PAGE;
+    articles.forEach(function(el, i) {
+      el.style.display = (i >= start && i < start + ITEMS_PER_PAGE) ? '' : 'none';
+    });
+    h3s.forEach(function(h3) {
+      var show = false;
+      var sibling = h3.nextElementSibling;
+      while (sibling && sibling.tagName !== 'H3') {
+        if (sibling.classList.contains('archive__item') && sibling.style.display !== 'none') {
+          show = true; break;
+        }
+        sibling = sibling.nextElementSibling;
+      }
+      h3.style.display = show ? '' : 'none';
+    });
+    document.getElementById('pub-page-info').textContent = (currentPage + 1) + ' / ' + totalPages;
+    var prev = document.getElementById('pub-prev');
+    var next = document.getElementById('pub-next');
+    prev.style.opacity = currentPage === 0 ? '0.4' : '1';
+    prev.style.pointerEvents = currentPage === 0 ? 'none' : 'auto';
+    next.style.opacity = currentPage === totalPages - 1 ? '0.4' : '1';
+    next.style.pointerEvents = currentPage === totalPages - 1 ? 'none' : 'auto';
+  }
+
+  if (totalPages > 1) {
+    document.getElementById('pub-pagination').style.display = 'flex';
+  }
+
+  document.getElementById('pub-prev').addEventListener('click', function(e) {
+    e.preventDefault();
+    if (currentPage > 0) { currentPage--; render(); }
+  });
+  document.getElementById('pub-next').addEventListener('click', function(e) {
+    e.preventDefault();
+    if (currentPage < totalPages - 1) { currentPage++; render(); }
+  });
+
+  render();
+});
+</script>

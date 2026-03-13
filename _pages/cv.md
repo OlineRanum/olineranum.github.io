@@ -16,6 +16,8 @@ redirect_from:
 
 Selected Projects
 ======
+<div id="projects-list">
+<div class="project-item">
 <table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
@@ -37,7 +39,8 @@ Modular framework for spatial indexing in BSL: a pose-based index detector combi
 </td>
 </tr>
 </table>
-
+</div>
+<div class="project-item">
 <table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
@@ -60,7 +63,8 @@ Multi-view benchmark for pose-based isolated sign recognition of Sign Language o
 </td>
 </tr>
 </table>
-
+</div>
+<div class="project-item">
 <table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
@@ -83,9 +87,8 @@ High-resolution motion capture dataset of 2,000 signs across ASL and Sign Langua
 </td>
 </tr>
 </table>
-
-
-
+</div>
+<div class="project-item">
 <table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
@@ -108,8 +111,8 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 </td>
 </tr>
 </table>
-
-
+</div>
+<div class="project-item">
 <table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
@@ -129,12 +132,57 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 
 <strong>Indoor scene generation using Point-E and Training Free Layout Control:</strong><br>
 <a href="https://github.com/LBBusser/point_e_team10/" target="_blank">Github Repository</a><br>
-We present framework for extending point cloud diffusion models to accomodate indoor scene generations directly from text prompts. 
+We present framework for extending point cloud diffusion models to accomodate indoor scene generations directly from text prompts.
 
 
 </td>
 </tr>
 </table>
+</div>
+</div>
+
+<div id="projects-pagination" style="display:none; margin-top: 0.75em; align-items: center; gap: 0.75em;">
+  <a id="proj-prev" href="#" style="text-decoration:none; color:inherit; opacity:0.4; pointer-events:none;">&#8592; Newer</a>
+  <span id="proj-page-info" style="font-size: 0.85em; color: #666;"></span>
+  <a id="proj-next" href="#">Older &#8594;</a>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var ITEMS_PER_PAGE = 3;
+  var currentPage = 0;
+  var items = Array.prototype.slice.call(document.querySelectorAll('#projects-list .project-item'));
+  var totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
+
+  function render() {
+    var start = currentPage * ITEMS_PER_PAGE;
+    items.forEach(function(el, i) {
+      el.style.display = (i >= start && i < start + ITEMS_PER_PAGE) ? '' : 'none';
+    });
+    document.getElementById('proj-page-info').textContent = (currentPage + 1) + ' / ' + totalPages;
+    var prev = document.getElementById('proj-prev');
+    var next = document.getElementById('proj-next');
+    prev.style.opacity = currentPage === 0 ? '0.4' : '1';
+    prev.style.pointerEvents = currentPage === 0 ? 'none' : 'auto';
+    next.style.opacity = currentPage === totalPages - 1 ? '0.4' : '1';
+    next.style.pointerEvents = currentPage === totalPages - 1 ? 'none' : 'auto';
+  }
+
+  if (totalPages > 1) {
+    document.getElementById('projects-pagination').style.display = 'flex';
+  }
+
+  document.getElementById('proj-prev').addEventListener('click', function(e) {
+    e.preventDefault();
+    if (currentPage > 0) { currentPage--; render(); }
+  });
+  document.getElementById('proj-next').addEventListener('click', function(e) {
+    e.preventDefault();
+    if (currentPage < totalPages - 1) { currentPage++; render(); }
+  });
+
+  render();
+});
+</script>
 
 ***
 
