@@ -122,15 +122,6 @@ I'm currently a postgraduate researcher at the Centre for Vision, Speech and Sig
 
 <ul class="proj-list">
   <li>
-    <span class="proj-title">Seeing Space: Directional Verbs and Topographic Placement</span>
-    <span class="proj-venue">· Active Development</span>
-    <div class="proj-links">
-      <a href="https://olineranum.github.io/seeingspace/">Project Page</a>
-      <span style="color:#9ca3af;">Paper (in preparation)</span>
-    </div>
-  </li>
-
-  <li>
     <span class="proj-title">What's the Point? Spatial Grammar &amp; Index Resolution for Sign Language Processing</span>
     <span class="proj-venue">· Under Review</span>
     <div class="proj-links">
