@@ -25,42 +25,47 @@ redirect_from:
     </li>
   {% endfor %}
 </ul>
-<div id="news-pagination" style="margin-top: 0.5em; display: flex; align-items: center; gap: 0.5em;">
-  <button id="news-prev" onclick="newsPage(-1)" style="padding: 0.25em 0.75em; cursor: pointer;">&#8592; Newer</button>
-  <span id="news-page-info" style="font-size: 0.9em; color: #666;"></span>
-  <button id="news-next" onclick="newsPage(1)" style="padding: 0.25em 0.75em; cursor: pointer;">Older &#8594;</button>
+<div id="news-pagination" style="display:none; margin-top: 0.75em; align-items: center; gap: 0.75em;">
+  <a id="news-prev" href="#" style="text-decoration:none; color:inherit; opacity:0.4; pointer-events:none;">&#8592; Newer</a>
+  <span id="news-page-info" style="font-size: 0.85em; color: #666;"></span>
+  <a id="news-next" href="#">Older &#8594;</a>
 </div>
 <script>
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   var ITEMS_PER_PAGE = 10;
   var currentPage = 0;
-  var items = document.querySelectorAll('#news-list .news-item');
-  var total = items.length;
-  var totalPages = Math.ceil(total / ITEMS_PER_PAGE);
+  var items = Array.prototype.slice.call(document.querySelectorAll('#news-list .news-item'));
+  var totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
 
   function render() {
     var start = currentPage * ITEMS_PER_PAGE;
-    var end = start + ITEMS_PER_PAGE;
     items.forEach(function(el, i) {
-      el.style.display = (i >= start && i < end) ? '' : 'none';
+      el.style.display = (i >= start && i < start + ITEMS_PER_PAGE) ? '' : 'none';
     });
-    document.getElementById('news-page-info').textContent =
-      'Page ' + (currentPage + 1) + ' of ' + totalPages;
-    document.getElementById('news-prev').disabled = currentPage === 0;
-    document.getElementById('news-next').disabled = currentPage === totalPages - 1;
-    // hide pagination entirely if everything fits on one page
-    document.getElementById('news-pagination').style.display =
-      totalPages <= 1 ? 'none' : 'flex';
+    document.getElementById('news-page-info').textContent = (currentPage + 1) + ' / ' + totalPages;
+    var prev = document.getElementById('news-prev');
+    var next = document.getElementById('news-next');
+    prev.style.opacity = currentPage === 0 ? '0.4' : '1';
+    prev.style.pointerEvents = currentPage === 0 ? 'none' : 'auto';
+    next.style.opacity = currentPage === totalPages - 1 ? '0.4' : '1';
+    next.style.pointerEvents = currentPage === totalPages - 1 ? 'none' : 'auto';
   }
 
-  window.newsPage = function(dir) {
-    currentPage = Math.max(0, Math.min(totalPages - 1, currentPage + dir));
-    render();
-    document.getElementById('news-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+  if (totalPages > 1) {
+    document.getElementById('news-pagination').style.display = 'flex';
+  }
+
+  document.getElementById('news-prev').addEventListener('click', function(e) {
+    e.preventDefault();
+    if (currentPage > 0) { currentPage--; render(); }
+  });
+  document.getElementById('news-next').addEventListener('click', function(e) {
+    e.preventDefault();
+    if (currentPage < totalPages - 1) { currentPage++; render(); }
+  });
 
   render();
-})();
+});
 </script>
 
 
