@@ -12,9 +12,9 @@ redirect_from:
 
 <!-- News items from small_news.yml -->
 <h2 class="archive__subtitle">News</h2>
-<ul style="list-style-type: disc; padding-left: 1.5em; line-height: 2;">
+<ul id="news-list" style="list-style-type: disc; padding-left: 1.5em; line-height: 2;">
   {% for item in site.data.small_news %}
-    <li>
+    <li class="news-item">
       <span style="color: #666; font-size: 0.9em;">{{ item.date }}</span>
       &nbsp;—&nbsp;
       {% if item.url and item.url != "" %}
@@ -25,6 +25,43 @@ redirect_from:
     </li>
   {% endfor %}
 </ul>
+<div id="news-pagination" style="margin-top: 0.5em; display: flex; align-items: center; gap: 0.5em;">
+  <button id="news-prev" onclick="newsPage(-1)" style="padding: 0.25em 0.75em; cursor: pointer;">&#8592; Newer</button>
+  <span id="news-page-info" style="font-size: 0.9em; color: #666;"></span>
+  <button id="news-next" onclick="newsPage(1)" style="padding: 0.25em 0.75em; cursor: pointer;">Older &#8594;</button>
+</div>
+<script>
+(function() {
+  var ITEMS_PER_PAGE = 10;
+  var currentPage = 0;
+  var items = document.querySelectorAll('#news-list .news-item');
+  var total = items.length;
+  var totalPages = Math.ceil(total / ITEMS_PER_PAGE);
+
+  function render() {
+    var start = currentPage * ITEMS_PER_PAGE;
+    var end = start + ITEMS_PER_PAGE;
+    items.forEach(function(el, i) {
+      el.style.display = (i >= start && i < end) ? '' : 'none';
+    });
+    document.getElementById('news-page-info').textContent =
+      'Page ' + (currentPage + 1) + ' of ' + totalPages;
+    document.getElementById('news-prev').disabled = currentPage === 0;
+    document.getElementById('news-next').disabled = currentPage === totalPages - 1;
+    // hide pagination entirely if everything fits on one page
+    document.getElementById('news-pagination').style.display =
+      totalPages <= 1 ? 'none' : 'flex';
+  }
+
+  window.newsPage = function(dir) {
+    currentPage = Math.max(0, Math.min(totalPages - 1, currentPage + dir));
+    render();
+    document.getElementById('news-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  render();
+})();
+</script>
 
 
 <h2 class="archive__subtitle">Publications</h2>
