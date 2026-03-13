@@ -26,10 +26,10 @@ Seeing Space<br>
 </td>
 <td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
 
-<strong><a href="https://olineranum.github.io/seeingspace/" target="_blank">Seeing Space — Directional Verbs and Topographic Placement</a></strong><br>
+<strong><a href="https://olineranum.github.io/SeeingSpace/" target="_blank">Seeing Space — Directional Verbs and Topographic Placement</a></strong><br>
 Computational toolkit for spatial and productive constructions in sign languages: directional verb detection with grammatical-person labelling and a learned pose-based placement module for pronominal indexing.<br>
 <em>Active Development</em> &nbsp;|&nbsp;
-<a href="https://olineranum.github.io/seeingspace/" target="_blank">Project Page</a> <span style="color:#9ca3af; font-size:0.88em;">(Coming soon)</span>
+<a href="https://olineranum.github.io/SeeingSpace/" target="_blank">Project Page</a> <span style="color:#9ca3af; font-size:0.88em;">(Coming soon)</span>
 
 </td>
 </tr>
