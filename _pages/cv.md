@@ -219,16 +219,31 @@ Media
 
 
 </td>
-<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
+<td style="border: none; text-align: left; font-size: 15px; vertical-align: top; width: 70.00%;">
 
+<div style="columns: 2; column-gap: 2em; column-rule: 1px solid #e5e7eb;">
+
+<div style="break-inside: avoid; margin-bottom: 0.9em;">
+<strong>Podcast:</strong><br>
+<a href="https://membership.echobox.radio/shows/talk-that-science?episode=35" target="_blank">Talk That Science #35 — AI for Sign Language</a><br>
+<span style="color:#6b7280; font-size:0.88em;">Echobox Radio · June 2025</span>
+</div>
+
+<div style="break-inside: avoid; margin-bottom: 0.9em;">
 <strong>3D-LEX:</strong><br>
-<a href="https://www.napnieuws.nl/2024/02/20/ai-voor-gebarentaal-uva-werkt-aan-een-nieuw-vertaalprogramma/" target="_blank">Napnieuws.nl (NL)</a>, SignLab interview showcasing the 3D-LEX laboratory<br><br>
+<a href="https://www.napnieuws.nl/2024/02/20/ai-voor-gebarentaal-uva-werkt-aan-een-nieuw-vertaalprogramma/" target="_blank">Napnieuws.nl (NL)</a><br>
+<span style="color:#6b7280; font-size:0.88em;">SignLab interview, 3D-LEX laboratory</span>
+</div>
 
+<div style="break-inside: avoid; margin-bottom: 0.9em;">
 <strong>DeepSign AS:</strong><br>
 <a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html" target="_blank">Titan.uio.no (NO)</a><br>
 <a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/" target="_blank">Argument.no (NO)</a><br>
-<a href="https://ace-incubator.nl/cohort-fall-2021/" target="_blank">Ace Incubator 1</a>, <a href="https://ace-incubator.nl/celebrating-graduation-companies/" target="_blank">Ace Incubator 2 COHORT FALL ’21</a><br>
-<a href="https://prosjektbanken.forskningsradet.no/en/project/FORISS/327456?Kilde=FORISS&distribution=Ar&chart=bar&calcType=funding&Sprak=no&sortBy=date&sortOrder=desc&resultCount=30&offset=90&ProgAkt.3=FORNY20-FORNY2020" target="_blank">Research Council of Norway</a><br>
+<a href="https://ace-incubator.nl/cohort-fall-2021/" target="_blank">Ace Incubator 1</a>, <a href="https://ace-incubator.nl/celebrating-graduation-companies/" target="_blank">Ace Incubator 2 ‘21</a><br>
+<a href="https://prosjektbanken.forskningsradet.no/en/project/FORISS/327456?Kilde=FORISS&distribution=Ar&chart=bar&calcType=funding&Sprak=no&sortBy=date&sortOrder=desc&resultCount=30&offset=90&ProgAkt.3=FORNY20-FORNY2020" target="_blank">Research Council of Norway</a>
+</div>
+
+</div>
 
 </td>
 </tr>
