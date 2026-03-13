@@ -20,6 +20,24 @@ Selected Projects
 <div class="project-item">
 <table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle; font-size: 1.05em; font-weight: 600; color: #1e293b; line-height: 1.4;">
+Seeing Space<br>
+<span style="font-weight: 400; font-size: 0.88em; color: #64748b;">Spatial grammar toolkit</span>
+</td>
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
+
+<strong><a href="https://olineranum.github.io/seeingspace/" target="_blank">Seeing Space — Directional Verbs and Topographic Placement</a></strong><br>
+Computational toolkit for spatial and productive constructions in sign languages: directional verb detection with grammatical-person labelling and a learned pose-based placement module for pronominal indexing.<br>
+<em>Active Development</em> &nbsp;|&nbsp;
+<a href="https://olineranum.github.io/seeingspace/" target="_blank">Project Page</a> <span style="color:#9ca3af; font-size:0.88em;">(Coming soon)</span>
+
+</td>
+</tr>
+</table>
+</div>
+<div class="project-item">
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
+<tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
 <figure style="display: flex; justify-content: left; flex-direction: column;">
@@ -35,7 +53,7 @@ Selected Projects
 <strong><a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">What's the Point? — Spatial Grammar &amp; Index Resolution for Sign Language Processing</a></strong><br>
 Modular framework for spatial indexing in BSL: a pose-based index detector combined with an online entity memory that substantially improves pointing-sign recovery in CSLR without retraining the backbone.<br>
 <em>Under review</em> &nbsp;|&nbsp;
-<a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">Project Page</a>
+<a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">Project Page</a> <span style="color:#9ca3af; font-size:0.88em;">(Coming soon)</span>
 </td>
 </tr>
 </table>
