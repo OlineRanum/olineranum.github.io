@@ -3,6 +3,7 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+description: "CV of Oline Ranum — PhD researcher in Sign Language Processing at the University of Surrey. Publications, projects, and academic background."
 redirect_from:
   - /resume
 ---
@@ -113,7 +114,7 @@ High-resolution motion capture dataset of 2,000 signs across ASL and Sign Langua
 
 <figure style="display: flex; justify-content: center;">
 <a href="https://github.com/elidub/equiv-neural-rendering">
-  <img src="/images/projects/one_rototrans.gif" alt="LEX" style="width: 300.00%; height: auto;"> 
+  <img src="/images/projects/one_rototrans.gif" alt="SE(3)-equivariant neural rendering — roto-translation transformation" style="width: 300.00%; height: auto;"> 
 </a>
 </figure>
 
@@ -138,7 +139,7 @@ Equivariant neural rendering is a complex task that builds upon geometric deep l
 <figure style="display: flex; justify-content: left; flex-direction: column;">
 
 <a href="https://github.com/LBBusser/point_e_team10/">
-  <img src="/images/projects/cv2_group.jpeg" alt="LEX" style="width: 75.00%; height: auto;"> 
+  <img src="/images/projects/cv2_group.jpeg" alt="Indoor scene generation with Point-E — poster presentation at University of Amsterdam" style="width: 75.00%; height: auto;"> 
 </a>
 
   <figcaption style="text-align: left;">Poster presentation at University of Amsterdam.</figcaption>
@@ -212,7 +213,7 @@ Media
 
 <figure style="display: flex; justify-content: center; flex-direction: column;">
 <a href="https://www.uio.no/om/aktuelt/arrangementer/en-ny-start-festival/student-og-grunder-hvordan-kan-din-ide-bli-til-noe-mer.html">
-  <img src="/images/photos/uio.JPG" alt="LEX" style="width: 75.00%; height: auto;"> 
+  <img src="/images/photos/uio.JPG" alt="DeepSign AS at En ny start festival, University of Oslo" style="width: 75.00%; height: auto;"> 
 </a>
   <figcaption style="text-align: left;">DeepSign at <span style="font-family: 'Brush Script MT', cursive;">En ny start - University of Oslo.</span></figcaption>
 </figure>

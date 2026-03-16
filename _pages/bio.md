@@ -3,6 +3,7 @@ layout: archive
 title: "Research & Bio"
 permalink: /bio/
 author_profile: true
+description: "Research background and biography of Oline Ranum — PhD at CVSSP Surrey, MSc AI University of Amsterdam (Cum Laude), sign language processing, geometric deep learning, and assistive technology."
 ---
 
 I grew up in a bilingual household, speaking both Norwegian and Norwegian Sign Language (NTS) daily — sign language has been part of my life from early childhood. I later started learning a bit of Dutch Sign Language (NGT) and am currently learning British Sign Language (BSL, Level 1). 

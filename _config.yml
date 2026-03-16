@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Oline Ranum"
 title_separator          : "-"
 name                     : &name "Oline Ranum"
-description              : &description "personal description"
+description              : &description "PhD researcher in Sign Language Processing at CVSSP, University of Surrey. Working on computer vision, NLP, and linguistics for sign languages."
 url                      : https://olineranum.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "OlineRanum/olineranum.github.io"
@@ -62,13 +62,17 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "web-Oline-050.jpg"  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : Oline Ranum
+  links:
+    - "https://linkedin.com/in/olineranum"
+    - "https://github.com/OlineRanum"
+    - "https://orcid.org/0000-0001-8627-6259"
+    - "https://scholar.google.com/citations?user=vv0kBWwAAAAJ&hl=en"
 
 
 # Analytics

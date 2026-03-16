@@ -1,7 +1,8 @@
 ---
 permalink: /
 title: "Oline A. Ranum"
-excerpt: "About me"
+excerpt: "PhD researcher in Sign Language Processing at CVSSP, University of Surrey. Working on computer vision, NLP, and sign language linguistics."
+description: "PhD researcher in Sign Language Processing at CVSSP, University of Surrey. Working on computer vision, NLP, and sign language linguistics."
 author_profile: true
 redirect_from:
   - /about/

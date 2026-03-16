@@ -3,6 +3,7 @@ layout: archive
 title: "Sign Language Processing"
 permalink: /SignLanguageProcessing/
 author_profile: true
+description: "An overview of Sign Language Processing (SLP) — recognition, translation, and generation of sign languages using computer vision and NLP. Covering BSL, ASL, NGT, and NTS."
 ---
 
 {% include base_path %}
