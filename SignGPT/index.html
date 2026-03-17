@@ -46,25 +46,64 @@
   </div>
 </section>
 
-<!-- ── The Data Problem ─────────────────────────────────────── -->
+<!-- ── Current state of the SLP field ───────────────────────── -->
 <section>
   <div class="container">
-    <h2>The Data Problem</h2>
-    <p>A fundamental challenge facing sign language AI is that progress is constrained not just by the scale of available data, but by how well it represents actual language use — whether it reflects the range and naturalness of real Deaf communication.</p>
+    <h2>The current state of the SLP field</h2>
+    <p>Interest in the computational modelling of sign languages has accelerated considerably over the last decade, with SLP research now regularly appearing at top-tier machine learning and computer vision conferences. The field has largely concentrated on three primary tasks — recognition, production, and translation — typically operating on video data with gloss annotations or free-text translations as supervision. Sign-to-text translation is commonly treated as a pipeline problem: recognition feeds into gloss-level representations, which are then translated to spoken language text.</p>
+    <p>More recent work has introduced gloss-free approaches that model sign-to-text mapping end-to-end, without gloss intermediaries. However, both gloss-based and gloss-free paradigms tend to prioritise mapping coarse manual features to spoken language text, often without modelling the full compositional and multimodal structure of signed communication. Text-to-sign research similarly tends to prioritise surface-level appearance and reconstruction, with limited evaluation of linguistic composition. Advancing the field requires rethinking not just the models, but the data, representations, and evaluation criteria that underpin them.</p>
+  </div>
+</section>
 
-    <h3>Existing data sources fall short</h3>
-    <p>Most sign language datasets are drawn from interpreted broadcast media or web-scraped content. Interpreted signing is produced under live broadcast constraints and differs substantially from everyday Deaf communication — it routinely involves omissions, simplifications, and restructuring relative to the spoken source. Web-scraped material raises concerns around consent, copyright, and unknown signer proficiency. Only around 15% of the BSL Corpus has been annotated at all, and broadcast captions are not verbatim representations of the signing.</p>
+<!-- ── Language representation ──────────────────────────────── -->
+<section>
+  <div class="container">
+    <h2>Language representation</h2>
+    <p>The development of SLP has been strongly shaped by the characteristics of existing datasets — which for continuous signing largely consist of interpreted broadcasts, content sourced from social media, or curated linguistic corpora. Each source carries significant limitations. Interpreted signing is produced under live broadcast constraints and differs substantially from natural Deaf communication: it routinely involves omissions, simplifications, and restructuring relative to the spoken source, and broadcast captions are not verbatim representations of what is signed. Web-sourced material raises concerns around consent, copyright, and unknown signer proficiency.</p>
+    <p>Gloss annotations — approximate word-level transcriptions of manual signs — are the dominant supervision signal in SLP, but they are both costly to produce and systematically incomplete. A single sign form can represent multiple meanings depending on context, and sociolinguistic variation means the same concept may be realised differently across signers and regions. Crucially, glosses collapse or ignore the productive constructions that are central to sign grammar: pointing, depicting signs, spatial indexing, and classifiers. Only around 15% of the BSL Corpus has been annotated at all.</p>
 
-    <h3>Gloss annotations are necessary but limiting</h3>
-    <p>Gloss annotations — approximate word-level transcriptions of manual signs — are costly, incomplete, and systematically ambiguous. A single sign can carry multiple meanings depending on context; sociolinguistic variation means the same concept may be realised differently across signers. Crucially, glosses collapse or ignore the productive constructions central to sign grammar: pointing, depicting signs, spatial indexing, and classifiers. Non-manual features — brow raises, eye gaze, mouthings, head movements, body posture — encode grammatical and prosodic meaning simultaneously across multiple articulators, yet are entirely absent from gloss-based supervision.</p>
-
-    <figure>
-      <img src="../images/blog/publications/signGPT/figure6.png" alt="Predicted non-manual articulations — lip movement, head nod, head shake, gaze, eye blink">
-      <figcaption>Predicted non-manual articulations from video: lip movement, head nods, gaze direction, and eye blinks — grammatically significant in BSL yet absent from gloss-based supervision.</figcaption>
+    <figure style="max-width:520px;margin:1.5em auto;">
+      <img src="../images/blog/publications/signGPT/figure6.png" alt="Predicted non-manual articulations — lip movement, head nods, gaze, eye blink" style="width:100%;height:auto;">
+      <figcaption>Non-manual articulations predicted from video: lip movement, head nods, gaze direction, and eye blinks. These features carry grammatical and prosodic meaning in BSL yet are absent from gloss-based supervision.</figcaption>
     </figure>
+  </div>
+</section>
 
-    <h3>Sign languages are simultaneous, not sequential</h3>
-    <p>Grammatical information in sign languages is distributed simultaneously across multiple articulators rather than encoded one unit at a time. The linear, token-based modelling paradigms inherited from spoken-language NLP are a structural mismatch for this. Standard evaluation metrics such as BLEU fail to capture the compositional and spatial structure of signing. Advancing the field requires representations that treat simultaneity, spatial grammar, and non-lexical material as first-class features — supported by naturalistic, Deaf-produced data and scalable annotation tooling.</p>
+<!-- ── Simultaneity and linear modelling ────────────────────── -->
+<section>
+  <div class="container">
+    <h2>Considering simultaneity, constituent order, and linear modelling paradigms</h2>
+    <p>Reliance on gloss annotations also reflects a deeper structural mismatch: sign languages are not sequentially ordered in the way spoken languages are. Grammatical relations in signing are generally less dependent on strict linear sequencing — signed grammatical structures may map onto multiple spoken-language sequences, and vice versa. The linear, token-based modelling paradigms inherited from spoken-language NLP are poorly suited to this.</p>
+    <p>Linearised intermediate representations — gloss strings or caption-aligned tokens — introduce an information bottleneck that obscures spatial grammar, productive constructions, and flexible constituent ordering. Standard evaluation metrics such as BLEU fail to capture the compositional and spatial structure of signing. Progress in SLP will likely require modelling approaches that move beyond strictly sequential assumptions towards representations capable of capturing multimodality, abstract use of space, cross-articulator temporal alignment, and inductive biases informing productive language use.</p>
+  </div>
+</section>
+
+<!-- ── Beyond the Lexicon ────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <h2>Beyond the lexicon</h2>
+    <p>A related challenge concerns non-lexical material. Non-manual signals — brow raises, eye gaze, mouthings, head movements, body posture — contribute to lexical, grammatical, prosodic, and discourse-level meanings simultaneously across multiple articulators. Despite their fundamental role in the grammar of sign languages, many SLP approaches focus primarily on coarse pose and motion, neglecting these cues entirely.</p>
+    <p>Work that does incorporate non-manual features into model inputs has demonstrated improved performance, but this remains relatively limited. Beyond non-manuals, productive constructions — depicting signs, spatial indexing, classifier constructions — encode information that is only weakly, if at all, captured in gloss-based annotations, where they are frequently reduced to coarse categories. Grammatical functions including directionality, clause type marking, and adverbial modification are conveyed through spatial and articulatory modulation rather than discrete lexical items. Without representing these dimensions, models risk prioritising lexical recognition at the expense of broader linguistic competence.</p>
+
+    <div class="fig-row" style="max-width:600px;margin:1.2em auto;">
+      <figure style="flex:1;min-width:0;">
+        <img src="../images/blog/publications/signGPT/figure1.png" alt="Sign segmentation BIO boundary predictions on MeinDGS" style="width:100%;height:auto;">
+        <figcaption>Sign segmentation: BIO boundary predictions on MeinDGS, showing over- and under-segmentation cases alongside successes.</figcaption>
+      </figure>
+      <figure style="flex:1;min-width:0;">
+        <img src="../images/blog/publications/signGPT/figure2.png" alt="VLT sign segmenter and sign spotter interface" style="width:100%;height:auto;">
+        <figcaption>The combined segmentation and spotting interface, matching segments against a sign dictionary via signer-invariant embeddings.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ── Towards real-world generalisation ────────────────────── -->
+<section>
+  <div class="container">
+    <h2>Towards real-world generalisation</h2>
+    <p>To improve real-world applicability, SLP must move towards greater use of fluent Deaf conversational data — deaf-presented, ethically sourced, and naturalistic — supported by scalable annotation tools. Progress depends not only on dataset scale, but on modelling and evaluation approaches that reflect the multimodal, spatial, and simultaneous nature of sign language. Systems must be able to handle co-articulation, signer variation, and the full range of linguistic structures present in spontaneous signing, not just the features that are easiest to extract from interpreted broadcast material.</p>
+    <p>Within this context, the SignGPT project is developing a conversational agent incorporating grounded translation pipelines, both lexicalised and productive language structures, and attention to linguistic diversity — factors essential for systems that generalise beyond constrained benchmarks toward real-world interaction.</p>
   </div>
 </section>
 
@@ -72,21 +111,11 @@
 <section>
   <div class="container">
     <h2>Visual Language Toolkit</h2>
-    <p>To address these challenges, the project is developing the Visual Language Toolkit (VLT) — a modular suite of semi-automatic annotation tools designed to scale corpus development without sacrificing linguistic principles. The VLT is under active early development and will be released as open-source software. Current tools include sign segmentation, sign spotting, non-manual feature tracking, and 3D signer reconstruction, all designed for interoperability with ELAN annotation files.</p>
+    <p>To address these challenges, the project is developing the <strong>Visual Language Toolkit (VLT)</strong> — a modular suite of semi-automatic annotation tools designed to scale corpus development without sacrificing linguistic principles. The VLT is under active early development and will be released as open-source software, with a central design principle of interoperability with established annotation platforms such as ELAN. Early tools cover sign segmentation, sign spotting, non-manual feature tracking, and 3D signer reconstruction.</p>
+    <p>Beyond annotation, the VLT aims to support the full sign language processing pipeline — providing interfaces between visual representations, symbolic linguistic units, and large language models. Although developed primarily for sign languages, the toolkit is explicitly designed to generalise to other forms of visual and multimodal communication. Selected capabilities will be made accessible through web-based demonstrations and applications, including dictionary search tools, sign language learning and assessment tools, and conversational interfaces. The VLT is preliminary and its scope and tools will evolve as the project develops.</p>
 
-    <div class="fig-row">
-      <figure>
-        <img src="../images/blog/publications/signGPT/figure1.png" alt="Sign segmentation BIO boundary predictions on MeinDGS">
-        <figcaption>Sign segmentation: BIO boundary predictions on the MeinDGS dataset. The model achieves up to 85% boundary accuracy using self-attention over body and hand features.</figcaption>
-      </figure>
-      <figure>
-        <img src="../images/blog/publications/signGPT/figure2.png" alt="VLT sign segmenter and sign spotter interface">
-        <figcaption>Sign spotting interface: segments are compared against a reference dictionary using SignRep embeddings — signer-invariant representations learned from skeletal pose.</figcaption>
-      </figure>
-    </div>
-
-    <figure style="max-width:480px;margin-left:auto;margin-right:auto;">
-      <img src="../images/blog/publications/signGPT/figure5.png" alt="Signer re-skinning using SMPL body meshes and Guava Gaussian splatting">
+    <figure style="max-width:480px;margin:1.5em auto;">
+      <img src="../images/blog/publications/signGPT/figure5.png" alt="Signer re-skinning using SMPL body meshes and Gaussian splatting" style="width:100%;height:auto;">
       <figcaption>Signer anonymisation and avatar driving via SMPL mesh reconstruction and Gaussian splatting — enabling privacy-preserving dataset expansion and photorealistic sign language production.</figcaption>
     </figure>
   </div>
@@ -96,7 +125,7 @@
 <section>
   <div class="container">
     <h2>Publications</h2>
-    <p>Brown, M., <strong>Ranum, O.</strong>, Fish, E., Proctor, H., Woll, B., Bowden, R., &amp; Cormier, K. (2026). <em>SignGPT and the Visual Language Toolkit.</em> 12th Workshop on the Representation and Processing of Sign Languages: Language in Motion, LREC 2026, Palma de Mallorca, Spain. &nbsp;<a href="../images/blog/publications/signGPT/SignGPTpaper.pdf" target="_blank">📄 Preprint (PDF)</a></p>
+    <p>Brown, M., <strong>Ranum, O.</strong>, Fish, E., Proctor, H., Woll, B., Bowden, R., &amp; Cormier, K. (2026). <em>SignGPT and the Visual Language Toolkit.</em> 12th Workshop on the Representation and Processing of Sign Languages: Language in Motion, LREC 2026, Palma de Mallorca, Spain. &nbsp;<a href="/files/SignGPTpaper.pdf" target="_blank">📄 Preprint (PDF)</a></p>
   </div>
 </section>
 
