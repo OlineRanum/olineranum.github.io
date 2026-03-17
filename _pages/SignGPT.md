@@ -1,115 +1,83 @@
 ---
 layout: archive
-title: "SignGPT and the Visual Language Toolkit"
+title: "SignGPT"
 permalink: /SignGPT/
 author_profile: true
-description: "SignGPT and the Visual Language Toolkit — Oline Ranum's contribution to the LREC 2026 Sign Language Workshop paper on linguistically grounded BSL processing."
+description: "SignGPT — Building Generative Predictive Transformers for Sign Language. A UKRI EPSRC Programme Grant developing bidirectional BSL–English AI translation and the Visual Language Toolkit."
 ---
 
 {% include base_path %}
 
-<table style="border-collapse: collapse; border: none; width: 100%; margin-bottom: 1.5em;" border="0">
+<table style="border-collapse: collapse; border: none; width: 100%; margin-bottom: 0.5em;" border="0">
 <tr>
-<td style="border: none; width: 140px; vertical-align: middle; padding-right: 20px;">
-<img src="/images/blog/publications/signGPT/projectlogo.png" alt="SignGPT project logo" style="width: 130px; height: auto;">
+<td style="border: none; width: 120px; vertical-align: middle; padding-right: 20px;">
+<img src="/images/blog/publications/signGPT/projectlogo.png" alt="SignGPT project logo" style="width: 110px; height: auto;">
 </td>
 <td style="border: none; vertical-align: middle;">
-<span style="font-size: 0.95em; color: #444;">
-<strong>Brown, M., Ranum, O., Fish, E., Proctor, H., Woll, B., Bowden, R., Cormier, K.</strong><br>
-12th Workshop on the Representation and Processing of Sign Languages: Language in Motion<br>
-<em>LREC 2026 · Palma de Mallorca, Spain · 16 May 2026</em>
-</span>
+<span style="font-size: 1.05em; font-weight: 600;">Building Generative Predictive Transformers for Sign Language</span><br>
+<span style="font-size: 0.9em; color: #555;">UKRI EPSRC Programme Grant &nbsp;·&nbsp; University of Surrey, University of Oxford, University College London &nbsp;·&nbsp; 2025–2031</span>
 </td>
 </tr>
 </table>
 
-[📄 Paper (PDF)](/images/blog/publications/signGPT/SignGPTpaper.pdf){:target="_blank"} &nbsp;·&nbsp; [🌐 SignGPT Project](https://sites.google.com/view/signgpt){:target="_blank"}
+[📄 Preprint (PDF)](/images/blog/publications/signGPT/SignGPTpaper.pdf){:target="_blank"} &nbsp;·&nbsp; [🌐 SignGPT Project](https://sites.google.com/view/signgpt){:target="_blank"}
 
 ---
 
 ## Overview
 
-SignGPT is a UKRI EPSRC Programme Grant (University of Surrey, University of Oxford, and University College London) building the first generative predictive transformer for bidirectional translation between British Sign Language (BSL) and English. A central component of this effort is the **Visual Language Toolkit (VLT)** — a modular suite of semi-automatic annotation and recognition tools designed to scale linguistically grounded BSL corpora without sacrificing linguistic validity.
+SignGPT is a UKRI EPSRC Programme Grant bringing together specialists in machine vision, generative AI, and sign language linguistics from the University of Surrey, University of Oxford, and University College London, with direct involvement from Deaf organisations and community partners.
 
-This paper presents both the motivation for the VLT and its current capabilities, covering sign segmentation, sign spotting, non-manual feature tracking, and 3D signer reconstruction.
+The project's long-term vision is to build the first conversational sign language model for British Sign Language — analogous to what large language models have done for written text — enabling seamless, bidirectional communication between signing and hearing individuals. Unlike prior systems that treat signing as a derivative of spoken language, SignGPT treats BSL as deserving its own generative model, with the full complexity of signing built in from the ground up: spatial grammar, non-manual features, productive constructions, and signer variation.
 
 ---
 
-## The Data Problem in Sign Language Processing (Section 2)
+## The Problem
 
-My contribution to this paper is Section 2, which frames the core linguistic and data challenges that motivated the VLT's design. The argument is that progress in Sign Language Processing (SLP) is fundamentally constrained not just by the scale of available data, but by its **ecological validity** — whether the data actually reflects how sign languages are used in everyday, naturalistic communication.
+Progress in Sign Language Processing (SLP) is constrained not just by the scale of available data, but by its **ecological validity** — whether it actually reflects how sign languages are used in real communication.
 
-### Why existing data falls short
+**Current data sources fall short.** The vast majority of SLP datasets are drawn from interpreted broadcast media or web-scraped content. Interpreted signing is produced under live broadcast constraints and differs substantially from everyday Deaf communication — it routinely involves omissions, simplifications, and restructuring relative to the spoken source. Web-scraped material raises concerns around consent, copyright, and unknown signer proficiency.
 
-The vast majority of SLP datasets are built from interpreted broadcast media, social media, or captions. While these sources are scalable, they introduce systematic biases:
+**Gloss annotations are both necessary and limiting.** Glosses — approximate word-level transcriptions of manual signs — are the dominant supervision signal in SLP, but they are costly to produce and systematically incomplete. A single sign can carry multiple meanings depending on context; sociolinguistic variation means the same concept may be realised differently across signers. Crucially, glosses collapse or ignore the productive constructions that are central to sign grammar: pointing, depicting signs, spatial indexing, and classifiers. Only around 15% of the BSL Corpus has been annotated at all.
 
-- **Interpreted signing** is produced under live broadcast constraints and differs substantially from everyday Deaf communication. Interpreters routinely omit, simplify, and restructure signing relative to the spoken source, making the resulting material a poor proxy for naturalistic language.
-- **Social media and web-scraped content** raises ethical concerns around consent, copyright, and unknown signer proficiency — and captions are typically not verbatim representations of the signing.
-
-The result is that current benchmarks measure performance on data that diverges from real-world signing in ways that are rarely acknowledged in model evaluation.
-
-### Why glosses are not enough
-
-Most SLP systems use **gloss annotations** — approximate word-level transcriptions of manual signs — as the primary supervision signal. This is both useful and fundamentally limiting:
-
-- A single sign form can carry multiple meanings depending on context (polysemy), and sociolinguistic variation means the same concept may be realised differently across signers (Stamp et al., 2014).
-- Glosses collapse **productive constructions** — pointing, depicting signs, spatial indexing, classifiers — into coarse categories or ignore them entirely, even though these constructions are central to BSL grammar.
-- Roughly **60% of spontaneous BSL consists of non-lexical elements** (Fenlon et al., 2014): brow raises, eye gaze, mouthings, head movements, and body posture that interact simultaneously across multiple articulators to convey grammatical and prosodic meaning.
+**Sign languages are simultaneous and spatial, not sequential.** Roughly 60% of spontaneous BSL consists of non-lexical elements — brow raises, eye gaze, mouthings, head movements, body posture — that interact simultaneously across multiple articulators to encode grammatical and prosodic meaning. The linear, token-based modelling paradigms inherited from spoken-language NLP are a structural mismatch for this, and standard evaluation metrics like BLEU fail to capture the compositional and spatial structure of signing.
 
 <figure style="margin: 1.5em 0;">
-<img src="/images/blog/publications/signGPT/figure6.png" alt="Predicted non-manual articulations — lip movement, head nod, head shake, gaze, eye blink detection" style="width: 100%; max-width: 520px; height: auto;">
-<figcaption style="font-size: 0.88em; color: #555; margin-top: 0.4em;">Predicted non-manual articulations based on keypoints extracted from the method described in Liu et al. (2025). These features — lip movement, head nods, gaze direction, and eye blinks — are grammatically significant in BSL but absent from gloss-based supervision.</figcaption>
+<img src="/images/blog/publications/signGPT/figure6.png" alt="Predicted non-manual articulations — lip movement, head nods, gaze, and eye blink detection" style="width: 100%; max-width: 500px; height: auto;">
+<figcaption style="font-size: 0.88em; color: #555; margin-top: 0.4em;">Non-manual articulations predicted from video — lip movement, head nods, gaze direction, and eye blinks. These features are grammatically significant in BSL yet absent from gloss-based supervision.</figcaption>
 </figure>
 
-### The simultaneity problem
-
-Sign languages are not simply sequences of discrete manual signs. Grammatical information is distributed **simultaneously** across multiple articulators rather than encoded sequentially. The linear, token-based modelling paradigms inherited from spoken-language NLP are a poor structural match for this:
-
-- Signed grammatical structures may map onto multiple spoken-language sequences, and vice versa — making n-gram metrics like BLEU a poor fit for evaluation.
-- Gloss strings and caption-aligned tokens introduce an **information bottleneck** that obscures spatial grammar, productive constructions, and flexible constituent ordering.
-
-### Towards real-world generalisation
-
-Addressing these issues requires data that is fluent, naturalistic, and Deaf-produced — along with annotation tools that can scale to such data without relying on costly expert annotation at every step. This motivates the VLT's design: semi-automatic glossing tools, dense temporal segmentation, and linguistically principled evaluation methods that go beyond surface-level sign-to-text matching.
+**Evaluation remains underdeveloped.** Most benchmarks measure sign-to-gloss or sign-to-text accuracy on interpreted, broadcast-derived data. This risks training models that are well-adapted to the artefacts of broadcast interpretation rather than to real-world signing. Advancing the field requires evaluation grounded in naturalistic, Deaf-produced data with linguistically principled annotation.
 
 ---
 
-## The Visual Language Toolkit
+## Visual Language Toolkit
 
-The VLT provides practical infrastructure for the annotation and analysis described above:
+To address these challenges, the project is developing the **Visual Language Toolkit (VLT)** — a modular suite of semi-automatic annotation tools designed to scale corpus development without sacrificing linguistic principles. Early tools cover sign segmentation, sign spotting, non-manual feature tracking, and 3D signer reconstruction, all interoperable with standard annotation platforms such as ELAN.
 
-<table style="border-collapse: collapse; border: none; width: 100%;" border="0">
+<table style="border-collapse: collapse; border: none; width: 100%; margin: 1em 0;" border="0">
 <tr>
-<td style="border: none; width: 48%; vertical-align: top; padding-right: 16px;">
-
-<figure>
-<img src="/images/blog/publications/signGPT/figure1.png" alt="Sign segmentation accuracy on MeinDGS — BIO labelling showing success, over-segmentation, and under-segmentation cases" style="width: 100%; height: auto;">
-<figcaption style="font-size: 0.88em; color: #555; margin-top: 0.4em;"><strong>Segmentation tool:</strong> BIO boundary prediction on the MeinDGS dataset, including success, over-segmentation, and under-segmentation cases.</figcaption>
+<td style="border: none; width: 48%; vertical-align: top; padding-right: 14px;">
+<figure style="margin: 0;">
+<img src="/images/blog/publications/signGPT/figure1.png" alt="Sign segmentation BIO boundary predictions on MeinDGS" style="width: 100%; height: auto;">
+<figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4em;">Sign segmentation: BIO boundary predictions on the MeinDGS dataset, including over- and under-segmentation cases.</figcaption>
 </figure>
-
 </td>
-<td style="border: none; width: 48%; vertical-align: top; padding-left: 16px;">
-
-<figure>
-<img src="/images/blog/publications/signGPT/figure2.png" alt="Sign segmenter and sign spotter VLT interface — video with predicted segments and ranked candidate signs" style="width: 100%; height: auto;">
-<figcaption style="font-size: 0.88em; color: #555; margin-top: 0.4em;"><strong>Sign spotting tool:</strong> Combined segmentation and spotting interface, comparing segments against a reference dictionary using SignRep embeddings.</figcaption>
+<td style="border: none; width: 48%; vertical-align: top; padding-left: 14px;">
+<figure style="margin: 0;">
+<img src="/images/blog/publications/signGPT/figure2.png" alt="VLT sign segmenter and sign spotter interface" style="width: 100%; height: auto;">
+<figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4em;">Combined segmentation and spotting interface: sign segments compared against a reference dictionary using learned signer-invariant embeddings.</figcaption>
 </figure>
-
 </td>
 </tr>
 </table>
 
-The **segmentation tool** identifies temporal sign boundaries in continuous video using a self-attention model over body and hand features (He et al., 2025), achieving up to 85% accuracy on annotated datasets. The **sign spotting tool** builds on SignRep (Wong et al., 2025), a masked autoencoder trained on skeletal features, to embed and compare sign segments against reference dictionaries in a signer-invariant latent space.
-
-Additional tools include 3D body pose and hand reconstruction, facial landmark tracking for non-manual feature detection, and signer anonymisation via differentiable re-skinning — all designed to interoperate with ELAN annotation files and expose a Python API.
-
-<figure style="margin: 1.5em 0;">
-<img src="/images/blog/publications/signGPT/figure5.png" alt="Re-skinning a signer into a continuous sequence using SMPL body meshes and Guava Gaussian splatting" style="width: 100%; max-width: 480px; height: auto;">
-<figcaption style="font-size: 0.88em; color: #555; margin-top: 0.4em;">Signer anonymisation and avatar driving via SMPL mesh reconstruction and Gaussian splatting — enabling privacy-preserving dataset expansion and sign language production.</figcaption>
-</figure>
+The VLT is under active development. Components will be released as open-source software accessible to researchers, linguists, and Deaf communities.
 
 ---
 
-## Links
+## Publications
 
-[📄 Paper (PDF)](/images/blog/publications/signGPT/SignGPTpaper.pdf){:target="_blank"} &nbsp;·&nbsp; [🌐 SignGPT Project](https://sites.google.com/view/signgpt){:target="_blank"}
+Brown, M., **Ranum, O.**, Fish, E., Proctor, H., Woll, B., Bowden, R., Cormier, K. (2026). *SignGPT and the Visual Language Toolkit.* 12th Workshop on the Representation and Processing of Sign Languages: Language in Motion, LREC 2026, Palma de Mallorca, Spain.
+
+[📄 Preprint (PDF)](/images/blog/publications/signGPT/SignGPTpaper.pdf){:target="_blank"}
