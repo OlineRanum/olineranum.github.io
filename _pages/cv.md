@@ -21,6 +21,30 @@ Selected Projects
 <div class="project-item">
 <table style="border-collapse: collapse; border: none;width: 100%;" border="0">
 <tr>
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+
+<figure style="display: flex; justify-content: left; flex-direction: column;">
+<a href="/SignGPT/" target="_blank">
+  <img src="/images/blog/publications/signGPT/projectlogo.png" alt="SignGPT — Visual Language Toolkit for BSL" style="width: 75.00%; height: auto;">
+</a>
+  <figcaption style="text-align: left;">EPSRC Programme Grant, University of Surrey.</figcaption>
+</figure>
+
+</td>
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
+
+<strong><a href="/SignGPT/" target="_blank">SignGPT and the Visual Language Toolkit</a></strong><br>
+Linguistically grounded analysis of the data problem in Sign Language Processing: ecological validity of existing corpora, limitations of gloss-based supervision, and the case for modelling non-lexical and simultaneous features of BSL.<br>
+<a href="/images/blog/publications/signGPT/SignGPTpaper.pdf" target="_blank">Paper (LREC 2026 Sign Language Workshop)</a> &nbsp;|&nbsp;
+<a href="/SignGPT/" target="_blank">Project Page</a> &nbsp;|&nbsp;
+<a href="https://sites.google.com/view/signgpt" target="_blank">SignGPT Project</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="project-item">
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
+<tr>
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle; font-size: 1.05em; font-weight: 600; color: #1e293b; line-height: 1.4;">
 Seeing Space<br>
 <span style="font-weight: 400; font-size: 0.88em; color: #64748b;">Spatial grammar toolkit</span>
