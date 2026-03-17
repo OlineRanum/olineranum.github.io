@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SignGPT and the Visual Language Toolkit</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────── -->
+<header>
+  <div class="container">
+    <img src="../images/blog/publications/signGPT/projectlogo.png" alt="SignGPT logo" style="width:70px;height:auto;margin-bottom:1rem;">
+    <div class="venue">LREC 2026 · 12th Sign Language Workshop</div>
+    <h1>SignGPT and the Visual Language Toolkit</h1>
+    <p class="authors">
+      Matt Brown &nbsp;·&nbsp; Oline Ranum &nbsp;·&nbsp; Edward Fish &nbsp;·&nbsp;
+      Heidi Proctor &nbsp;·&nbsp; Bencie Woll &nbsp;·&nbsp; Richard Bowden &nbsp;·&nbsp; Kearsy Cormier
+    </p>
+    <p class="affiliations">University College London &amp; Centre for Vision, Speech and Signal Processing, University of Surrey</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="../images/blog/publications/signGPT/SignGPTpaper.pdf" target="_blank">
+        📄 Preprint (PDF)
+      </a>
+      <a class="btn btn-secondary" href="https://sites.google.com/view/signgpt" target="_blank">
+        🌐 SignGPT Project
+      </a>
+      <a class="btn btn-secondary" href="https://olineranum.github.io/">
+        ↩ Back
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ── Context banner ──────────────────────────────────────── -->
+<div class="context-banner">
+  <div class="container">
+    <p>
+      Sign languages are not sequences of discrete manual signs. Roughly <strong>60% of spontaneous BSL consists of non-lexical elements</strong> — brow raises, gaze, mouthings, head movements — that encode grammatical meaning across multiple articulators simultaneously. Current datasets and annotation pipelines are not built for this.
+    </p>
+  </div>
+</div>
+
+<!-- ── Abstract ────────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <h2>Abstract</h2>
+    <div class="abstract-box">
+      <p>SignGPT's Visual Language Toolkit (VLT) aims to remove fundamental barriers to large scale sign language modelling by developing data-driven, linguistically grounded methods for continuous sign language recognition. We first identify fundamental issues around the ecological validity of potential data sources (e.g. broadcast media with interpreted signing or captions, scraping of social media). We contrast these with the currently highly resource-intensive development of curated sign language corpora based on linguistic principles. The VLT addresses this scarcity of high quality sign language data by providing semi-automated glossing and other recognition tools, driving large scale corpus expansion without sacrificing linguistic principles. Unlike prior systems that rely on sparse glossing, the project integrates dense temporal annotation, non-manual and non-lexical feature tracking, and transformer-based architectures to capture the multimodal and spatial structure of signing. By aligning machine vision innovation with linguistic insights and community-embedded evaluation, SignGPT establishes a foundation for robust and extensible sign language models.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Project Overview ─────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <h2>Project Overview</h2>
+    <p>SignGPT is a UKRI EPSRC Programme Grant (2025–2031) bringing together specialists in machine vision, generative AI, and sign language linguistics from the University of Surrey, University of Oxford, and University College London, with direct involvement from Deaf organisations and community partners. The project's long-term vision is to build the first conversational sign language model for British Sign Language — analogous to what large language models have done for written text — enabling seamless, bidirectional communication between signing and hearing individuals. Unlike prior systems that treat signing as a derivative of spoken language, SignGPT treats BSL as deserving its own generative model, with the full complexity of signing built in from the ground up: spatial grammar, non-manual features, productive constructions, and signer variation.</p>
+  </div>
+</section>
+
+<!-- ── The Data Problem ─────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <h2>The Data Problem</h2>
+
+    <h3>Ecological validity of existing corpora</h3>
+    <p>Most SLP datasets are drawn from interpreted broadcast media or web-scraped content. Interpreted signing is produced under live broadcast constraints and differs substantially from everyday Deaf communication — it routinely involves omissions, simplifications, and restructuring. Web-scraped material raises concerns around consent, copyright, and unknown signer proficiency. Only around 15% of the BSL Corpus has been annotated at all.</p>
+
+    <h3>Limitations of gloss-based supervision</h3>
+    <p>Gloss annotations — approximate word-level transcriptions — are costly, incomplete, and systematically ambiguous. A single sign can carry multiple meanings depending on context; the same concept may be realised differently across signers. Crucially, glosses collapse or ignore the productive constructions central to sign grammar: pointing, depicting signs, spatial indexing, and classifiers. Non-manual features — brow raises, eye gaze, mouthings, head movements, body posture — encode grammatical and prosodic meaning simultaneously across multiple articulators, yet are entirely absent from gloss-based supervision.</p>
+
+    <figure>
+      <img src="../images/blog/publications/signGPT/figure6.png" alt="Predicted non-manual articulations — lip movement, head nod, head shake, gaze, eye blink">
+      <figcaption>Predicted non-manual articulations from video: lip movement, head nods, gaze direction, and eye blinks — grammatically significant in BSL yet absent from gloss-based supervision.</figcaption>
+    </figure>
+
+    <h3>Simultaneity and the linearity problem</h3>
+    <p>Sign languages are not sequential. Grammatical information is distributed simultaneously across multiple articulators rather than encoded one unit at a time. The linear, token-based modelling paradigms inherited from spoken-language NLP are a structural mismatch for this. Standard evaluation metrics such as BLEU fail to capture the compositional and spatial structure of signing. Progress requires representations that treat simultaneity, spatial grammar, and non-lexical material as first-class features — supported by naturalistic, Deaf-produced data and scalable annotation tooling.</p>
+  </div>
+</section>
+
+<!-- ── Visual Language Toolkit ──────────────────────────────── -->
+<section>
+  <div class="container">
+    <h2>Visual Language Toolkit</h2>
+    <p>To address these challenges, the project is developing the Visual Language Toolkit (VLT) — a modular suite of semi-automatic annotation tools designed to scale corpus development without sacrificing linguistic principles. The VLT is under active development; current early tools include:</p>
+
+    <div class="fig-row">
+      <figure>
+        <img src="../images/blog/publications/signGPT/figure1.png" alt="Sign segmentation BIO boundary predictions on MeinDGS">
+        <figcaption>Sign segmentation: BIO boundary predictions on the MeinDGS dataset. The model achieves up to 85% boundary accuracy using self-attention over body and hand features.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/blog/publications/signGPT/figure2.png" alt="VLT sign segmenter and sign spotter interface">
+        <figcaption>Sign spotting interface: segments are compared against a reference dictionary using SignRep embeddings — signer-invariant representations learned from skeletal pose.</figcaption>
+      </figure>
+    </div>
+
+    <figure style="max-width:480px;margin-left:auto;margin-right:auto;">
+      <img src="../images/blog/publications/signGPT/figure5.png" alt="Signer re-skinning using SMPL body meshes and Guava Gaussian splatting">
+      <figcaption>Signer anonymisation and avatar driving: SMPL mesh reconstruction with Gaussian splatting enables privacy-preserving dataset expansion and photorealistic sign language production.</figcaption>
+    </figure>
+
+    <p>Components will be released as open-source software accessible to researchers, linguists, and Deaf communities. The toolkit is designed for interoperability with ELAN annotation files and exposes a Python API.</p>
+  </div>
+</section>
+
+<!-- ── Publications ─────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <h2>Publications</h2>
+    <p>Brown, M., <strong>Ranum, O.</strong>, Fish, E., Proctor, H., Woll, B., Bowden, R., &amp; Cormier, K. (2026). <em>SignGPT and the Visual Language Toolkit.</em> 12th Workshop on the Representation and Processing of Sign Languages: Language in Motion, LREC 2026, Palma de Mallorca, Spain.</p>
+    <p><a href="../images/blog/publications/signGPT/SignGPTpaper.pdf" target="_blank">📄 Preprint (PDF)</a></p>
+<pre class="bibtex">@inproceedings{brown-etal-2026-signgpt,
+  title     = {SignGPT and the Visual Language Toolkit},
+  author    = {Brown, Matt and Ranum, Oline and Fish, Edward and Proctor, Heidi and Woll, Bencie and Bowden, Richard and Cormier, Kearsy},
+  booktitle = {Proceedings of the LREC 2026 12th Workshop on the Representation and Processing of Sign Languages: Language in Motion},
+  month     = may,
+  year      = {2026},
+  address   = {Palma de Mallorca, Spain},
+  url       = {https://olineranum.github.io/images/blog/publications/signGPT/SignGPTpaper.pdf}
+}</pre>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <p>Centre for Vision, Speech and Signal Processing, University of Surrey &nbsp;·&nbsp; University College London &nbsp;·&nbsp; 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

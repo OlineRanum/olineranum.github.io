@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "SignGPT"
-permalink: /SignGPT/
+permalink: /SignGPT-jekyll/
 author_profile: true
 description: "SignGPT — Building Generative Predictive Transformers for Sign Language. A UKRI EPSRC Programme Grant developing bidirectional BSL–English AI translation and the Visual Language Toolkit."
 ---
