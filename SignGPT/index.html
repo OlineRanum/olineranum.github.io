@@ -50,7 +50,8 @@
 <section>
   <div class="container">
     <h2>The current state of the SLP field</h2>
-    <p>SLP research has grown rapidly, concentrating on recognition, production, and translation — typically on video with gloss annotations or free-text supervision. Both gloss-based and more recent gloss-free approaches tend to prioritise mapping surface-level manual features to spoken language text, often without modelling the full compositional and multimodal structure of signing. Advancing the field requires rethinking not just the models, but the data, representations, and evaluation criteria that underpin them.</p>
+    <p>SLP research has grown rapidly over the last decade, with the field largely concentrating on three primary tasks — recognition, production, and translation — typically operating on video data with gloss annotations or free-text translations as supervision. Sign-to-text translation has commonly been treated as a pipeline problem: recognition feeds into gloss-level representations, which are then translated to spoken language text.</p>
+    <p>More recent work has introduced gloss-free approaches that model sign-to-text mapping end-to-end without gloss intermediaries. However, both paradigms tend to prioritise mapping surface-level manual features to spoken language text, often without capturing the full compositional and multimodal structure of signed communication. Text-to-sign research similarly concentrates on surface-level appearance rather than linguistic composition, and evaluation typically relies on metrics such as BLEU that are poorly suited to the spatial and simultaneous structure of signing. Advancing the field requires rethinking not just the models, but the data, representations, and evaluation criteria that underpin them.</p>
   </div>
 </section>
 
@@ -71,7 +72,7 @@
 <section>
   <div class="container">
     <h2>Considering simultaneity, constituent order, and linear modelling paradigms</h2>
-    <p>Sign languages are not strictly linearly ordered. Grammatical relations are conveyed through spatial organisation and simultaneous articulation across multiple channels, making the token-based sequential paradigms inherited from spoken-language NLP a poor structural fit. Gloss strings and caption-aligned representations introduce a bottleneck that obscures spatial grammar and flexible constituent ordering — and standard metrics such as BLEU fail to capture these properties. Progress will require representations that treat simultaneity and space as first-class features.</p>
+    <p>Sign languages are not strictly linearly ordered — grammatical relations are distributed across space and expressed simultaneously across multiple articulators, rather than encoded one unit at a time. This is a fundamental mismatch with the sequential, token-based modelling paradigms inherited from spoken-language NLP. Linearised intermediate representations such as gloss strings or caption-aligned tokens introduce an information bottleneck that obscures spatial grammar, productive constructions, and flexible constituent ordering. A signed grammatical structure may correspond to multiple different spoken-language sequences, and vice versa — a variability that standard metrics such as BLEU are not designed to capture. Progress will likely require representations that treat simultaneity, space, and cross-articulator alignment as first-class properties rather than edge cases.</p>
   </div>
 </section>
 
@@ -79,7 +80,7 @@
 <section>
   <div class="container">
     <h2>Beyond the lexicon</h2>
-    <p>Non-manual signals — brow raises, eye gaze, mouthings, head movements — carry grammatical, prosodic, and discourse meaning simultaneously across articulators, yet most SLP approaches focus on coarse pose and neglect them. Productive constructions such as depicting signs, spatial indexing, and classifier constructions are similarly absent or reduced in gloss-based annotation. Without these dimensions, models risk over-fitting to lexical recognition at the expense of broader linguistic competence.</p>
+    <p>Non-manual signals — brow raises, eye gaze, mouthings, head movements, body posture — carry grammatical, prosodic, and discourse-level meaning simultaneously across articulators. Despite their fundamental role, most SLP approaches focus on coarse pose and motion, and work that does incorporate non-manual features remains relatively limited. Productive constructions — depicting signs, spatial indexing, classifier constructions — are similarly absent or reduced to coarse categories in gloss-based annotation, despite encoding grammatical information that is not expressible through lexical items alone. Many grammatical functions, including directionality and clause type marking, are conveyed through spatial and articulatory modulation rather than through discrete signs. Without modelling these dimensions, systems risk optimising for lexical recognition while missing the broader structure of the language.</p>
 
     <div class="fig-row" style="max-width:580px;margin:1.2em auto;">
       <figure style="flex:1;min-width:0;">
@@ -119,7 +120,7 @@
 <section>
   <div class="container">
     <h2>Publications</h2>
-    <p>Brown, M., <strong>Ranum, O.</strong>, Fish, E., Proctor, H., Woll, B., Bowden, R., &amp; Cormier, K. (2026). <em>SignGPT and the Visual Language Toolkit.</em> 12th Workshop on the Representation and Processing of Sign Languages: Language in Motion, LREC 2026, Palma de Mallorca, Spain. &nbsp;<a href="/files/SignGPTpaper.pdf" target="_blank">📄 Preprint (PDF)</a></p>
+    <p>Brown, M., Ranum, O., Fish, E., Proctor, H., Woll, B., Bowden, R., &amp; Cormier, K. (2026). <em>SignGPT and the Visual Language Toolkit.</em> 12th Workshop on the Representation and Processing of Sign Languages: Language in Motion, LREC 2026, Palma de Mallorca, Spain. &nbsp;<a href="/files/SignGPTpaper.pdf" target="_blank">📄 Preprint (PDF)</a></p>
   </div>
 </section>
 

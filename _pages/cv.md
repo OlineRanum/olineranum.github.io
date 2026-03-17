@@ -34,7 +34,7 @@ Selected Projects
 <td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
 
 <strong><a href="/SignGPT/" target="_blank">SignGPT</a></strong><br>
-A UKRI EPSRC Programme Grant (University of Surrey, Oxford, UCL) building the first generative transformer for bidirectional BSL–English translation, treating sign languages as deserving their own large language models rather than as derivatives of spoken language.<br>
+A UKRI EPSRC Programme Grant (University of Surrey, Oxford, UCL) building generative transformers for bidirectional BSL–English translation, combining computer vision, sign linguistics, and machine learning to model the full structure of signed communication.<br>
 <a href="/SignGPT/" target="_blank">Project Page</a> &nbsp;|&nbsp;
 <a href="https://sites.google.com/view/signgpt" target="_blank">SignGPT Project</a>
 </td>
