@@ -25,7 +25,7 @@ Selected Projects
 
 <figure style="display: flex; justify-content: left; flex-direction: column;">
 <a href="/SignGPT/" target="_blank">
-  <img src="/images/blog/publications/signGPT/projectlogo.png" alt="SignGPT — Visual Language Toolkit for BSL" style="width: 75.00%; height: auto;">
+  <img src="/images/blog/publications/signGPT/projectlogo.png" alt="SignGPT — Visual Language Toolkit for BSL" style="width: 55.00%; height: auto;">
 </a>
   <figcaption style="text-align: left;">EPSRC Programme Grant, University of Surrey.</figcaption>
 </figure>
@@ -33,7 +33,7 @@ Selected Projects
 </td>
 <td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
 
-<strong><a href="/SignGPT/" target="_blank">SignGPT — Building Generative Predictive Transformers for Sign Language</a></strong><br>
+<strong><a href="/SignGPT/" target="_blank">SignGPT</a></strong><br>
 A UKRI EPSRC Programme Grant (University of Surrey, Oxford, UCL) developing the first large-scale, end-to-end AI system for bidirectional translation between British Sign Language and English. The project treats sign languages as deserving their own large language models — not as derivatives of spoken language — combining computer vision, sign linguistics, and machine learning with direct Deaf community involvement. Covers fundamental challenges in SLP: data validity, gloss supervision limitations, simultaneity, non-lexical features, and paths to real-world generalisation.<br>
 <a href="/images/blog/publications/signGPT/SignGPTpaper.pdf" target="_blank">Preprint (LREC 2026 Sign Language Workshop)</a> &nbsp;|&nbsp;
 <a href="/SignGPT/" target="_blank">Project Page</a> &nbsp;|&nbsp;
