@@ -77,7 +77,7 @@ Computational toolkit for spatial and productive constructions in sign languages
 <strong><a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">What's the Point? — Spatial Grammar &amp; Index Resolution for Sign Language Processing</a></strong><br>
 Modular framework for spatial indexing in BSL: a pose-based index detector combined with an online entity memory that substantially improves pointing-sign recovery in CSLR without retraining the backbone.<br>
 <em>Under review</em> &nbsp;|&nbsp;
-<a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">Project Page</a> <span style="color:#9ca3af; font-size:0.88em;">(Coming soon)</span>
+<a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">Project Page</a>
 </td>
 </tr>
 </table>
