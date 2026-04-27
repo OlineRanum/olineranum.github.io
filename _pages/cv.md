@@ -24,8 +24,31 @@ Selected Projects
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
 <figure style="display: flex; justify-content: left; flex-direction: column;">
+<a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">
+  <img src="/images/projects/whatsthepoint_frontpage.png" alt="What's the Point" style="width: 75.00%; height: auto;">
+</a>
+  <figcaption style="text-align: left;">Index resolution framework for BSL spatial grammar.</figcaption>
+</figure>
+
+</td>
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
+
+<strong><a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">What's the Point? Spatial Grammar &amp; Index Resolution for Sign Language Processing</a></strong><br>
+Modular framework for spatial indexing in BSL: a pose-based index detector combined with an online entity memory that substantially improves pointing-sign recovery in CSLR without retraining the backbone.<br>
+<em>Under review</em> &nbsp;|&nbsp;
+<a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">Project Page</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="project-item">
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
+<tr>
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+
+<figure style="display: flex; justify-content: left; flex-direction: column;">
 <a href="/SignGPT/" target="_blank">
-  <img src="/images/blog/publications/signGPT/projectlogo.png" alt="SignGPT — Visual Language Toolkit for BSL" style="width: 55.00%; height: auto;">
+  <img src="/images/blog/publications/signGPT/projectlogo.png" alt="SignGPT" style="width: 55.00%; height: auto;">
 </a>
   <figcaption style="text-align: left;">EPSRC Programme Grant, University of Surrey.</figcaption>
 </figure>
@@ -55,29 +78,6 @@ Computational toolkit for spatial and productive constructions in sign languages
 <em>Active Development</em> &nbsp;|&nbsp;
 <a href="https://olineranum.github.io/SeeingSpace/" target="_blank">Project Page</a> <span style="color:#9ca3af; font-size:0.88em;">(Coming soon)</span>
 
-</td>
-</tr>
-</table>
-</div>
-<div class="project-item">
-<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
-<tr>
-<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
-
-<figure style="display: flex; justify-content: left; flex-direction: column;">
-<a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">
-  <img src="/images/projects/whatsthepoint_frontpage.png" alt="What's the Point" style="width: 75.00%; height: auto;">
-</a>
-  <figcaption style="text-align: left;">Index resolution framework for BSL spatial grammar.</figcaption>
-</figure>
-
-</td>
-<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
-
-<strong><a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">What's the Point? — Spatial Grammar &amp; Index Resolution for Sign Language Processing</a></strong><br>
-Modular framework for spatial indexing in BSL: a pose-based index detector combined with an online entity memory that substantially improves pointing-sign recovery in CSLR without retraining the backbone.<br>
-<em>Under review</em> &nbsp;|&nbsp;
-<a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">Project Page</a>
 </td>
 </tr>
 </table>
