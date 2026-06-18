@@ -248,6 +248,11 @@ Media
 <div style="columns: 2; column-gap: 2em; column-rule: 1px solid #e5e7eb;">
 
 <div style="break-inside: avoid; margin-bottom: 0.9em;">
+<strong>SignGPT:</strong><br>
+<a href="https://www.bbc.co.uk/news/articles/c4g9rd4g8w2o" target="_blank">BBC News</a>
+</div>
+
+<div style="break-inside: avoid; margin-bottom: 0.9em;">
 <strong>Podcast:</strong><br>
 <a href="https://membership.echobox.radio/shows/talk-that-science?episode=35" target="_blank">Talk That Science #35 — AI for Sign Language</a><br>
 <span style="color:#6b7280; font-size:0.88em;">Echobox Radio · June 2025</span>

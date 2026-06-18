@@ -20,7 +20,7 @@ description: "SignGPT — Building Generative Predictive Transformers for Sign L
 </tr>
 </table>
 
-[📄 Preprint (PDF)](/files/SignGPTpaper.pdf){:target="_blank"} &nbsp;·&nbsp; [🌐 SignGPT Project](https://sites.google.com/view/signgpt){:target="_blank"}
+[📄 Paper (PDF)](https://www.sign-lang.uni-hamburg.de/lrec/pub/26026.pdf){:target="_blank"} &nbsp;·&nbsp; [🌐 SignGPT Project](https://sites.google.com/view/signgpt){:target="_blank"}
 
 ---
 
@@ -80,4 +80,4 @@ The VLT is under active development. Components will be released as open-source 
 
 Brown, M., **Ranum, O.**, Fish, E., Proctor, H., Woll, B., Bowden, R., Cormier, K. (2026). *SignGPT and the Visual Language Toolkit.* 12th Workshop on the Representation and Processing of Sign Languages: Language in Motion, LREC 2026, Palma de Mallorca, Spain.
 
-[📄 Preprint (PDF)](/files/SignGPTpaper.pdf){:target="_blank"}
+[📄 Paper (PDF)](https://www.sign-lang.uni-hamburg.de/lrec/pub/26026.pdf){:target="_blank"}
