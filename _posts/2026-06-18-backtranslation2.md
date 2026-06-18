@@ -1,6 +1,6 @@
 ---
 title: 'BackTranslation2.0 accepted at ECCV 2026'
-date: 2026-06-18
+date: 2026-06-17
 permalink: /posts/backtranslation2/
 tags:
   - BackTranslation2.0

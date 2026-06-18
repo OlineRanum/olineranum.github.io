@@ -1,6 +1,6 @@
 ---
 title: "What's the Point? Spatial Grammar & Index Resolution for Sign Language Recognition"
-date: 2026-06-18 12:00:00
+date: 2026-06-18
 permalink: /posts/whatsthepoint/
 tags:
   - What's the Point
