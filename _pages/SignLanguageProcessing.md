@@ -3,12 +3,12 @@ layout: archive
 title: "Sign Language Processing"
 permalink: /SignLanguageProcessing/
 author_profile: true
-description: "An overview of Sign Language Processing (SLP) — recognition, translation, and generation of sign languages using computer vision and NLP. Covering BSL, ASL, NGT, and NTS."
+description: "An overview of Sign Language Processing (SLP): recognition, translation, and generation of sign languages using computer vision and NLP. Covering BSL, ASL, NGT, and NTS."
 ---
 
 {% include base_path %}
 
-Sign languages are fully natural, visually expressed languages with rich grammatical structure. Unlike spoken language, they unfold in three-dimensional space through the coordinated use of hands, arms, body posture, and facial expressions. Each country or region typically has its own sign language — Norwegian Sign Language (NTS), British Sign Language (BSL), Sign Language of the Netherlands (NGT), and American Sign Language (ASL) are among the hundreds worldwide, none of which are mutually intelligible.
+Sign languages are fully natural, visually expressed languages with rich grammatical structure. Unlike spoken language, they unfold in three-dimensional space through the coordinated use of hands, arms, body posture, and facial expressions. Each country or region typically has its own sign language. Norwegian Sign Language (NTS), British Sign Language (BSL), Sign Language of the Netherlands (NGT), and American Sign Language (ASL) are among the hundreds worldwide, none of which are mutually intelligible.
 
 **Sign Language Processing (SLP)** is the subfield of AI concerned with the automatic analysis and generation of sign language. It sits at the intersection of computer vision, natural language processing, and sign language linguistics.
 
@@ -16,7 +16,7 @@ Sign languages are fully natural, visually expressed languages with rich grammat
 
 ## Core Tasks
 
-**Sign Language Recognition (SLR)** maps signed video or pose data to linguistic representations. *Isolated Sign Recognition (ISR)* classifies individual signs from segmented clips. *Continuous Sign Language Recognition (CSLR)* transcribes connected signing into a gloss sequence without predefined boundaries — substantially harder due to coarticulation, signer variation, and unsegmented input.
+**Sign Language Recognition (SLR)** maps signed video or pose data to linguistic representations. *Isolated Sign Recognition (ISR)* classifies individual signs from segmented clips. *Continuous Sign Language Recognition (CSLR)* transcribes connected signing into a gloss sequence without predefined boundaries, substantially harder due to coarticulation, signer variation, and unsegmented input.
 
 **Sign Language Translation (SLT)** maps a sign language utterance to a spoken or written language sentence, requiring cross-modal and cross-lingual transfer. Historically framed as a recognition-then-translation pipeline, recent work increasingly pursues *gloss-free* end-to-end approaches that model sign-to-text directly.
 
@@ -28,9 +28,9 @@ Sign languages are fully natural, visually expressed languages with rich grammat
 
 ## Beyond the Lexicon
 
-A key challenge — and active research frontier — is that sign languages are not purely lexical. In spontaneous signing, roughly 40% of signs are *non-lexical*, consisting of **productive constructions** that exploit three-dimensional space, iconicity, and discourse context. These include:
+A key challenge, and active research frontier, is that sign languages are not purely lexical. In spontaneous signing, roughly 40% of signs are *non-lexical*, consisting of **productive constructions** that exploit three-dimensional space, iconicity, and discourse context. These include:
 
-- **Spatial indexing** (pointing): signers assign discourse entities to spatial loci and later re-reference them through pointing — a pronominal and locative mechanism embedded in space rather than form.
+- **Spatial indexing** (pointing): signers assign discourse entities to spatial loci and later re-reference them through pointing, a pronominal and locative mechanism embedded in space rather than form.
 - **Depicting signs**: handshape, location, and movement together encode the shape, size, or path of a referent.
 - **Non-manual features**: brow movements, mouthings, head tilt, and gaze contribute grammatical, prosodic, and discourse-level information simultaneously with manual signs.
 
@@ -43,7 +43,7 @@ Most current benchmarks and models treat signing as a linear sequence of glosses
 - **Gloss-free translation**: moving from gloss-label intermediates toward direct sign-to-text models using large language models and self-supervised pretraining.
 - **Large-scale models**: scaling sign language models (Uni-Sign, SignRep, SIGN2GPT) on internet and broadcast data, analogous to LLMs in spoken NLP.
 - **Geometric and 3D representations**: using body mesh reconstruction (SMPL) and 3D hand pose (WiLoR/HaMeR) to encode spatial grammar more faithfully than 2D skeletons.
-- **Non-lexical modelling**: explicit treatment of pointing, depicting signs, and non-manual features — moving beyond lexicon-centric supervision.
+- **Non-lexical modelling**: explicit treatment of pointing, depicting signs, and non-manual features, moving beyond lexicon-centric supervision.
 - **Community and ethics**: growing awareness of the need for deaf-led evaluation and leadership, consent in data collection, and ecologically valid training data beyond interpreted broadcasts.
 
 ---
