@@ -25,7 +25,7 @@ tags:
 </tr>
 </table>
 
-[🌐 Project Page](https://cogvis-cvssp.github.io/BackTranslation2/){:target="_blank"} &nbsp;·&nbsp; [📄 Paper (PDF)](https://cogvis-cvssp.github.io/BackTranslation2/assets/BackTranslation2_0___ECCV_2026_Submission.pdf){:target="_blank"}
+[📄 arXiv Preprint](https://arxiv.org/pdf/2606.28673){:target="_blank"} &nbsp;·&nbsp; [🌐 Project Page](https://cogvis-cvssp.github.io/BackTranslation2/){:target="_blank"}
 
 **Abstract:** Sign Languages (SLs) are the primary means of communication for millions of Deaf individuals, yet existing evaluation metrics for generated SL remain simplistic and poorly aligned with human judgements. We introduce BackTranslation2.0, a linguistically grounded evaluation metric for text-to-sign translation that moves beyond naïve backtranslation. Our approach adopts an agentic framework in which a deterministic pipeline orchestrates a suite of specialised tools to assess four scoring dimensions (grammatical correctness, phonological accuracy, motion fluency, and generation fidelity) aligned with human rater assessments.
 
