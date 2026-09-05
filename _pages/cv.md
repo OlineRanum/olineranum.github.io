@@ -24,6 +24,30 @@ Selected Projects
 <td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
 
 <figure style="display: flex; justify-content: left; flex-direction: column;">
+<a href="https://olineranum.github.io/beyondBLEU/" target="_blank">
+  <img src="/images/projects/beyondbleu_frontpage.png" alt="Beyond BLEU" style="width: 75.00%; height: auto;">
+</a>
+  <figcaption style="text-align: left;">BLEU-4 retention under corruption of the signing.</figcaption>
+</figure>
+
+</td>
+<td style="border: none; text-align: left; font-size: 16px; vertical-align: left;width: 70.00%;">
+
+<strong><a href="https://olineranum.github.io/beyondBLEU/" target="_blank">Beyond BLEU: A Case for Redefining Sign Language Translation Benchmarks</a></strong><br>
+Evaluation study across six SLT systems on Phoenix-2014T and CSL-Daily, showing that gains in BLEU-4 are not on their own evidence of better sign understanding, with an open-weight-LLM QA protocol that scores salient content preservation instead.<br>
+<em>Under review</em> &nbsp;|&nbsp;
+<a href="https://olineranum.github.io/beyondBLEU/" target="_blank">Project Page</a> &nbsp;|&nbsp;
+<a href="https://arxiv.org/pdf/2609.03734" target="_blank">arXiv</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="project-item">
+<table style="border-collapse: collapse; border: none;width: 100%;" border="0">
+<tr>
+<td style="border: none; width: auto; padding-right: 10px; vertical-align: middle;">
+
+<figure style="display: flex; justify-content: left; flex-direction: column;">
 <a href="https://olineranum.github.io/WhatsThePoint/" target="_blank">
   <img src="/images/projects/whatsthepoint_frontpage.png" alt="What's the Point" style="width: 75.00%; height: auto;">
 </a>
