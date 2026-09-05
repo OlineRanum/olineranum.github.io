@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyond BLEU: Redefining Sign Language Translation Benchmarks</title>
+  <meta name="description" content="Gains in BLEU-4 are not on their own evidence of better sign language understanding. An open-weight-LLM QA protocol measuring salient content preservation for sign language translation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  HEADER                                                    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<header>
+  <div class="container">
+    <div class="venue">Under Review &nbsp;&middot;&nbsp; arXiv 2609.03734</div>
+    <h1>Beyond BLEU:<br>A Case for Redefining<br>Sign Language Translation Benchmarks</h1>
+
+    <p class="authors">
+      Oline Ranum &nbsp;&middot;&nbsp;
+      Edward Fish &nbsp;&middot;&nbsp;
+      Simon Hadfield &nbsp;&middot;&nbsp;
+      Richard Bowden
+    </p>
+    <p class="affiliations">
+      Centre for Vision, Speech and Signal Processing, University of Surrey, UK
+    </p>
+
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://arxiv.org/pdf/2609.03734" target="_blank" rel="noopener" style="cursor:pointer;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        arXiv
+      </a>
+      <a class="btn btn-secondary" href="https://olineranum.github.io/">
+        &#8617; Back
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  CONTEXT BANNER                                            -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="context-banner">
+  <div class="container">
+    <p>
+      Sign language translation is measured almost entirely by <strong>BLEU-4</strong>, an n-gram precision
+      metric that quantifies how closely a system reproduces a reference. On Phoenix-2014T, masking the
+      signer's hands leaves five of the six systems we reproduce at three quarters or more of their score, and
+      masking the face leaves all six between 53% and 68%. Replacing the visual representation with noise
+      leaves every model at 1.2 points or below, which fixes the floor a system reaches while reading nothing.
+      A retention figure between those two numbers reflects three things at once: content the corruption
+      removed, word order it broke, and target-side structure it never touched. Our results indicate that the
+      third term dominates, by a margin larger than the
+      <strong>2.5 points separating the six systems</strong> at baseline.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  ABSTRACT                                                  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <h2>Abstract</h2>
+    <div class="abstract-box">
+      BLEU-4 is the standard metric for evaluating sign language translation (SLT), but spoken-language metrics
+      may not adequately reflect sign language proficiency. The multimodal, low-resource context of SLT allows
+      models to exploit spurious correlations and spoken-language priors, rather than learning stronger sign
+      representations. In this paper, we evaluate the relationship between spatio-temporal understanding and
+      BLEU-4 across six SLT models on Phoenix-2014T and CSL-Daily, showing that gains in BLEU-4 are not on
+      their own evidence of better sign language understanding. This work introduces an alternative inspired by
+      language-learning assessment, using an open-weight-LLM QA protocol that measures salient content
+      preservation. It aligns more closely with human rankings and is six to seven times more
+      paraphrase-invariant than BLEU-4. Applied to SLT, this protocol targets content transfer, is more robust
+      to train-test overlap, and gives a different picture of the field: the five gloss-free systems are largely
+      within noise of one another on Phoenix-2014T, while the gloss-supervised system stands 9.3 points higher,
+      a gap invisible to BLEU-4.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  PART 1: BLEU-4 IN SLT                                     -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <h2>Correlations and Attributions of BLEU-4 in SLT</h2>
+    <p>
+      In multimodal translation, target-side metrics such as BLEU do not indicate whether an improvement
+      reflects stronger visual understanding, better spoken-language modelling, or overfitting. Six systems
+      reporting state-of-the-art results are evaluated across two benchmarks: the gloss-free GFSLT-VLP,
+      Fla-LLM, CiCo, SignCL and C2RL, together with the single-stream (RGB-only) variant of the
+      gloss-supervised TwoStream.
+    </p>
+
+    <h3>Robustness to input corruption</h3>
+    <p>
+      Replacing the visual representation with noise leaves every model at <strong>1.2 BLEU-4 points or
+      below</strong>, fixing the floor a system reaches while reading nothing. If the score were a true
+      reflection of sign comprehension, masking the signer's hands and face or shuffling the frames should
+      approach that floor. Retention stays well above it throughout. Masking a single articulator leaves most
+      models above half their baseline: masking both hands leaves CiCo, SignCL and GFSLT-VLP at 81%, 83% and
+      80% of baseline on Phoenix-2014T, and masking the face leaves every model at 53&ndash;68% there and
+      63&ndash;86% on CSL-Daily.
+    </p>
+    <p>
+      These gaps matter because of their size relative to the margins in use. With both articulators masked,
+      the five gloss-free systems retain 7.3<sub>&plusmn;0.9</sub> BLEU-4 points on Phoenix-2014T, close to
+      three times the 2.5-point spread separating the six systems at baseline. What a model scores while
+      reading none of the signing therefore exceeds the differences the field uses to rank systems, so a BLEU-4
+      gain at the current state of the art is not on its own evidence of better sign proficiency.
+    </p>
+    <figure>
+      <img src="static/images/retention_main_SEGMENTATION.png" alt="Heatmap of BLEU-4 retention under corruption for six models on two benchmarks" />
+      <figcaption>
+        <strong>Fig. 1.</strong> BLEU-4 retention (% of baseline) under input corruption: spatial masking of
+        hands (H) and face (F), temporal shuffling of frames (Shuf.) and Gaussian noise (Gaus.).
+        Phoenix-2014T in blue, CSL-Daily in orange.
+      </figcaption>
+    </figure>
+
+    <h3>Modalities and award structures</h3>
+    <p>
+      Signing encodes simultaneously and densely, using space for placement, depiction and constructed action,
+      while many spoken-language grammatical elements are absent from it. No current annotation scheme offers a
+      precise account of what is articulated in the sign space, but gloss may offer a first approximation.
+      Pairing gloss and text part-of-speech distributions with the corresponding BLEU-4 attribution shows that,
+      for both benchmarks and averaged over the six systems, <strong>37% of BLEU-4 is attributable to function
+      words that occur far less frequently in gloss than in text</strong>: German adpositions appear 57 times
+      in gloss against 1,155 spoken tokens, worth 3.65 points, and Chinese particles 33 against 1,279, worth
+      1.81 points.
+    </p>
+    <p>
+      Function words are also what best survives corruption. Replacing the visual signal with noise leaves
+      function-word recall at 69% of baseline on Phoenix-2014T and 78% on CSL-Daily, while content-word recall
+      falls to 7&ndash;16%. This opens a channel for improvement without comprehension, where a system can
+      raise BLEU-4 by modelling the target language better in the very category the signed source largely does
+      not encode, indistinguishably from a gain earned by reading the signing. Nor is the channel narrow: it
+      corresponds to approximately 8 BLEU-4 points on Phoenix-2014T against the 2.5 points that separate the
+      six systems.
+    </p>
+    <div class="fig-row">
+      <figure>
+        <img src="static/images/combined_attribution.png" alt="Gloss and text POS distributions with BLEU-4 attribution on Phoenix-2014T" />
+        <figcaption><strong>Fig. 2a.</strong> Phoenix-2014T. 63% of BLEU-4 falls on content, 37% on function.</figcaption>
+      </figure>
+      <figure>
+        <img src="static/images/combined_attribution_csl.png" alt="Gloss and text POS distributions with BLEU-4 attribution on CSL-Daily" />
+        <figcaption><strong>Fig. 2b.</strong> CSL-Daily. The same division, with particles carrying much of the load.</figcaption>
+      </figure>
+    </div>
+
+    <h3>What survives corruption</h3>
+    <p>
+      Output surviving corruption separates along two axes: whether it preserves the reference's words or only
+      their order, and whether those words are content or function. The distinction matters because the two
+      categories are not equally recoverable from target-side priors alone, since function words occupy a
+      narrow, concentrated vocabulary while content words are broad and long-tailed. Two patterns hold in both
+      datasets under every condition: coverage is retained better than 4-gram precision, and function-word
+      coverage is retained far better than content-word coverage. What survives corruption is thus
+      predominantly what target-side priors can supply, which is exactly what a metric rewarding explicit
+      function-word forms is most exposed to.
+    </p>
+    <figure>
+      <img src="static/images/loss_vs_reshuffle_combined.png" alt="Scatter of retained 4-gram precision against retained reference-word recall, split by content and function words" />
+      <figcaption>
+        <strong>Fig. 3.</strong> What survives corruption. Each condition contributes one content and one
+        function marker (mean &plusmn; SD over models), placed by retained 4-gram precision (word order)
+        against retained reference-word recall (coverage), both as % of baseline.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  PART 2: THE QA PROTOCOL                                   -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <h2>Measuring Content Preservation</h2>
+    <p>
+      Receptive assessment in early-stage sign language learning suggests a way to apply these perspectives:
+      probe comprehension by querying the conveyed content, and assess whether the responses recover the
+      salient information of the input. A metric of this kind should be invariant to wording at fixed content
+      and sensitive to changes in the content itself.
+    </p>
+
+    <h3>Task definition and QA-bank generation</h3>
+    <p>
+      Given a human reference translation <em>r</em>, the protocol builds a bank <em>Q<sub>s</sub></em> of
+      quality-controlled multiple-choice questions and scores a model prediction <em>s</em> by the fraction of
+      <em>Q<sub>s</sub></em> it can answer correctly <strong>from <em>s</em> alone</strong>, using an
+      open-weight LLM (<code>qwen2.5-32b</code>) served via vLLM.
+    </p>
+    <p>
+      Generation runs in three phases. To increase coverage, the LLM is prompted to extract all content units
+      from <em>r</em> related to nine categories (entity, action, attribute, quantity, time, location,
+      relation, negation, polarity). In phase two it is prompted to generate questions about each unit, so
+      <em>|Q<sub>s</sub>|</em> scales with the reference's semantic density. In phase three, distractors are
+      generated independently for each unit and question: four per question, each plausible but incorrect,
+      mutually distinct, non-paraphrastic, and matched in language and register. The five options are
+      deterministically permuted and a language-specific <em>not stated</em> sentinel is fixed in a sixth
+      position, which lets the answerer decline rather than guess and floors the metric on non-equivalent
+      content rather than at chance.
+    </p>
+
+    <h3>Quality control</h3>
+    <p>
+      Three LLM-executed gates filter the assembled items. A <strong>round-trip</strong> gate requires the
+      answerer, shown the reference itself, to select the correct option, since an item unanswerable from the
+      reference cannot fairly be asked of a candidate. A <strong>world-knowledge probe</strong> presents the
+      question with an empty passage and rejects items still answered correctly, removing those answerable
+      from language priors alone. An <strong>ambiguity</strong> gate re-presents the reference, the question
+      and the five content options in a separate pass, asks which of them the reference states or clearly
+      implies, and rejects the item if more than one does. Candidates are then scored from the passage,
+      question and options alone.
+    </p>
+
+    <h3>Yield and content coverage</h3>
+    <p>
+      The metric can only penalise a candidate for content its questions probe, so reach is quantified as
+      <em>content coverage</em>: the fraction of a reference's content lemmas that reappear in the QA items
+      generated from it.
+    </p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Benchmark</th>
+            <th class="num">Languages</th>
+            <th class="num">References</th>
+            <th class="num">Questions / ref.</th>
+            <th class="num">Content coverage (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="5"><em>Signed</em></td></tr>
+          <tr><td>Phoenix-2014T</td><td class="num">1</td><td class="num">641</td><td class="num">9.15</td><td class="num">88.6</td></tr>
+          <tr><td>CSL-Daily</td><td class="num">1</td><td class="num">1,175</td><td class="num">6.78</td><td class="num">94.6</td></tr>
+          <tr><td colspan="5"><em>Spoken</em></td></tr>
+          <tr><td>WMT 2011&ndash;2024</td><td class="num">5</td><td class="num">15,938</td><td class="num">12.1</td><td class="num">92.8</td></tr>
+          <tr><td>OpusParcus</td><td class="num">6</td><td class="num">19,492</td><td class="num">3.2</td><td class="num">84.9</td></tr>
+          <tr><td>PAWS-X</td><td class="num">7</td><td class="num">13,862</td><td class="num">11.1</td><td class="num">95.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">
+      QA yield and coverage, pooled over the languages of each benchmark. Question counts scale with sentence
+      complexity as intended: the short colloquial subtitles of OpusParcus yield 3.2 questions per reference
+      against 11.1 for the longer Wikipedia-derived sentences of PAWS-X.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  PART 3: VALIDATION                                        -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <h2>Validation on Spoken-Language Benchmarks</h2>
+    <p>
+      The protocol is validated where human annotations are available, on four axes: paraphrase invariance
+      (WMT19-P, WMT21-multiref), sensitivity to shifts in meaning from partial paraphrases (OpusParcus),
+      sensitivity to flipped meaning under fixed wording (PAWS-X), and alignment with human system rankings
+      over the WMT campaigns from 2011 to 2024.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Benchmark</th>
+            <th>Statistic</th>
+            <th class="num">BLEU-4</th>
+            <th class="num">QA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight"><td>WMT19 <span style="font-weight:400">(invariance)</span></td><td>SNR</td><td class="num">2.1</td><td class="num">12.5</td></tr>
+          <tr class="highlight"><td>WMT21 <span style="font-weight:400">(invariance)</span></td><td>SNR</td><td class="num">3.1</td><td class="num">23.0</td></tr>
+          <tr class="highlight"><td>OpusParcus <span style="font-weight:400">(graded)</span></td><td>Spearman &rho;&#772;</td><td class="num">0.28</td><td class="num">0.55</td></tr>
+          <tr class="highlight"><td>PAWS-X <span style="font-weight:400">(inversion)</span></td><td>AUC</td><td class="num">0.61</td><td class="num">0.83</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">
+      SNR is the gap to the floor divided by the mean within-group fluctuation over meaning-equivalent groups,
+      so higher means more invariant to wording. &rho;&#772; is Spearman correlation with human
+      paraphrase-quality ratings. AUC is the probability that a true paraphrase outscores a meaning-flipped
+      pair, averaged over the seven PAWS-X languages.
+    </p>
+
+    <h3>Invariance and sensitivity</h3>
+    <p>
+      Each WMT group collects renderings of one source sentence that differ in wording but not content: one
+      supplies the reference from which questions are generated, the rest are scored against it, and
+      renderings of other sentences supply a floor. On WMT19 BLEU-4 fluctuates by 7.7 points against a
+      16.5-point gap, an SNR of 2.1, where QA reaches 12.5; on WMT21 the two are 3.1 and 23.0. The two
+      collections differ in provenance, deliberate paraphrasing against independent translation, so their
+      agreement is not a protocol artefact. Sensitivity is tested on OpusParcus, whose ratings are graded: QA
+      tracks the human scale on average twice as closely as BLEU-4 in every language, rising from 9 to 72
+      across the four quality bands where BLEU-4 moves from 9 to 14.
+    </p>
+    <figure>
+      <img src="static/images/opusparcus_sim.png" alt="Mean metric score by human quality band on OpusParcus" />
+      <figcaption>
+        <strong>Fig. 4.</strong> Mean metric score by human similarity band on OpusParcus (Q1 = low
+        similarity, Q4 = clean paraphrase), mean &plusmn; SD over the six languages.
+      </figcaption>
+    </figure>
+
+    <h3>Meaning inversion</h3>
+    <p>
+      PAWS-X pairs keep surface overlap high whether or not meaning is inverted, so lexical overlap is
+      uninformative by design. Scoring one sentence of each pair against the other yields two populations of
+      scores, one for true paraphrases and one for meaning-flipped pairs, summarised by ROC-AUC: the
+      probability that a randomly drawn true paraphrase outscores a randomly drawn flipped pair. A metric
+      blind to the inversion sits at 0.5 and one that separates the two populations perfectly at 1.0. QA
+      performs better than BLEU-4 in all seven languages, 0.83 against 0.61. That QA still awards flipped
+      English pairs 55.7% against 95.4% for true paraphrases is expected: PAWS-X alters one or two arguments,
+      so most questions stay answerable.
+    </p>
+
+    <h3>Human rankings of MT systems</h3>
+    <p>
+      Current text-only MT is near human performance, so its error profiles differ from those of SLT systems;
+      restricting the WMT campaigns to systems averaging below 30 BLEU-4 gives a first approximation. QA
+      matches or exceeds BLEU-4 in every campaign, though the intervals overlap in most. Separation is
+      clearest in 2013&ndash;2015, where systems are weak enough for content transfer to differ between them
+      but not so weak that both metrics floor.
+    </p>
+    <figure>
+      <img src="static/images/WMT.png" alt="Kendall tau-like concordance with human judgments across WMT campaigns" />
+      <figcaption>
+        <strong>Fig. 5.</strong> Kendall &tau;-like concordance with human judgments over WMT campaigns
+        restricted to systems at or below 30 BLEU-4.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  PART 4: APPLIED TO SLT                                    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <h2>QA-Based Evaluation for SLT</h2>
+
+    <h3>Efficiency and stability</h3>
+    <p>
+      Costs depend on deployment, so each stage is reported separately, measured on a single RTX 5090 with
+      <code>qwen2.5-32b</code> served under vLLM. Bank construction, encompassing content extraction, two
+      QA-generation passes and three quality-control gates, is the expensive stage at 22&ndash;24 minutes per
+      benchmark. Answering, one short-prompt call per admitted question, is up to an order of magnitude
+      cheaper, putting the recurring cost of evaluating an additional system at roughly
+      <strong>2&ndash;3 GPU-minutes</strong>.
+    </p>
+    <p>
+      Rerunning the generation pipeline does not necessarily reproduce a bank: roughly three-quarters of the
+      admitted items recur between two banks, partly by design, since the second generation pass samples at a
+      non-zero temperature. That variability does not carry through to the scores. Over ten end-to-end
+      repeats, each regenerating content units, questions and answers against fixed system outputs, a system's
+      QA accuracy moves by &sigma; = 0.17&ndash;0.34 percentage points on Phoenix-2014T and 0.11&ndash;0.26 on
+      CSL-Daily. Holding the bank fixed and bootstrap-resampling the test instances instead moves it by
+      2.4&ndash;2.7 and 1.4&ndash;2.0 points, between seven and sixteen times more for every system. Which
+      questions get asked therefore matters far less than which sentences the test set happens to contain. A
+      QA gap below roughly half a point is within run-to-run noise and should not be read as a difference
+      between systems.
+    </p>
+
+    <h3>Exposure to train-test overlap</h3>
+    <p>
+      BLEU scores a test sentence higher when it resembles the training data, crediting recall of the training
+      targets as though it were translation quality, and does so most where the training distribution is
+      narrowest, which is the situation in SLT. Each test instance is characterised by a
+      <em>training-likeness</em> &#8467;, the character-level similarity between its reference and the closest
+      training target. Within a sliding window over &#8467;, the per-instance score is regressed on &#8467; at
+      fixed reference length, and the slope expressed as a percentage of that model's own mean score.
+      Normalising this way is what makes the two metrics comparable, since BLEU-4 averages about 22 on
+      Phoenix-2014T and QA about 56.
+    </p>
+    <p>
+      On Phoenix-2014T, BLEU-4 sits at 3.9% per likeness point over most of the range, below &#8467; = 80,
+      then rises eightfold to 32% for the most training-like sentences, where QA moves only from 2.4% to 6.5%.
+      The exact copies, excluded from the curves, show the same asymmetry in levels rather than slopes: on the
+      31 references that occur verbatim in training, sentence BLEU-4 averages 52.5 against 21.4 elsewhere, a
+      2.4-fold jump, where QA averages 79.7 against 57.1, a 1.4-fold one. CSL-Daily reproduces the shape more
+      weakly: over the top quarter of its likeness range BLEU-4 averages 8.4% per likeness point against 2.5%
+      for QA, a 3.4-fold gap, where the Phoenix-2014T figures of 23.5% and 3.6% give 6.6-fold. The direction
+      is the same in all twelve cases.
+    </p>
+    <figure>
+      <img src="static/images/sensitivity.png" alt="Local sensitivity of BLEU-4 and QA to training-likeness on both benchmarks" />
+      <figcaption>
+        <strong>Fig. 6.</strong> Local sensitivity of BLEU-4 and QA to training-likeness &#8467;, at fixed
+        reference length. Curves are the mean over the six models; bands span their min and max. Exact
+        duplicates are excluded as a point mass.
+      </figcaption>
+    </figure>
+
+    <h3>Probing sign grounding</h3>
+    <p>
+      A retention percentage reflects content the corruption removed, word order it broke, and target-side
+      structure it never touched, and the two results above indicate that the third term dominates for BLEU-4.
+      Content words are harder to guess given their long-tailed distribution, but the share that survives pure
+      noise shows they remain partly recoverable, so a content-oriented metric is not a fully closed channel,
+      only a more transparent one. Since neither function-word scaffolding nor train-test overlap inflates QA,
+      its retention can be read more directly: masking the hands leaves 64&ndash;80% of content transfer
+      intact on Phoenix-2014T but only 4&ndash;16% on CSL-Daily, while masking the face leaves 62&ndash;70%
+      and 40&ndash;68% respectively.
+    </p>
+    <figure>
+      <img src="static/images/qa_retention_main_SEGMENTATION.png" alt="Heatmap of QA retention under corruption for six models on two benchmarks" />
+      <figcaption>
+        <strong>Fig. 7.</strong> QA retention (% of baseline) under the corruptions of Fig. 1. The bar below
+        records where the metric's credit falls: 95% on content for Phoenix-2014T and over 99% for CSL-Daily,
+        against 63% for BLEU-4.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  RESULTS                                                   -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <h2>Saliency-Oriented System Ranking</h2>
+    <p>
+      Relative to the published scores the ranking reorders substantially, but some of that is attributable to
+      the reproduction gap, which is itself informative. The five gloss-free systems are evaluated from the
+      checkpoints of Sincan et al., which brings them onto a common data pipeline, input resolution and
+      evaluation protocol, and all six are decoded and scored through a single pipeline of our own. The
+      <em>reported</em> column instead aggregates six independent training and evaluation setups, so the
+      <em>ours</em> ranking is taken to be the like-for-like comparison. On identical predictions the two
+      metrics agree closely: no system changes rank on CSL-Daily, and five of six move by at most one position
+      on Phoenix-2014T, since transferring more content also reproduces more reference surface. The exception
+      is Fla-LLM, sixth on BLEU-4 and third on QA.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th class="num">BLEU-4 (reported)</th>
+            <th class="num">BLEU-4 (ours)</th>
+            <th class="num">QA (%)</th>
+            <th class="num">Rank: BLEU-4 &rarr; QA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="5"><strong>Phoenix-2014T</strong></td></tr>
+          <tr><td>C2RL</td><td class="num">26.8</td><td class="num">21.2 <span style="color:var(--muted)">&plusmn;2.2</span></td><td class="num">52.6 <span style="color:var(--muted)">&plusmn;2.6</span></td><td class="num">5 &rarr; 6</td></tr>
+          <tr><td>CiCo</td><td class="num">&ndash;</td><td class="num">23.6 <span style="color:var(--muted)">&plusmn;2.1</span></td><td class="num">56.2 <span style="color:var(--muted)">&plusmn;2.6</span></td><td class="num">1 &rarr; 2</td></tr>
+          <tr><td>Fla-LLM</td><td class="num">23.1</td><td class="num">21.1 <span style="color:var(--muted)">&plusmn;2.1</span></td><td class="num">55.0 <span style="color:var(--muted)">&plusmn;2.5</span></td><td class="num">6 &rarr; 3</td></tr>
+          <tr><td>GFSLT-VLP</td><td class="num">21.4</td><td class="num">22.2 <span style="color:var(--muted)">&plusmn;2.3</span></td><td class="num">53.5 <span style="color:var(--muted)">&plusmn;2.6</span></td><td class="num">4 &rarr; 5</td></tr>
+          <tr><td>SignCL</td><td class="num">22.7</td><td class="num">22.7 <span style="color:var(--muted)">&plusmn;2.2</span></td><td class="num">53.8 <span style="color:var(--muted)">&plusmn;2.6</span></td><td class="num">3 &rarr; 4</td></tr>
+          <tr class="highlight"><td>SingleStream <span style="font-weight:400">(gloss-supervised)</span></td><td class="num">27.6</td><td class="num">23.5 <span style="color:var(--muted)">&plusmn;2.1</span></td><td class="num">65.5 <span style="color:var(--muted)">&plusmn;2.3</span></td><td class="num">2 &rarr; 1</td></tr>
+
+          <tr><td colspan="5"><strong>CSL-Daily</strong></td></tr>
+          <tr><td>C2RL</td><td class="num">21.6</td><td class="num">7.0 <span style="color:var(--muted)">&plusmn;0.7</span></td><td class="num">11.6 <span style="color:var(--muted)">&plusmn;1.3</span></td><td class="num">6 &rarr; 6</td></tr>
+          <tr><td>CiCo</td><td class="num">&ndash;</td><td class="num">12.0 <span style="color:var(--muted)">&plusmn;0.8</span></td><td class="num">27.1 <span style="color:var(--muted)">&plusmn;1.8</span></td><td class="num">3 &rarr; 3</td></tr>
+          <tr><td>Fla-LLM</td><td class="num">14.2</td><td class="num">16.9 <span style="color:var(--muted)">&plusmn;1.0</span></td><td class="num">41.2 <span style="color:var(--muted)">&plusmn;2.1</span></td><td class="num">2 &rarr; 2</td></tr>
+          <tr><td>GFSLT-VLP</td><td class="num">11.0</td><td class="num">10.9 <span style="color:var(--muted)">&plusmn;0.9</span></td><td class="num">22.7 <span style="color:var(--muted)">&plusmn;1.7</span></td><td class="num">4 &rarr; 4</td></tr>
+          <tr><td>SignCL</td><td class="num">16.2</td><td class="num">10.9 <span style="color:var(--muted)">&plusmn;0.8</span></td><td class="num">21.2 <span style="color:var(--muted)">&plusmn;1.7</span></td><td class="num">5 &rarr; 5</td></tr>
+          <tr class="highlight"><td>SingleStream <span style="font-weight:400">(gloss-supervised)</span></td><td class="num">25.8</td><td class="num">28.2 <span style="color:var(--muted)">&plusmn;1.4</span></td><td class="num">61.6 <span style="color:var(--muted)">&plusmn;2.1</span></td><td class="num">1 &rarr; 1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">
+      Reported against reproduced performance, with QA content preservation. Intervals are 95% bootstrap over
+      test instances. QA is the pooled fraction of admitted questions answered correctly, from a bank generated
+      and answered by <code>qwen2.5-32b</code>. Rank columns order all six models by our reproduced BLEU-4
+      against QA.
+    </p>
+
+    <h3>Separation, not reranking</h3>
+    <p>
+      QA accuracy ranges from 52.6 to 65.5% on Phoenix-2014T and from 11.6 to 61.6% on CSL-Daily. On
+      Phoenix-2014T, the field's most reported benchmark, the five gloss-free systems fall within a span of
+      just <strong>3.6 QA points</strong>, and their per-system confidence intervals all overlap. CSL-Daily
+      separates the same five over a span eight times wider. SingleStream, the one gloss-supervised system,
+      stands apart from all five on both benchmarks, by <strong>9.3 and 20.4 points</strong>, a gap invisible
+      to BLEU-4, which ranks it <em>second</em> on Phoenix-2014T.
+    </p>
+    <p>
+      Preservation is partial at best: about two thirds of queried content for the gloss-supervised system on
+      Phoenix-2014T, just above half for the gloss-free systems, and as little as a tenth on CSL-Daily, whose
+      figures reflect total failures as much as partial transfer.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  CONCLUSION                                                -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <h2>Conclusion</h2>
+    <p>
+      BLEU-4 rewards words a spoken-language decoder can supply without reading the signing: it survives
+      occlusion of the articulators, commits a third of its credit to function words with few counterparts in
+      the source, and favours systems that reproduce training-like targets. Each exceeds the 2.5-point spread
+      separating the six systems we reproduce, so BLEU-4 differences at the current state of the art are not
+      evidence of better sign understanding.
+    </p>
+    <p>
+      Asking instead what a translation conveys measures salient content preservation reliably and at scale,
+      stable to within half a point across reevaluations at 2&ndash;3 GPU-minutes per additional system. It
+      resists what inflates BLEU-4: 95% of its credit falls on content, it is markedly more
+      paraphrase-invariant and inversion-sensitive, and on the least training-like tenth of Phoenix-2014T it
+      retains 57% of its full-set value where BLEU-4 retains 12%. As SLT matures, content transfer will
+      increasingly saturate and be replaced by more detailed benchmarks. Until then, we believe the field
+      should focus on whether models are capable of recovering the salient, grounded content of the discourse.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  CITATION                                                  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <h2>Citation</h2>
+    <pre class="bibtex">@article{ranum2026beyondbleu,
+  title   = {Beyond BLEU: A Case for Redefining Sign Language
+             Translation Benchmarks},
+  author  = {Ranum, Oline and Fish, Edward and Hadfield, Simon
+             and Bowden, Richard},
+  journal = {arXiv preprint arXiv:2609.03734},
+  year    = {2026},
+}</pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  FOOTER                                                    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <p>
+      Under Review &nbsp;&middot;&nbsp;
+      CVSSP, University of Surrey
+    </p>
+    <p style="margin-top:0.3rem;">
+      Website template inspired by common academic project pages.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
