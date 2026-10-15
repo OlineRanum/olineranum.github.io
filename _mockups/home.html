@@ -21,6 +21,7 @@
     --sage:       #E2E8DA;  /* tag background */
     --sage-ink:   #3D5642;  /* tag text */
     --clay:       #A8714F;  /* tiny warm accent */
+    --band:       #232B26;  /* solid strip behind the cover photo */
 
     --serif: "Source Serif 4", Georgia, serif;
     --sans:  "Source Sans 3", -apple-system, "Segoe UI", sans-serif;
@@ -111,23 +112,23 @@
   /* ---- Photo variant A: cover band with overlapping portrait ---- */
   .v-cover .cover {
     display: block; position: relative;
+    background: var(--band);
+  }
+  .v-cover .cover-img {
+    position: relative;
     max-width: 1120px; height: 280px; margin: 0 auto;
-    background: #6f7f95 url("../images/photos/MountainFebruary.jpeg") center 60% / cover no-repeat;
-    /* fade the band into the page at both sides */
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.12) 4%, rgba(0,0,0,.4) 9%, rgba(0,0,0,.75) 14%, #000 20%, #000 80%, rgba(0,0,0,.75) 86%, rgba(0,0,0,.4) 91%, rgba(0,0,0,.12) 96%, transparent 100%);
-            mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.12) 4%, rgba(0,0,0,.4) 9%, rgba(0,0,0,.75) 14%, #000 20%, #000 80%, rgba(0,0,0,.75) 86%, rgba(0,0,0,.4) 91%, rgba(0,0,0,.12) 96%, transparent 100%);
+    background: url("../images/photos/MountainFebruary.jpeg") center 60% / cover no-repeat;
   }
   .v-cover .cover span {
-    position: absolute; right: 18%; bottom: 12px;
-    font-size: .8rem; font-style: italic; color: rgba(255,255,255,.75);
+    position: absolute; right: 16px; bottom: 12px;
+    font-size: .8rem; font-style: italic; color: rgba(255,255,255,.7);
   }
   .v-cover header.site { border-bottom: 0; }
   .v-cover .hero { padding-top: 0; }
   .v-cover .portrait {
-    position: relative; margin-top: -105px;
-    border: 6px solid var(--bg);
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(42,43,38,.10);
+    position: relative; margin-top: -110px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(20,24,20,.22), 0 1px 3px rgba(20,24,20,.12);
   }
   .v-cover .hero > div { padding-top: 26px; }
 
@@ -260,8 +261,8 @@
     .hero h1 { font-size: 2.1rem; }
     .pub, .news li { grid-template-columns: 1fr; gap: 6px; }
 
-    .v-cover .cover { height: 170px; -webkit-mask-image: none; mask-image: none; }
-    .v-cover .portrait { margin-top: -64px; border-width: 5px; }
+    .v-cover .cover-img { height: 170px; }
+    .v-cover .portrait { margin-top: -64px; }
     .v-cover .hero > div { padding-top: 0; }
     .v-horizon footer.site { min-height: 260px; }
     .v-side .hero { grid-template-columns: 1fr; }
@@ -285,7 +286,7 @@
   </div>
 </header>
 
-<div class="cover" role="img" aria-label="Sunset over Manaslu, Nepal"><span>Manaslu, Nepal</span></div>
+<div class="cover"><div class="cover-img" role="img" aria-label="Sunset over Manaslu, Nepal"><span>Manaslu, Nepal</span></div></div>
 
 <main class="wrap">
 
