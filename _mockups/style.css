@@ -53,9 +53,10 @@ nav.main a.active { box-shadow: inset 0 -2px 0 var(--green); padding-bottom: 2px
 
 /* ---- Home: cover photo ---- */
 .cover {
-  /* full-bleed band; height follows the window width so wide screens keep the peaks */
-  height: clamp(240px, 24vw, 400px);
-  background: #6f7f95 url("../images/photos/MountainFebruary.jpeg") center 70% / cover no-repeat;
+  height: 340px;
+  margin-top: 28px;
+  border-radius: 8px;
+  background: #6f7f95 url("../images/photos/MountainFebruary.jpeg") center 92% / cover no-repeat;
 }
 
 /* ---- Home: portrait + links on the left, intro on the right ---- */
@@ -287,7 +288,7 @@ footer.site a { color: var(--ink-2); }
   header.site .wrap { padding-top: 16px; padding-bottom: 14px; }
   nav.main { gap: 20px; width: 100%; }
 
-  .cover { height: 170px; }
+  .cover { height: 160px; margin-top: 16px; }
   .hero {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
