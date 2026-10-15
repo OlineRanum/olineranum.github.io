@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oline Ranum — Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+  /* ---- Design tokens: earthy forest palette ---- */
+  :root {
+    --bg:         #F7F5EF;  /* linen */
+    --surface:    #EFEBE1;  /* oat */
+    --ink:        #2A2B26;  /* warm near-black */
+    --ink-2:      #56584E;  /* secondary text */
+    --ink-3:      #858578;  /* captions, dates */
+    --rule:       #DDD7C8;  /* hairlines */
+    --green:      #4A6750;  /* muted forest — links, accents */
+    --green-deep: #34503A;  /* hover */
+    --sage:       #E2E8DA;  /* tag background */
+    --sage-ink:   #3D5642;  /* tag text */
+    --clay:       #A8714F;  /* tiny warm accent */
+
+    --serif: "Source Serif 4", Georgia, serif;
+    --sans:  "Source Sans 3", -apple-system, "Segoe UI", sans-serif;
+    --wrap:  940px;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 17.5px/1.65 var(--sans);
+  }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green-deep); text-decoration: underline; text-underline-offset: 3px; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+
+  /* ---- Header ---- */
+  header.site {
+    border-bottom: 1px solid var(--rule);
+  }
+  header.site .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap;
+    padding-top: 22px; padding-bottom: 22px;
+  }
+  .brand {
+    font: 600 1.2rem/1 var(--serif);
+    color: var(--ink);
+    letter-spacing: .005em;
+  }
+  .brand:hover { color: var(--ink); text-decoration: none; }
+  nav.main { display: flex; gap: 28px; flex-wrap: wrap; }
+  nav.main a {
+    color: var(--ink-2); font-weight: 500; font-size: .98rem;
+  }
+  nav.main a:hover, nav.main a.active { color: var(--green-deep); text-decoration: none; }
+  nav.main a.active { box-shadow: inset 0 -2px 0 var(--green); padding-bottom: 2px; }
+
+  /* ---- Hero ---- */
+  .hero {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 48px;
+    align-items: start;
+    padding: 64px 0 48px;
+  }
+  .portrait {
+    width: 210px; aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--surface);
+  }
+  .hero h1 {
+    font: 500 2.6rem/1.1 var(--serif);
+    margin: 4px 0 6px;
+    letter-spacing: -.01em;
+  }
+  .role {
+    color: var(--ink-2); font-size: 1.08rem; margin: 0 0 22px;
+  }
+  .hero p { margin: 0 0 14px; max-width: 60ch; }
+  .links {
+    display: flex; flex-wrap: wrap; gap: 8px 10px; margin-top: 22px;
+    padding: 0; list-style: none;
+  }
+  .links a {
+    display: inline-block;
+    padding: 5px 13px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    font-size: .9rem; font-weight: 500;
+    color: var(--ink-2);
+    background: #FBFAF6;
+  }
+  .links a:hover {
+    border-color: var(--green); color: var(--green-deep); text-decoration: none;
+  }
+  .links a.primary { background: var(--green); border-color: var(--green); color: #F7F5EF; }
+  .links a.primary:hover { background: var(--green-deep); color: #fff; }
+
+  /* ---- Landscape band ---- */
+  figure.band { margin: 0 0 8px; }
+  figure.band img {
+    width: 100%; height: 230px; object-fit: cover; object-position: center 62%;
+    border-radius: 10px;
+  }
+  figure.band figcaption {
+    font-size: .85rem; color: var(--ink-3); margin-top: 8px; font-style: italic;
+  }
+
+  /* ---- Sections ---- */
+  section { padding: 44px 0 8px; }
+  .section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: 4px 16px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px; margin-bottom: 8px;
+  }
+  h2 {
+    font: 500 1.6rem/1.2 var(--serif);
+    margin: 0;
+  }
+  .more { font-size: .95rem; font-weight: 500; }
+
+  /* ---- Publications ---- */
+  .pubs { list-style: none; margin: 0; padding: 0; }
+  .pub {
+    display: grid; grid-template-columns: 150px 1fr; gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .pub:last-child { border-bottom: 0; }
+  .venue {
+    align-self: start;
+    justify-self: start;
+    background: var(--sage); color: var(--sage-ink);
+    font-size: .8rem; font-weight: 600; letter-spacing: .02em;
+    padding: 4px 10px; border-radius: 6px;
+    margin-top: 3px;
+  }
+  .venue.pending { background: var(--surface); color: var(--ink-2); }
+  .pub h3 {
+    font: 600 1.12rem/1.35 var(--serif);
+    margin: 0 0 6px;
+  }
+  .pub h3 a { color: var(--ink); }
+  .pub h3 a:hover { color: var(--green-deep); }
+  .pub p { margin: 0 0 8px; color: var(--ink-2); font-size: .98rem; line-height: 1.55; }
+  .pub .actions { display: flex; gap: 16px; font-size: .9rem; font-weight: 600; }
+  .pub .actions a::before { content: "→ "; color: var(--ink-3); font-weight: 400; }
+
+  /* ---- News ---- */
+  .news { list-style: none; margin: 0; padding: 0; }
+  .news li {
+    display: grid; grid-template-columns: 150px 1fr; gap: 24px;
+    padding: 13px 0;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .news li:last-child { border-bottom: 0; }
+  .news time { color: var(--ink-3); font-size: .92rem; font-variant-numeric: tabular-nums; padding-top: 1px; }
+  .news .new {
+    display: inline-block; margin-right: 8px;
+    font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--clay);
+  }
+
+  /* ---- Footer ---- */
+  footer.site {
+    margin-top: 64px;
+    background: var(--surface);
+    border-top: 1px solid var(--rule);
+    color: var(--ink-3); font-size: .9rem;
+  }
+  footer.site .wrap {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    padding-top: 28px; padding-bottom: 28px;
+  }
+  footer.site nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  footer.site a { color: var(--ink-2); }
+
+  /* ---- Mobile ---- */
+  @media (max-width: 720px) {
+    body { font-size: 16.5px; }
+    header.site .wrap { padding-top: 16px; padding-bottom: 14px; }
+    nav.main { gap: 20px; width: 100%; }
+    .hero { grid-template-columns: 1fr; gap: 20px; padding: 36px 0 32px; }
+    .portrait { width: 128px; border-width: 4px; }
+    .hero h1 { font-size: 2.1rem; }
+    figure.band img { height: 160px; }
+    .pub, .news li { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#">Oline Ranum</a>
+    <nav class="main">
+      <a href="#" class="active">Home</a>
+      <a href="#">Research</a>
+      <a href="#">Bio</a>
+      <a href="#">News</a>
+      <a href="#">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <img class="portrait" src="../images/web-Oline-050.jpg" alt="Portrait of Oline Ranum">
+    <div>
+      <h1>Oline A. Ranum</h1>
+      <p class="role">PhD researcher · Centre for Vision, Speech and Signal Processing, University of Surrey</p>
+      <p>My research focuses on Sign Language Processing, Recognition, and Translation, with a particular interest in spatial grammar and productive constructions.</p>
+      <p>I'm supervised by Dr. Richard Bowden and Dr. Simon Hadfield.</p>
+      <ul class="links">
+        <li><a class="primary" href="mailto:o.ranum@surrey.ac.uk">o.ranum@surrey.ac.uk</a></li>
+        <li><a href="https://scholar.google.com/citations?user=vv0kBWwAAAAJ&hl=en">Google Scholar</a></li>
+        <li><a href="https://github.com/OlineRanum">GitHub</a></li>
+        <li><a href="https://orcid.org/0000-0001-8627-6259">ORCID</a></li>
+        <li><a href="https://linkedin.com/in/olineranum">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <figure class="band">
+    <img src="../images/photos/MountainFebruary.jpeg" alt="Sunset over Manaslu, Nepal">
+    <figcaption>Manaslu, Nepal.</figcaption>
+  </figure>
+
+  <section>
+    <div class="section-head">
+      <h2>Selected publications</h2>
+      <a class="more" href="#">All publications</a>
+    </div>
+    <ul class="pubs">
+      <li class="pub">
+        <span class="venue">WACV 2027</span>
+        <div>
+          <h3><a href="https://olineranum.github.io/beyondBLEU/">Beyond BLEU: A Case for Redefining Sign Language Translation Benchmarks</a></h3>
+          <p>An evaluation study across six SLT systems showing that gains in BLEU-4 are not on their own evidence of better sign understanding.</p>
+          <div class="actions"><a href="https://arxiv.org/pdf/2609.03734">Paper</a><a href="https://olineranum.github.io/beyondBLEU/">Project page</a></div>
+        </div>
+      </li>
+      <li class="pub">
+        <span class="venue">Annu. Rev. Ling.</span>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2610.00881">Machine Translation for Sign Languages</a></h3>
+          <p>A review of sign language recognition, translation, and production, balancing technical challenges with ethics and community involvement.</p>
+          <div class="actions"><a href="https://arxiv.org/abs/2610.00881">Paper</a></div>
+        </div>
+      </li>
+      <li class="pub">
+        <span class="venue">ECCV 2026</span>
+        <div>
+          <h3><a href="https://cogvis-cvssp.github.io/BackTranslation2/">BackTranslation2.0: A Linguistically Motivated Metric to Assess Sign Language Production</a></h3>
+          <p>A linguistically grounded, agentic metric for text-to-sign translation, validated against native Deaf raters on BSL.</p>
+          <div class="actions"><a href="https://arxiv.org/pdf/2606.28673">Paper</a><a href="https://cogvis-cvssp.github.io/BackTranslation2/">Project page</a></div>
+        </div>
+      </li>
+      <li class="pub">
+        <span class="venue pending">Under review</span>
+        <div>
+          <h3><a href="https://olineranum.github.io/WhatsThePoint/">What's the Point? Spatial Grammar &amp; Index Resolution for Sign Language Processing</a></h3>
+          <p>A pose-based index detector and online entity memory that substantially improve pointing-sign recovery in CSLR without retraining the backbone.</p>
+          <div class="actions"><a href="https://olineranum.github.io/WhatsThePoint/">Project page</a></div>
+        </div>
+      </li>
+      <li class="pub">
+        <span class="venue">ICML 2024 W</span>
+        <div>
+          <h3><a href="https://olineranum.github.io/GMVISR/">NGT200: Geometric Multi-View Isolated Sign Recognition</a></h3>
+          <p>A multi-view benchmark for NGT; SE(2)-equivariant Temporal-PONITA improves recognition by 8–22% over SL-GCN.</p>
+          <div class="actions"><a href="https://openreview.net/forum?id=idkNzTC67X">Paper</a><a href="https://olineranum.github.io/GMVISR/">Project page</a></div>
+        </div>
+      </li>
+      <li class="pub">
+        <span class="venue">LREC-COLING 2024</span>
+        <div>
+          <h3><a href="https://olineranum.github.io/SAPA/">3D-LEX v1.0: 3D Lexicons for ASL and Sign Language of the Netherlands</a></h3>
+          <p>A motion-capture dataset of 2,000 signs with semi-automatic phonetic annotation matching expert accuracy.</p>
+          <div class="actions"><a href="https://aclanthology.org/2024.signlang-1.33/">Paper</a><a href="https://olineranum.github.io/SAPA/">Project page</a></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>News</h2>
+      <a class="more" href="#">All news</a>
+    </div>
+    <ul class="news">
+      <li><time datetime="2026-10-15">Oct 2026</time><div><span class="new">New</span><a href="https://olineranum.github.io/beyondBLEU/">Beyond BLEU</a> accepted at WACV 2027.</div></li>
+      <li><time datetime="2026-10-07">Oct 2026</time><div><span class="new">New</span><a href="https://arxiv.org/abs/2610.00881">Machine Translation for Sign Languages</a> accepted in the Annual Review of Linguistics, Vol. 13.</div></li>
+      <li><time datetime="2026-06-17">Jun 2026</time><div><a href="https://cogvis-cvssp.github.io/BackTranslation2/">BackTranslation2.0</a> accepted at ECCV 2026.</div></li>
+      <li><time datetime="2026-05-16">May 2026</time><div><a href="#">SignGPT and the Visual Language Toolkit</a> accepted at the LREC 2026 Sign Language Workshop.</div></li>
+      <li><time datetime="2026-03-13">Mar 2026</time><div>Started the <a href="https://olineranum.github.io/SeeingSpace/">Seeing Space</a> project on spatial and productive constructions.</div></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Oline Ranum · CVSSP, University of Surrey</span>
+    <nav>
+      <a href="https://scholar.google.com/citations?user=vv0kBWwAAAAJ&hl=en">Scholar</a>
+      <a href="https://github.com/OlineRanum">GitHub</a>
+      <a href="https://orcid.org/0000-0001-8627-6259">ORCID</a>
+      <a href="#">RSS</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
