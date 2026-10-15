@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign Language Processing — Oline Ranum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Oline Ranum</a>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="bio.html">Bio</a>
+      <a href="news.html">News</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="page-head">
+    <h1>Sign Language Processing</h1>
+    <p class="lede">An overview of Sign Language Processing: the recognition, translation, and generation of sign languages using computer vision and NLP.</p>
+  </div>
+
+  <div class="with-aside">
+    <article class="prose">
+<p>Sign languages are fully natural, visually expressed languages with rich grammatical structure. Unlike spoken language, they unfold in three-dimensional space through the coordinated use of hands, arms, body posture, and facial expressions. Each country or region typically has its own sign language. Norwegian Sign Language (NTS), British Sign Language (BSL), Sign Language of the Netherlands (NGT), and American Sign Language (ASL) are among the hundreds worldwide, none of which are mutually intelligible.</p>
+<p><strong>Sign Language Processing (SLP)</strong> is the subfield of AI concerned with the automatic analysis and generation of sign language. It sits at the intersection of computer vision, natural language processing, and sign language linguistics.</p>
+<h2 id="core-tasks">Core Tasks</h2>
+<p><strong>Sign Language Recognition (SLR)</strong> maps signed video or pose data to linguistic representations. <em>Isolated Sign Recognition (ISR)</em> classifies individual signs from segmented clips. <em>Continuous Sign Language Recognition (CSLR)</em> transcribes connected signing into a gloss sequence without predefined boundaries, substantially harder due to coarticulation, signer variation, and unsegmented input.</p>
+<p><strong>Sign Language Translation (SLT)</strong> maps a sign language utterance to a spoken or written language sentence, requiring cross-modal and cross-lingual transfer. Historically framed as a recognition-then-translation pipeline, recent work increasingly pursues <em>gloss-free</em> end-to-end approaches that model sign-to-text directly.</p>
+<p><strong>Sign Language Production (SLP/G)</strong> generates sign language from text, typically via pose synthesis or photorealistic video generation. This encompasses motion synthesis, avatar animation, and increasingly diffusion-based approaches. Despite the name, it is a translation task in the opposite direction from SLT.</p>
+<p><strong>Other tasks</strong> include <em>sign segmentation</em> (identifying temporal boundaries in continuous signing), <em>sign spotting</em> (locating specific signs within a stream), <em>signer anonymisation</em>, and <em>sign-text alignment</em> for corpus annotation.</p>
+<h2 id="beyond-the-lexicon">Beyond the Lexicon</h2>
+<p>A key challenge, and active research frontier, is that sign languages are not purely lexical. In spontaneous signing, roughly 40% of signs are <em>non-lexical</em>, consisting of <strong>productive constructions</strong> that exploit three-dimensional space, iconicity, and discourse context. These include:</p>
+<ul>
+  <li><strong>Spatial indexing</strong> (pointing): signers assign discourse entities to spatial loci and later re-reference them through pointing, a pronominal and locative mechanism embedded in space rather than form.</li>
+  <li><strong>Depicting signs</strong>: handshape, location, and movement together encode the shape, size, or path of a referent.</li>
+  <li><strong>Non-manual features</strong>: brow movements, mouthings, head tilt, and gaze contribute grammatical, prosodic, and discourse-level information simultaneously with manual signs.</li>
+</ul>
+<p>Most current benchmarks and models treat signing as a linear sequence of glosses, implicitly assuming a discrete and finite lexicon. This misses the spatial grammar and simultaneity that are central to how sign languages actually work.</p>
+<h2 id="current-trends">Current Trends</h2>
+<ul>
+  <li><strong>Gloss-free translation</strong>: moving from gloss-label intermediates toward direct sign-to-text models using large language models and self-supervised pretraining.</li>
+  <li><strong>Large-scale models</strong>: scaling sign language models (Uni-Sign, SignRep, SIGN2GPT) on internet and broadcast data, analogous to LLMs in spoken NLP.</li>
+  <li><strong>Geometric and 3D representations</strong>: using body mesh reconstruction (SMPL) and 3D hand pose (WiLoR/HaMeR) to encode spatial grammar more faithfully than 2D skeletons.</li>
+  <li><strong>Non-lexical modelling</strong>: explicit treatment of pointing, depicting signs, and non-manual features, moving beyond lexicon-centric supervision.</li>
+  <li><strong>Community and ethics</strong>: growing awareness of the need for deaf-led evaluation and leadership, consent in data collection, and ecologically valid training data beyond interpreted broadcasts.</li>
+</ul>
+<h2 id="key-challenges">Key Challenges</h2>
+<ul>
+  <li><strong>Data scarcity</strong>: sign language datasets are orders of magnitude smaller than spoken-language counterparts, due to high annotation cost and the absence of a written form.</li>
+  <li><strong>Annotation bottleneck</strong>: gloss annotation requires linguists and fluent signers; only a fraction of existing corpora is annotated at all.</li>
+  <li><strong>Simultaneity vs. linearity</strong>: sign languages express meaning simultaneously across multiple articulators, which does not map cleanly onto the sequential assumptions of standard NLP pipelines.</li>
+  <li><strong>Ecological validity</strong>: most large-scale training data comes from interpreted broadcast or social media, which differs systematically from natural, spontaneous signing.</li>
+  <li><strong>Evaluation</strong>: automatic metrics like BLEU do not capture the flexible word order, spatial grammar, or productive constructions of sign languages well.</li>
+</ul>
+    </article>
+    <aside class="side toc-wrap">
+      <p class="side-label">On this page</p>
+      <ul class="toc">
+        <li><a href="#core-tasks">Core Tasks</a></li>
+        <li><a href="#beyond-the-lexicon">Beyond the Lexicon</a></li>
+        <li><a href="#current-trends">Current Trends</a></li>
+        <li><a href="#key-challenges">Key Challenges</a></li>
+      </ul>
+    </aside>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Oline Ranum · CVSSP, University of Surrey</span>
+    <nav>
+      <a href="https://scholar.google.com/citations?user=vv0kBWwAAAAJ&hl=en">Scholar</a>
+      <a href="https://github.com/OlineRanum">GitHub</a>
+      <a href="https://orcid.org/0000-0001-8627-6259">ORCID</a>
+      <a href="#">RSS</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

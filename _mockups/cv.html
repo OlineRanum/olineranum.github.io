@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV — Oline Ranum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Oline Ranum</a>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="bio.html">Bio</a>
+      <a href="news.html">News</a>
+      <a href="cv.html" class="active">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="page-head">
+    <h1>CV</h1>
+    <p class="lede">PhD researcher in sign language processing at CVSSP, University of Surrey. The full CV is available as a PDF.</p>
+    <a class="button" href="https://olineranum.github.io/files/CV_Ranum_Public.pdf"><i class="fa-regular fa-file-lines"></i>Download CV (PDF)</a>
+  </div>
+
+  <section id="projects">
+    <div class="section-head"><h2>Selected projects</h2></div>
+    <ul class="projects">
+      <li class="project">
+        <div class="thumb contain"><img src="img/beyondbleu.png" alt="BLEU-4 retention under corruption of the signing" loading="lazy"></div>
+        <div>
+          <div class="meta"><span class="venue">WACV 2027</span></div>
+          <h3><a href="https://olineranum.github.io/beyondBLEU/">Beyond BLEU: A Case for Redefining Sign Language Translation Benchmarks</a></h3>
+          <p>Evaluation study across six SLT systems on Phoenix-2014T and CSL-Daily, showing that gains in BLEU-4 are not on their own evidence of better sign understanding, with an open-weight-LLM QA protocol that scores salient content preservation instead.</p>
+          <div class="actions"><a href="https://arxiv.org/pdf/2609.03734">arXiv</a><a href="https://olineranum.github.io/beyondBLEU/">Project page</a></div>
+        </div>
+      </li>
+      <li class="project">
+        <div class="thumb contain"><img src="img/whatsthepoint.png" alt="Index resolution framework for BSL spatial grammar" loading="lazy"></div>
+        <div>
+          <div class="meta"><span class="venue pending">Under review</span></div>
+          <h3><a href="https://olineranum.github.io/WhatsThePoint/">What's the Point? Spatial Grammar &amp; Index Resolution for Sign Language Processing</a></h3>
+          <p>Modular framework for spatial indexing in BSL: a pose-based index detector combined with an online entity memory that substantially improves pointing-sign recovery in CSLR without retraining the backbone.</p>
+          <div class="actions"><a href="https://olineranum.github.io/WhatsThePoint/">Project page</a></div>
+        </div>
+      </li>
+      <li class="project">
+        <div class="thumb contain"><img src="img/signgpt.png" alt="SignGPT project logo" loading="lazy"></div>
+        <div>
+          <div class="meta"><span class="venue">EPSRC Programme Grant</span></div>
+          <h3><a href="https://olineranum.github.io/SignGPT/">SignGPT</a></h3>
+          <p>A UKRI EPSRC Programme Grant (University of Surrey, Oxford, UCL) building generative transformers for bidirectional BSL–English translation, combining computer vision, sign linguistics, and machine learning to model the full structure of signed communication.</p>
+          <div class="actions"><a href="https://olineranum.github.io/SignGPT/">Project page</a><a href="https://sites.google.com/view/signgpt">SignGPT website</a></div>
+        </div>
+      </li>
+      <li class="project">
+        <div class="thumb text">Seeing Space</div>
+        <div>
+          <div class="meta"><span class="venue pending">In development</span></div>
+          <h3>Seeing Space — Directional Verbs and Topographic Placement</h3>
+          <p>Computational toolkit for spatial and productive constructions in sign languages: directional verb detection with grammatical-person labelling and a learned pose-based placement module for pronominal indexing.</p>
+          <div class="actions"><span class="soon">Project page coming soon</span></div>
+        </div>
+      </li>
+      <li class="project">
+        <div class="thumb"><img src="img/ngt200.jpg" alt="NGT200 multi-view recording setup" loading="lazy"></div>
+        <div>
+          <div class="meta"><span class="venue">ICML 2024 Workshop</span></div>
+          <h3><a href="https://olineranum.github.io/GMVISR/">NGT200: Geometric Multi-View Isolated Sign Recognition</a></h3>
+          <p>Multi-view benchmark for pose-based isolated sign recognition of Sign Language of the Netherlands (NGT). SE(2)-equivariant Temporal-PONITA improves recognition by 8–22% over the SL-GCN baseline.</p>
+          <div class="actions"><a href="https://openreview.net/forum?id=idkNzTC67X">Paper</a><a href="https://olineranum.github.io/GMVISR/">Project page</a><a href="https://osf.io/5zuyd/">Dataset</a></div>
+        </div>
+      </li>
+      <li class="project">
+        <div class="thumb"><img src="img/3dlex.jpg" alt="A recording session in the 3D-LEX laboratory" loading="lazy"></div>
+        <div>
+          <div class="meta"><span class="venue">LREC-COLING 2024</span></div>
+          <h3><a href="https://olineranum.github.io/SAPA/">3D-LEX v1.0: 3D Lexicons for ASL and NGT</a></h3>
+          <p>High-resolution motion capture dataset of 2,000 signs across ASL and Sign Language of the Netherlands, with semi-automatic phonetic annotation that matches or exceeds expert accuracy.</p>
+          <div class="actions"><a href="https://aclanthology.org/2024.signlang-1.33/">Paper</a><a href="https://olineranum.github.io/SAPA/">Project page</a><a href="https://osf.io/g7u9c/?view_only=8090319e12aa4fd991d81e369a1cbd88">Dataset</a></div>
+        </div>
+      </li>
+      <li class="project">
+        <div class="thumb text">SE(3)</div>
+        <div>
+          <div class="meta"></div>
+          <h3><a href="https://github.com/elidub/equiv-neural-rendering">SE(3)-Equivariant Neural Rendering</a></h3>
+          <p>Equivariant neural rendering builds on geometric deep learning, computer vision and representation theory; a critical component is the scene representation.</p>
+          <div class="actions"><a href="https://github.com/elidub/equiv-neural-rendering">GitHub</a><a href="https://github.com/elidub/equiv-neural-rendering/blob/main/blogpost.md">Blog post</a></div>
+        </div>
+      </li>
+      <li class="project">
+        <div class="thumb"><img src="img/pointe.jpg" alt="Poster presentation at the University of Amsterdam" loading="lazy"></div>
+        <div>
+          <div class="meta"></div>
+          <h3><a href="https://github.com/LBBusser/point_e_team10/">Indoor Scene Generation using Point-E and Training-Free Layout Control</a></h3>
+          <p>A framework extending point cloud diffusion models to generate indoor scenes directly from text prompts.</p>
+          <div class="actions"><a href="https://github.com/LBBusser/point_e_team10/">GitHub</a></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="media">
+    <div class="section-head"><h2>Media</h2></div>
+    <div class="media">
+      <figure>
+        <a href="https://www.uio.no/om/aktuelt/arrangementer/en-ny-start-festival/student-og-grunder-hvordan-kan-din-ide-bli-til-noe-mer.html"><img src="img/deepsign-uio.jpg" alt="DeepSign AS at En ny start festival, University of Oslo" loading="lazy"></a>
+        <figcaption>DeepSign at En ny start, University of Oslo.</figcaption>
+      </figure>
+      <div class="press">
+        <div>
+          <h3>SignGPT</h3>
+          <a href="https://www.bbc.co.uk/news/articles/c4g9rd4g8w2o">BBC News</a>
+        </div>
+        <div>
+          <h3>Podcast</h3>
+          <a href="https://membership.echobox.radio/shows/talk-that-science?episode=35">Talk That Science #35 — AI for Sign Language</a>
+          <small>Echobox Radio · June 2025</small>
+        </div>
+        <div>
+          <h3>3D-LEX</h3>
+          <a href="https://www.napnieuws.nl/2024/02/20/ai-voor-gebarentaal-uva-werkt-aan-een-nieuw-vertaalprogramma/">Napnieuws.nl (NL)</a>
+          <small>SignLab interview, 3D-LEX laboratory</small>
+        </div>
+        <div>
+          <h3>DeepSign AS</h3>
+          <a href="https://www.titan.uio.no/innovasjon/2021/studentgrundere-vil-lage-automatisk-tegnsprak-oversetter.html">Titan.uio.no (NO)</a>
+          <a href="https://argumentnett.no/2022/02/06/tetter-kommunikasjonsgapet-ved-hjelp-av-kunstig-intelligens/">Argument.no (NO)</a>
+          <a href="https://ace-incubator.nl/cohort-fall-2021/">ACE Incubator, cohort 2021</a>
+          <a href="https://prosjektbanken.forskningsradet.no/project/FORISS/327456">Research Council of Norway</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Oline Ranum · CVSSP, University of Surrey</span>
+    <nav>
+      <a href="https://scholar.google.com/citations?user=vv0kBWwAAAAJ&hl=en">Scholar</a>
+      <a href="https://github.com/OlineRanum">GitHub</a>
+      <a href="https://orcid.org/0000-0001-8627-6259">ORCID</a>
+      <a href="#">RSS</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
