@@ -6,6 +6,7 @@
 <title>Oline Ranum — Mockup</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
 <style>
   /* ---- Design tokens: earthy forest palette ---- */
@@ -21,7 +22,6 @@
     --sage:       #E2E8DA;  /* tag background */
     --sage-ink:   #3D5642;  /* tag text */
     --clay:       #A8714F;  /* tiny warm accent */
-    --band:       #232B26;  /* solid strip behind the cover photo */
 
     --serif: "Source Serif 4", Georgia, serif;
     --sans:  "Source Sans 3", -apple-system, "Segoe UI", sans-serif;
@@ -63,106 +63,56 @@
   nav.main a:hover, nav.main a.active { color: var(--green-deep); text-decoration: none; }
   nav.main a.active { box-shadow: inset 0 -2px 0 var(--green); padding-bottom: 2px; }
 
-  /* ---- Hero ---- */
+  /* ---- Cover photo ---- */
+  .cover {
+    height: 270px;
+    margin-top: 28px;
+    border-radius: 8px;
+    background: #6f7f95 url("../images/photos/MountainFebruary.jpeg") center 92% / cover no-repeat;
+  }
+
+  /* ---- Hero: portrait + links on the left, intro on the right ---- */
   .hero {
     display: grid;
-    grid-template-columns: 210px 1fr;
-    gap: 48px;
-    align-items: start;
-    padding: 64px 0 48px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "photo main" "links main";
+    column-gap: 56px;
+    padding: 0 32px 40px;
   }
   .portrait {
-    width: 210px; aspect-ratio: 1;
-    border-radius: 6px;
-    object-fit: cover;
-    object-position: center 30%;
+    grid-area: photo;
+    position: relative;
+    width: 200px; aspect-ratio: 1;
+    margin-top: -96px;
+    object-fit: cover; object-position: center 30%;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(20,24,20,.22), 0 1px 3px rgba(20,24,20,.12);
   }
+  .intro { grid-area: main; padding-top: 30px; }
   .hero h1 {
     font: 500 2.6rem/1.1 var(--serif);
-    margin: 4px 0 6px;
+    margin: 0 0 8px;
     letter-spacing: -.01em;
   }
   .role {
     color: var(--ink-2); font-size: 1.08rem; margin: 0 0 22px;
   }
-  .hero p { margin: 0 0 14px; max-width: 60ch; }
+  .intro p { margin: 0 0 14px; max-width: 60ch; }
+
   .links {
-    display: flex; flex-wrap: wrap; gap: 8px 10px; margin-top: 22px;
-    padding: 0; list-style: none;
+    grid-area: links;
+    list-style: none; margin: 22px 0 0; padding: 0;
+    font-size: .95rem;
   }
-  .links a {
-    display: inline-block;
-    padding: 5px 13px;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    font-size: .9rem; font-weight: 500;
+  .links li { margin: 0; }
+  .links a, .links span {
+    display: flex; align-items: center; gap: 11px;
+    padding: 4px 0;
     color: var(--ink-2);
-    background: #FBFAF6;
   }
-  .links a:hover {
-    border-color: var(--green); color: var(--green-deep); text-decoration: none;
-  }
-  .links a.primary { background: var(--green); border-color: var(--green); color: #F7F5EF; }
-  .links a.primary:hover { background: var(--green-deep); color: #fff; }
-
-  /* Elements only used by some photo variants */
-  .cover, .hero-photo, .name-row .mini-portrait { display: none; }
-  .name-row { display: flex; align-items: center; gap: 16px; }
-
-  /* ---- Photo variant A: cover band with overlapping portrait ---- */
-  .v-cover .cover {
-    display: block; position: relative;
-    background: var(--band);
-  }
-  .v-cover .cover-img {
-    position: relative;
-    max-width: 1120px; height: 280px; margin: 0 auto;
-    background: url("../images/photos/MountainFebruary.jpeg") center 60% / cover no-repeat;
-  }
-  .v-cover .cover span {
-    position: absolute; right: 16px; bottom: 12px;
-    font-size: .8rem; font-style: italic; color: rgba(255,255,255,.7);
-  }
-  .v-cover header.site { border-bottom: 0; }
-  .v-cover .hero { padding-top: 0; }
-  .v-cover .portrait {
-    position: relative; margin-top: -110px;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(20,24,20,.22), 0 1px 3px rgba(20,24,20,.12);
-  }
-  .v-cover .hero > div { padding-top: 26px; }
-
-  /* ---- Photo variant B: mountains rise into the footer ---- */
-  .v-horizon footer.site {
-    margin-top: 24px;
-    min-height: 380px;
-    display: flex; align-items: flex-end;
-    border-top: 0;
-    background:
-      linear-gradient(to bottom, var(--bg) 0%, rgba(247,245,239,0) 38%),
-      linear-gradient(to top, rgba(20,24,20,.6) 0%, rgba(20,24,20,0) 30%),
-      #1f2420 url("../images/photos/MountainFebruary.jpeg") center 70% / cover no-repeat;
-    color: rgba(240,237,228,.7);
-  }
-  .v-horizon footer.site .wrap { width: 100%; }
-  .v-horizon footer.site a { color: rgba(240,237,228,.9); }
-  .v-horizon footer.site .photo-credit { display: inline; }
-
-  /* ---- Photo variant C: photo card beside the intro ---- */
-  .v-side .hero { grid-template-columns: 1fr 380px; gap: 48px; }
-  .v-side .hero > .portrait { display: none; }
-  .v-side .name-row .mini-portrait {
-    display: block; width: 72px; aspect-ratio: 1; border-radius: 5px;
-    object-fit: cover; object-position: center 30%;
-  }
-  .v-side .hero-photo { display: block; margin: 8px 0 0; }
-  .v-side .hero-photo img {
-    width: 100%; height: 330px; object-fit: cover; object-position: 62% center;
-    border-radius: 10px;
-  }
-  .v-side .hero-photo figcaption {
-    font-size: .85rem; color: var(--ink-3); margin-top: 8px; font-style: italic;
-  }
+  .links a:hover { color: var(--green-deep); text-decoration: none; }
+  .links i { width: 16px; text-align: center; color: var(--green); font-size: .95em; }
 
   /* ---- Sections ---- */
   section { padding: 44px 0 8px; }
@@ -233,45 +183,29 @@
   }
   footer.site nav { display: flex; gap: 18px; flex-wrap: wrap; }
   footer.site a { color: var(--ink-2); }
-  footer.site .photo-credit { display: none; font-style: italic; }
-
-  /* ---- Mockup-only variant switcher ---- */
-  .switcher {
-    position: fixed; right: 16px; bottom: 16px; z-index: 10;
-    display: flex; gap: 4px; align-items: center;
-    padding: 6px; border-radius: 999px;
-    background: rgba(42,43,38,.88); color: #eee;
-    font: 500 .8rem/1 var(--sans);
-    box-shadow: 0 4px 16px rgba(0,0,0,.18);
-  }
-  .switcher span { padding: 0 6px 0 8px; opacity: .7; }
-  .switcher button {
-    font: inherit; color: inherit; background: transparent; cursor: pointer;
-    border: 0; border-radius: 999px; padding: 7px 12px;
-  }
-  .switcher button[aria-pressed="true"] { background: var(--green); color: #fff; }
 
   /* ---- Mobile ---- */
   @media (max-width: 720px) {
     body { font-size: 16.5px; }
     header.site .wrap { padding-top: 16px; padding-bottom: 14px; }
     nav.main { gap: 20px; width: 100%; }
-    .hero { grid-template-columns: 1fr; gap: 20px; padding: 36px 0 32px; }
-    .portrait { width: 128px; }
+    .cover { height: 160px; margin-top: 16px; }
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "photo" "main" "links";
+      padding: 0 0 24px;
+    }
+    .portrait { width: 120px; margin: -56px 0 0 16px; }
+    .intro { padding-top: 20px; }
     .hero h1 { font-size: 2.1rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 2px 20px; margin-top: 10px; }
     .pub, .news li { grid-template-columns: 1fr; gap: 6px; }
 
-    .v-cover .cover-img { height: 170px; }
-    .v-cover .portrait { margin-top: -64px; }
-    .v-cover .hero > div { padding-top: 0; }
-    .v-horizon footer.site { min-height: 260px; }
-    .v-side .hero { grid-template-columns: 1fr; }
-    .v-side .name-row .mini-portrait { width: 56px; }
-    .v-side .hero-photo img { height: 190px; }
   }
 </style>
 </head>
-<body class="v-cover">
+<body>
 
 <header class="site">
   <div class="wrap">
@@ -286,32 +220,26 @@
   </div>
 </header>
 
-<div class="cover"><div class="cover-img" role="img" aria-label="Sunset over Manaslu, Nepal"><span>Manaslu, Nepal</span></div></div>
-
 <main class="wrap">
+
+  <div class="cover" role="img" aria-label="Sunset over Manaslu, Nepal"></div>
 
   <div class="hero">
     <img class="portrait" src="../images/web-Oline-050.jpg" alt="Portrait of Oline Ranum">
-    <div>
-      <div class="name-row">
-        <img class="mini-portrait" src="../images/web-Oline-050.jpg" alt="">
-        <h1>Oline A. Ranum</h1>
-      </div>
+    <div class="intro">
+      <h1>Oline A. Ranum</h1>
       <p class="role">PhD researcher · Centre for Vision, Speech and Signal Processing, University of Surrey</p>
       <p>My research focuses on Sign Language Processing, Recognition, and Translation, with a particular interest in spatial grammar and productive constructions.</p>
       <p>I'm supervised by Dr. Richard Bowden and Dr. Simon Hadfield.</p>
-      <ul class="links">
-        <li><a class="primary" href="mailto:o.ranum@surrey.ac.uk">o.ranum@surrey.ac.uk</a></li>
-        <li><a href="https://scholar.google.com/citations?user=vv0kBWwAAAAJ&hl=en">Google Scholar</a></li>
-        <li><a href="https://github.com/OlineRanum">GitHub</a></li>
-        <li><a href="https://orcid.org/0000-0001-8627-6259">ORCID</a></li>
-        <li><a href="https://linkedin.com/in/olineranum">LinkedIn</a></li>
-      </ul>
     </div>
-    <figure class="hero-photo">
-      <img src="../images/photos/MountainFebruary.jpeg" alt="Sunset over Manaslu, Nepal">
-      <figcaption>Manaslu, Nepal.</figcaption>
-    </figure>
+    <ul class="links">
+      <li><span><i class="fa-solid fa-location-dot"></i>Surrey, UK</span></li>
+      <li><a href="mailto:o.ranum@surrey.ac.uk"><i class="fa-regular fa-envelope"></i>o.ranum@surrey.ac.uk</a></li>
+      <li><a href="https://scholar.google.com/citations?user=vv0kBWwAAAAJ&hl=en"><i class="fa-brands fa-google-scholar"></i>Google Scholar</a></li>
+      <li><a href="https://github.com/OlineRanum"><i class="fa-brands fa-github"></i>GitHub</a></li>
+      <li><a href="https://orcid.org/0000-0001-8627-6259"><i class="fa-brands fa-orcid"></i>ORCID</a></li>
+      <li><a href="https://linkedin.com/in/olineranum"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+    </ul>
   </div>
 
   <section>
@@ -389,7 +317,7 @@
 
 <footer class="site">
   <div class="wrap">
-    <span>© 2026 Oline Ranum · CVSSP, University of Surrey<span class="photo-credit"> · Manaslu, Nepal</span></span>
+    <span>© 2026 Oline Ranum · CVSSP, University of Surrey</span>
     <nav>
       <a href="https://scholar.google.com/citations?user=vv0kBWwAAAAJ&hl=en">Scholar</a>
       <a href="https://github.com/OlineRanum">GitHub</a>
@@ -398,25 +326,6 @@
     </nav>
   </div>
 </footer>
-
-<!-- Mockup only: switch between photo placements -->
-<div class="switcher" role="group" aria-label="Photo placement">
-  <span>Photo:</span>
-  <button data-v="v-cover">Cover</button>
-  <button data-v="v-horizon">Horizon</button>
-  <button data-v="v-side">Side</button>
-</div>
-<script>
-  const buttons = document.querySelectorAll(".switcher button");
-  function setVariant(v) {
-    document.body.className = v;
-    buttons.forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
-    history.replaceState(null, "", "#" + v.slice(2));
-  }
-  buttons.forEach(b => b.addEventListener("click", () => setVariant(b.dataset.v)));
-  const fromHash = "v-" + location.hash.slice(1);
-  setVariant([...buttons].some(b => b.dataset.v === fromHash) ? fromHash : "v-cover");
-</script>
 
 </body>
 </html>
