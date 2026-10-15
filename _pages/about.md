@@ -124,7 +124,7 @@ I'm currently a postgraduate researcher at the Centre for Vision, Speech and Sig
 <ul class="proj-list">
   <li>
     <span class="proj-title">Beyond BLEU: A Case for Redefining Sign Language Translation Benchmarks</span>
-    <span class="proj-venue">· Under Review</span>
+    <span class="proj-venue">· WACV 2027</span>
     <div class="proj-links">
       <a href="https://olineranum.github.io/beyondBLEU/">Project Page</a>
       <a href="https://arxiv.org/pdf/2609.03734">Paper</a>
@@ -154,4 +154,3 @@ I'm currently a postgraduate researcher at the Centre for Vision, Speech and Sig
     </div>
   </li>
 </ul>
-

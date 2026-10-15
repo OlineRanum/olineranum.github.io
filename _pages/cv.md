@@ -35,7 +35,7 @@ Selected Projects
 
 <strong><a href="https://olineranum.github.io/beyondBLEU/" target="_blank">Beyond BLEU: A Case for Redefining Sign Language Translation Benchmarks</a></strong><br>
 Evaluation study across six SLT systems on Phoenix-2014T and CSL-Daily, showing that gains in BLEU-4 are not on their own evidence of better sign understanding, with an open-weight-LLM QA protocol that scores salient content preservation instead.<br>
-<em>Under review</em> &nbsp;|&nbsp;
+<em>Accepted at WACV 2027</em> &nbsp;|&nbsp;
 <a href="https://olineranum.github.io/beyondBLEU/" target="_blank">Project Page</a> &nbsp;|&nbsp;
 <a href="https://arxiv.org/pdf/2609.03734" target="_blank">arXiv</a>
 </td>

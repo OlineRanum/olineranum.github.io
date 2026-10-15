@@ -13,11 +13,11 @@ tags:
 <tr>
 <td style="border: none; text-align: left; font-size: 16px;">
 
-<strong>Beyond BLEU: A Case for Redefining Sign Language Translation Benchmarks</strong> is available on arXiv.
+<strong>Beyond BLEU: A Case for Redefining Sign Language Translation Benchmarks</strong> was accepted at <strong>WACV 2027</strong>.
 
 <br><br>
 
-<strong>Venue:</strong> arXiv preprint (under review)<br>
+<strong>Venue:</strong> WACV 2027<br>
 <strong>Authors:</strong> Ranum, O., Fish, E., Hadfield, S., Bowden, R.
 
 </td>
