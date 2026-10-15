@@ -117,7 +117,7 @@ page("research.html", "Sign Language Processing", f"""
     <p class="lede">{inline_md(lede)}</p>
   </div>
 
-  <div class="with-aside">
+  <div class="with-aside toc-layout">
     <article class="prose">
 {prose_html}
     </article>

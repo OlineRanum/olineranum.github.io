@@ -17,7 +17,7 @@
 
   --serif: "Source Serif 4", Georgia, serif;
   --sans:  "Source Sans 3", -apple-system, "Segoe UI", sans-serif;
-  --wrap:  940px;
+  --wrap:  1000px;
 }
 
 * { box-sizing: border-box; }
@@ -53,10 +53,9 @@ nav.main a.active { box-shadow: inset 0 -2px 0 var(--green); padding-bottom: 2px
 
 /* ---- Home: cover photo ---- */
 .cover {
-  height: 270px;
-  margin-top: 28px;
-  border-radius: 8px;
-  background: #6f7f95 url("../images/photos/MountainFebruary.jpeg") center 92% / cover no-repeat;
+  /* full-bleed band; height follows the window width so wide screens keep the peaks */
+  height: clamp(240px, 24vw, 400px);
+  background: #6f7f95 url("../images/photos/MountainFebruary.jpeg") center 70% / cover no-repeat;
 }
 
 /* ---- Home: portrait + links on the left, intro on the right ---- */
@@ -123,12 +122,13 @@ h2 { font: 500 1.6rem/1.2 var(--serif); margin: 0; }
 /* ---- Long-form text with a side column ---- */
 .with-aside {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
-  gap: 64px;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 48px;
   align-items: start;
   padding-bottom: 24px;
 }
-.prose { max-width: 66ch; }
+.prose { max-width: 72ch; }
+.toc-layout .prose { max-width: 80ch; }
 .prose > :first-child { margin-top: 0; }
 .prose p { margin: 0 0 1.1em; }
 .prose h2 { margin: 2.2em 0 .6em; scroll-margin-top: 24px; }
@@ -287,7 +287,7 @@ footer.site a { color: var(--ink-2); }
   header.site .wrap { padding-top: 16px; padding-bottom: 14px; }
   nav.main { gap: 20px; width: 100%; }
 
-  .cover { height: 160px; margin-top: 16px; }
+  .cover { height: 170px; }
   .hero {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
