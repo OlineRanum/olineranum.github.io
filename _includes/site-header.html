@@ -1,0 +1,21 @@
+{% include base_path %}
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="{{ base_path }}/">{{ site.title }}</a>
+    <nav class="main" aria-label="Main">
+      {% for link in site.data.navigation.main %}
+        {% if link.url contains 'http' %}{% assign href = link.url %}{% else %}{% assign href = base_path | append: link.url %}{% endif %}
+        {% assign active = false %}
+        {% if link.url == '/' %}
+          {% if page.url == '/' %}{% assign active = true %}{% endif %}
+        {% elsif page.url contains link.url %}
+          {% assign active = true %}
+        {% elsif link.url == '/blog/' and page.collection == 'posts' %}
+          {% assign active = true %}
+        {% endif %}
+      <a href="{{ href }}"{% if active %} class="active" aria-current="page"{% endif %}>{{ link.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

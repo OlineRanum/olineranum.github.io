@@ -1,22 +1,16 @@
-# main links links
+# Main navigation (header)
 main:
-#  - title: "Publications"
-#    url: /publications/
+  - title: "Home"
+    url: /
+
+  - title: "Research"
+    url: /SignLanguageProcessing/
 
   - title: "Bio"
-    url: /bio/    
-    
-#  - title: "Portfolio"
-#    url: /portfolio/
-        
-  - title: "Sign Language Processing"
-    url: /SignLanguageProcessing/
-  
+    url: /bio/
+
   - title: "News"
-    url: /blog/   
-    
+    url: /blog/
+
   - title: "CV"
     url: /cv/
-    
-#  - title: "Guide"
-#    url: /markdown/

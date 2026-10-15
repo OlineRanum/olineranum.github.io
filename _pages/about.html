@@ -1,0 +1,107 @@
+---
+layout: default
+permalink: /
+title: "Oline A. Ranum"
+excerpt: "PhD researcher in Sign Language Processing at CVSSP, University of Surrey. Working on computer vision, NLP, and sign language linguistics."
+description: "PhD researcher in Sign Language Processing at CVSSP, University of Surrey. Working on computer vision, NLP, and sign language linguistics."
+redirect_from:
+  - /about/
+  - /about.html
+---
+
+{% include base_path %}
+
+<div class="cover" role="img" aria-label="Sunset over Manaslu, Nepal"></div>
+
+<div class="hero">
+  <img class="portrait" src="{{ base_path }}/images/{{ site.author.avatar }}" alt="Portrait of {{ site.author.name }}">
+  <div class="intro">
+    <h1>Oline A. Ranum</h1>
+    <p class="role">PhD researcher · Centre for Vision, Speech and Signal Processing, University of Surrey</p>
+    <p>My research focuses on Sign Language Processing, Recognition, and Translation, with a particular interest in spatial grammar and productive constructions.</p>
+    <p>I'm supervised by Dr. Richard Bowden and Dr. Simon Hadfield.</p>
+  </div>
+  <ul class="links">
+    <li><span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>{{ site.author.location }}</span></li>
+    <li><a href="mailto:o.ranum@surrey.ac.uk"><i class="fa-regular fa-envelope" aria-hidden="true"></i>o.ranum@surrey.ac.uk</a></li>
+    <li><a href="{{ site.author.googlescholar }}"><i class="fa-brands fa-google-scholar" aria-hidden="true"></i>Google Scholar</a></li>
+    <li><a href="https://github.com/{{ site.author.github }}"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a></li>
+    <li><a href="{{ site.author.orcid }}"><i class="fa-brands fa-orcid" aria-hidden="true"></i>ORCID</a></li>
+    <li><a href="https://linkedin.com/in/{{ site.author.linkedin }}"><i class="fa-brands fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+  </ul>
+</div>
+
+<section>
+  <div class="section-head">
+    <h2>Selected publications</h2>
+    <a class="more" href="{{ base_path }}/cv/#projects">All projects</a>
+  </div>
+  <ul class="pubs">
+    <li class="pub">
+      <span class="venue">WACV 2027</span>
+      <div>
+        <h3><a href="https://olineranum.github.io/beyondBLEU/">Beyond BLEU: A Case for Redefining Sign Language Translation Benchmarks</a></h3>
+        <p>An evaluation study across six SLT systems showing that gains in BLEU-4 are not on their own evidence of better sign understanding.</p>
+        <div class="actions"><a href="https://arxiv.org/pdf/2609.03734">Paper</a><a href="https://olineranum.github.io/beyondBLEU/">Project page</a></div>
+      </div>
+    </li>
+    <li class="pub">
+      <span class="venue">Annu. Rev. Ling.</span>
+      <div>
+        <h3><a href="https://arxiv.org/abs/2610.00881">Machine Translation for Sign Languages</a></h3>
+        <p>A review of sign language recognition, translation, and production, balancing technical challenges with ethics and community involvement.</p>
+        <div class="actions"><a href="https://arxiv.org/abs/2610.00881">Paper</a></div>
+      </div>
+    </li>
+    <li class="pub">
+      <span class="venue">ECCV 2026</span>
+      <div>
+        <h3><a href="https://cogvis-cvssp.github.io/BackTranslation2/">BackTranslation2.0: A Linguistically Motivated Metric to Assess Sign Language Production</a></h3>
+        <p>A linguistically grounded, agentic metric for text-to-sign translation, validated against native Deaf raters on BSL.</p>
+        <div class="actions"><a href="https://arxiv.org/pdf/2606.28673">Paper</a><a href="https://cogvis-cvssp.github.io/BackTranslation2/">Project page</a></div>
+      </div>
+    </li>
+    <li class="pub">
+      <span class="venue pending">Under review</span>
+      <div>
+        <h3><a href="https://olineranum.github.io/WhatsThePoint/">What's the Point? Spatial Grammar &amp; Index Resolution for Sign Language Processing</a></h3>
+        <p>A pose-based index detector and online entity memory that substantially improve pointing-sign recovery in CSLR without retraining the backbone.</p>
+        <div class="actions"><a href="https://olineranum.github.io/WhatsThePoint/">Project page</a></div>
+      </div>
+    </li>
+    <li class="pub">
+      <span class="venue">ICML 2024 W</span>
+      <div>
+        <h3><a href="https://olineranum.github.io/GMVISR/">NGT200: Geometric Multi-View Isolated Sign Recognition</a></h3>
+        <p>A multi-view benchmark for NGT; SE(2)-equivariant Temporal-PONITA improves recognition by 8–22% over SL-GCN.</p>
+        <div class="actions"><a href="https://openreview.net/forum?id=idkNzTC67X">Paper</a><a href="https://olineranum.github.io/GMVISR/">Project page</a></div>
+      </div>
+    </li>
+    <li class="pub">
+      <span class="venue">LREC-COLING 2024</span>
+      <div>
+        <h3><a href="https://olineranum.github.io/SAPA/">3D-LEX v1.0: 3D Lexicons for ASL and Sign Language of the Netherlands</a></h3>
+        <p>A motion-capture dataset of 2,000 signs with semi-automatic phonetic annotation matching expert accuracy.</p>
+        <div class="actions"><a href="https://aclanthology.org/2024.signlang-1.33/">Paper</a><a href="https://olineranum.github.io/SAPA/">Project page</a></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>News</h2>
+    <a class="more" href="{{ base_path }}/blog/">All news</a>
+  </div>
+  {% assign news = site.data.small_news | sort: "date" | reverse %}
+  {% assign now = site.time | date: "%s" | plus: 0 %}
+  <ul class="news">
+    {% for item in news limit: 5 %}
+      {% assign age = item.date | date: "%s" | plus: 0 | minus: now | abs %}
+      <li>
+        <time datetime="{{ item.date }}">{{ item.date | date: "%b %Y" }}</time>
+        <div>{% if age < 3888000 %}<span class="new">New</span>{% endif %}{% if item.url and item.url != "" %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

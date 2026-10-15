@@ -2,17 +2,17 @@
 layout: archive
 title: "Sign Language Processing"
 permalink: /SignLanguageProcessing/
-author_profile: true
+lede: "An overview of Sign Language Processing: the recognition, translation, and generation of sign languages using computer vision and NLP."
 description: "An overview of Sign Language Processing (SLP): recognition, translation, and generation of sign languages using computer vision and NLP. Covering BSL, ASL, NGT, and NTS."
 ---
 
-{% include base_path %}
+<div class="with-aside toc-layout">
+<article class="prose" markdown="1">
 
 Sign languages are fully natural, visually expressed languages with rich grammatical structure. Unlike spoken language, they unfold in three-dimensional space through the coordinated use of hands, arms, body posture, and facial expressions. Each country or region typically has its own sign language. Norwegian Sign Language (NTS), British Sign Language (BSL), Sign Language of the Netherlands (NGT), and American Sign Language (ASL) are among the hundreds worldwide, none of which are mutually intelligible.
 
 **Sign Language Processing (SLP)** is the subfield of AI concerned with the automatic analysis and generation of sign language. It sits at the intersection of computer vision, natural language processing, and sign language linguistics.
 
----
 
 ## Core Tasks
 
@@ -24,7 +24,6 @@ Sign languages are fully natural, visually expressed languages with rich grammat
 
 **Other tasks** include *sign segmentation* (identifying temporal boundaries in continuous signing), *sign spotting* (locating specific signs within a stream), *signer anonymisation*, and *sign-text alignment* for corpus annotation.
 
----
 
 ## Beyond the Lexicon
 
@@ -36,7 +35,6 @@ A key challenge, and active research frontier, is that sign languages are not pu
 
 Most current benchmarks and models treat signing as a linear sequence of glosses, implicitly assuming a discrete and finite lexicon. This misses the spatial grammar and simultaneity that are central to how sign languages actually work.
 
----
 
 ## Current Trends
 
@@ -46,7 +44,6 @@ Most current benchmarks and models treat signing as a linear sequence of glosses
 - **Non-lexical modelling**: explicit treatment of pointing, depicting signs, and non-manual features, moving beyond lexicon-centric supervision.
 - **Community and ethics**: growing awareness of the need for deaf-led evaluation and leadership, consent in data collection, and ecologically valid training data beyond interpreted broadcasts.
 
----
 
 ## Key Challenges
 
@@ -55,3 +52,15 @@ Most current benchmarks and models treat signing as a linear sequence of glosses
 - **Simultaneity vs. linearity**: sign languages express meaning simultaneously across multiple articulators, which does not map cleanly onto the sequential assumptions of standard NLP pipelines.
 - **Ecological validity**: most large-scale training data comes from interpreted broadcast or social media, which differs systematically from natural, spontaneous signing.
 - **Evaluation**: automatic metrics like BLEU do not capture the flexible word order, spatial grammar, or productive constructions of sign languages well.
+
+</article>
+<aside class="side toc-wrap">
+  <p class="side-label">On this page</p>
+  <ul class="toc">
+    <li><a href="#core-tasks">Core Tasks</a></li>
+    <li><a href="#beyond-the-lexicon">Beyond the Lexicon</a></li>
+    <li><a href="#current-trends">Current Trends</a></li>
+    <li><a href="#key-challenges">Key Challenges</a></li>
+  </ul>
+</aside>
+</div>

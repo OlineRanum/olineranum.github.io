@@ -1,0 +1,13 @@
+{% include base_path %}
+<footer class="site">
+  <div class="wrap">
+    <span>&copy; {{ site.time | date: '%Y' }} {{ site.name }} · CVSSP, University of Surrey</span>
+    <nav aria-label="Footer">
+      {% if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}">Scholar</a>{% endif %}
+      {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}
+      {% if site.author.orcid %}<a href="{{ site.author.orcid }}">ORCID</a>{% endif %}
+      <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}">RSS</a>
+      <a href="{{ base_path }}/sitemap/">Sitemap</a>
+    </nav>
+  </div>
+</footer>
