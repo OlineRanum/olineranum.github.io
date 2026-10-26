@@ -25,7 +25,8 @@ redirect_from:
   (function () {
     var photos = {{ cover_photos | jsonify }};
     if (!photos.length) return;
-    // Where to crop photos whose subject isn't in the middle (default: centre)
+    /* Where to crop photos whose subject isn't in the middle (default: centre).
+       Use block comments here: the live site minifies this onto one line. */
     var focus = { "PANA6989.jpg": "center 62%" };
     var pick = photos[Math.floor(Math.random() * photos.length)];
     var cover = document.querySelector(".cover");
