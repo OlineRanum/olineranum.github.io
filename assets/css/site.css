@@ -149,9 +149,8 @@ aside.side { position: sticky; top: 28px; font-size: .95rem; }
 .toc a:hover { color: var(--green-deep); text-decoration: none; }
 
 .facts {
-  background: var(--surface);
-  border-radius: 8px;
-  padding: 22px 22px 8px;
+  border-left: 1px solid var(--rule);
+  padding: 2px 0 8px 22px;
 }
 .facts dl { margin: 0; }
 .facts dt {
@@ -247,8 +246,7 @@ aside.side { position: sticky; top: 28px; font-size: .95rem; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; }
 .thumb.contain img { object-fit: contain; padding: 12px; }
 .thumb.text {
-  background: var(--surface); border-color: transparent;
-  font: 500 1.25rem/1.2 var(--serif); color: var(--sage-ink); text-align: center; padding: 16px;
+  font: 500 1.25rem/1.2 var(--serif); color: var(--ink-2); text-align: center; padding: 16px;
 }
 .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 8px; }
 .meta .venue { margin-top: 0; }
@@ -328,11 +326,8 @@ footer.site a { color: var(--ink-2); }
 }
 .page-meta i { color: var(--green); margin-right: 6px; }
 .back-link { display: inline-block; margin: 36px 0 0; font-weight: 500; }
-.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 28px; padding: 0; list-style: none; }
-.tags li {
-  background: var(--sage); color: var(--sage-ink);
-  font-size: .8rem; font-weight: 600; padding: 3px 9px; border-radius: 6px;
-}
+.tags { display: flex; flex-wrap: wrap; margin-top: 28px; padding: 0; list-style: none; color: var(--ink-3); font-size: .9rem; }
+.tags li + li::before { content: "·"; margin: 0 8px; }
 .citation {
   background: var(--surface); border-radius: 8px;
   padding: 14px 18px; font-size: .95rem; color: var(--ink-2);
