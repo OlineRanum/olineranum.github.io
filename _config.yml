@@ -127,6 +127,8 @@ include:
   - _pages
   - files
 exclude:
+  - files/favourite_photos # full-size originals; the site uses images/photos/cover
+  - make_cover_photos.py
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
