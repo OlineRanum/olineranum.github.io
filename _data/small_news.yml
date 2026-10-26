@@ -32,7 +32,7 @@
 
 - title: "Received the Amsterdam AI Thesis Award for best AI thesis in Amsterdam"
   date: "2024-12-01"
-  url: "https://www.amsterdamai.com/events/Amsterdam%20AI%20Thesis%20Awards"
+  url: "/posts/amsterdam-ai-thesis-award/"
 
 - title: "Started as researcher at SignLab Amsterdam, University of Amsterdam"
   date: "2024-09-01"
@@ -40,7 +40,7 @@
 
 - title: "Graduated MSc AI with Cum Laude and ELLIS Honours — Thesis GP 9.5"
   date: "2024-08-31"
-  url: "https://scripties.uba.uva.nl/search?id=record_55278"
+  url: "/posts/msc-graduation/"
 
 - title: "NGT200: Geometric Multi-View Isolated Sign Recognition accepted at ICML 2024 Workshop on Geometry-grounded Representation Learning"
   date: "2024-06-19"
@@ -52,7 +52,7 @@
 
 - title: "Selected for ELLIS Honours Programme"
   date: "2023-12-01"
-  url: "https://ivi.fnwi.uva.nl/ellis/2024/05/19/advancing-ai-frontiers-the-ellis-amsterdam-msc-honours-programme-2-2/"
+  url: "/posts/ellis-honours/"
 
 - title: "Reproducibility study of 'Joint Multisided Exposure Fairness for Recommendation' accepted at ReScience / MLRC 2023"
   date: "2023-07-31"
