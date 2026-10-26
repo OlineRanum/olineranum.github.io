@@ -15,4 +15,4 @@ My MSc thesis, *3D Awareness, Geometry & Linguistics in Neural Sign Language Rep
   <figcaption>At the Amsterdam AI Thesis Awards 2024.</figcaption>
 </figure>
 
-[🏆 Amsterdam AI Thesis Awards](https://www.amsterdamai.com/events/Amsterdam%20AI%20Thesis%20Awards){:target="_blank"} &nbsp;·&nbsp; [📄 Thesis](https://scripties.uba.uva.nl/search?id=record_55278){:target="_blank"}
+[📰 ILLC news](https://www.illc.uva.nl/NewsandEvents/News/Projects-and-Awards/newsitem/15335/Oline-Ranum-wins-Amsterdam-AI-Thesis-Award-2024){:target="_blank"} &nbsp;·&nbsp; [🏆 Amsterdam AI: award highlights](https://amsterdamai.com/news/looking-back-amsterdam-ai-thesis-award-2024-highlights/){:target="_blank"} &nbsp;·&nbsp; [📄 Thesis](https://scripties.uba.uva.nl/search?id=record_55278){:target="_blank"}
