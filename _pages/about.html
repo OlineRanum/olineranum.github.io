@@ -25,10 +25,12 @@ redirect_from:
   (function () {
     var photos = {{ cover_photos | jsonify }};
     if (!photos.length) return;
+    // Where to crop photos whose subject isn't in the middle (default: centre)
+    var focus = { "PANA6989.jpg": "center 62%" };
     var pick = photos[Math.floor(Math.random() * photos.length)];
     var cover = document.querySelector(".cover");
     cover.style.backgroundImage = "url('{{ site.baseurl }}" + encodeURI(pick) + "')";
-    cover.style.backgroundPosition = "center";
+    cover.style.backgroundPosition = focus[pick.split("/").pop()] || "center";
   })();
 </script>
 

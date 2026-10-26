@@ -10,10 +10,12 @@ SRC = Path(__file__).parent / "files" / "favourite_photos"
 DST = Path(__file__).parent / "images" / "photos" / "cover"
 MAX_WIDTH = 2000
 QUALITY = 80
+# Photos that don't suit the wide cover banner (e.g. portrait shots)
+SKIP = {"mw2.png"}
 
 DST.mkdir(parents=True, exist_ok=True)
 for src in sorted(SRC.iterdir()):
-    if src.suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp"}:
+    if src.suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp"} or src.name in SKIP:
         continue
     dst = DST / (src.stem + ".jpg")
     if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
